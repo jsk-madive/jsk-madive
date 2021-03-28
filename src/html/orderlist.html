@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" class="has-navbar-fixed-bottom">
+@@include('./include/head.html')
+
+<body>
+    @@include('./include/header.html',{
+    'title' : 'Tab'
+    })
+    <!-- container -->
+    <div id="contents" class="container">
+        <div class="tablist-box">
+            <ul class="tab-list tab04">
+                <li class="on">
+                    <h3 class="tab-title"><a href="javascript:;">전체</a></h3>
+                    <div class="tab-cont">
+                        <article class="media">
+                            
+                            <figure class="media-left">
+                              <p class="image is-128x128">
+                                <img src="https://bulma.io/images/placeholders/128x128.png">
+                              </p>
+                            </figure>
+                            <div class="media-content">
+                              <div class="content">
+                                <p>
+                                  <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                  <br>
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="media-right">
+                              <button class="delete"></button>
+                            </div>
+                          </article>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="tab-title"><a href="javascript:;">음식배달</a></h3>
+                    <div class="tab-cont">
+                        <div>tab02</div>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="tab-title"><a href="javascript:;">전통시장</a></h3>
+                    <div class="tab-cont">
+                        <div>tab03</div>
+                    </div>
+                </li>
+                <li>
+                    <h3 class="tab-title"><a href="javascript:;">쇼핑몰</a></h3>
+                    <div class="tab-cont">
+                        <div>tab03</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- // container -->
+    @@include('./include/btm_nav.html')
+</body>
+
+</html>

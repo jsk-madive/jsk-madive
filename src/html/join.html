@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body class="has-navbar-fixed-bottom">
+  @@include('./include/header.html',{
+  'title' : '회원가입'
+  })
+  <!-- container -->
+  <div id="contents" class="container">
+    <div class="login is-mobile-inner join is-centered">
+      <div class="title-field is-centered">
+        <h2 class="title is-4">회원가입</h2>
+      </div>
+      <div class="form-grid">
+        <div class="filed-grid">
+          <div class="field">
+            <div class="level util is-mobile">
+              <p class="level-left">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <i></i>
+                  <strong>필수약관, 선택약관 모두에 동의합니다.</strong>
+                </label>
+              </p>
+            </div>
+          </div>
+          <div class="field">
+            <div class="level util is-mobile">
+              <p class="level-left">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <i></i>
+                  <strong>개인정보 처리방침(필수)</strong>
+                </label>
+              </p>
+            </div>
+            <div class="control mt-2">
+              <textarea class="textarea is-medium">개인정보 처리방침</textarea>
+            </div>
+          </div>
+          <div class="field">
+            <div class="level util is-mobile">
+              <p class="level-left">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  <i></i>
+                  <strong>이용약관 (필수)</strong>
+                </label>
+              </p>
+            </div>
+            <div class="control mt-2">
+              <textarea class="textarea is-medium">개인정보 처리방침</textarea>
+            </div>
+          </div>
+          <div class="buttons is-centered">
+            <a href="javascript:;" class="button is-medium is-gray">취소</a>
+            <button class="button is-medium is-blue">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // container -->
+  @@include('./include/btm_nav.html')
+
+</body>
+
+</html>

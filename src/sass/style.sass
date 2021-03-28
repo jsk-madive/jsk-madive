@@ -1,0 +1,593 @@
+@charset "utf-8"
+
+@import 'font/_all'
+@import 'marketapp/mixin'
+// ----------------------------------  변수선언 ---------------------------------- //
+
+// 
+//  [B - Utilities]   //
+// 
+
+// initial-variable.sass   //
+
+ // Color
+$color-black: #000000
+$color-black02 : #333333
+$color-black03 : #151515
+$color-black04 : #080808
+
+
+$color-blue : #1C67FF  // 기본 
+$color-blue02  : #3273DC
+$color-blue03 : #4869B1
+
+
+$color-gray : #DBDBDB
+$color-gray02 : #D5D5D5
+$color-gray03 : #333333
+$color-gray04 : #585858
+$color-gray05 : #8B8B8B
+$color-gray06 : #CACACA
+$color-gray07 : #EEEEEE
+$color-gray08 : #ACACAC
+$color-gray09 : #E5E5E5
+
+$color-white : #FFFFFF
+$color-white02 : #F5F5F5
+$color-white03 : #F9F9F9
+
+$color-red : #FF0000
+$color-red02 : #D64C3E // chrome
+
+$color-yellow : #FFEB33
+
+$color-green : #03C75A
+$color-green02 : #058B8B 
+
+$color-transparent: transparent
+
+
+// Typography
+$family-sans-serif: 'NotoSansKR', sans-serif
+
+$size-1: 32px
+$size-2: 30px
+$size-3: 20px
+$size-4: 18px
+$size-5: 16px
+$size-6: 15px
+$size-7: 14px
+$size-8: 13px
+$size-9: 12px
+
+$weight-black: 900
+
+
+$border-color : $color-gray09
+
+// derived-variables.address-list-box
+$link-hover: $color-black
+
+
+
+// 
+//  [B - Base]   //
+//    
+
+// generic.sass //
+$body-background-color: $color-white
+$body-min-width: 280px
+$body-font-size: 16px
+$body-line-height: 1.2
+
+$widescreen-enabled: false
+$fullhd-enabled: false
+$gap: 16px
+$strong-weight: 700
+$container-max-width: 100%
+
+$link: $color-black
+$body-color: $color-black
+
+
+
+// 
+//  [B - Utilities]  //
+//   
+$navbar-height: 5.125rem    // navbar / 16px
+
+
+
+
+
+// shared.sass
+// $input-color: $color-black03
+// $input-border-color: $color-gray09
+$input-focus-border-color: $color-gray
+$input-shadow: none
+// $input-focus-box-shadow-size: 0 0 0 0
+// $input-placeholder-color: $color-gray06
+// $input-hover-border-color: $color-gray09
+// $input-disabled-background-color: $color-white02
+// $input-disabled-border-color: $color-gray09
+// $input-disabled-color: $color-gray06
+// $input-disabled-placeholder-color: $color-gray06
+
+// grid.sass
+$column-gap: 6px
+
+// modal.sass
+$modal-background-background-color: rgba(0, 0, 0, .3)
+$modal-card-title-line-height: 28px
+$modal-card-head-background-color: $color-white
+
+$modal-card-head-padding: 16px 20px 15px
+$modal-card-body-padding: 30px 0px
+$modal-content-width: 550px
+
+// tools.sass
+$label-weight: 400
+$size-normal: $size-6
+
+// box.sass
+$box-padding: 20px 30px
+
+// tabs.sass
+// $tabs-toggle-link-border-color: $color-gray09
+// $tabs-toggle-link-hover-border-color: $color-gray09
+// $tabs-toggle-link-hover-background-color: $color-white02
+// $tabs-toggle-link-active-background-color: $color-white
+// $tabs-toggle-link-active-border-color: $color-blue
+// $tabs-toggle-link-active-color: $color-blue
+// $tabs-link-color: $color-gray06
+// $tabs-link-hover-color: $color-gray06
+// $tabs-link-active-color: $color-black
+
+// Image Path
+$image-path: '/img/'
+
+// -------------
+//  [B] Form
+// -------------    
+
+// shared.sass (input css)
+$input-color: $color-black  // text
+$input-border-color: $color-gray
+$input-radius: 4px
+$input-focus-border-color: none
+$input-focus-box-shadow-size: 0
+$input-focus-box-shadow-color: transparent
+
+// tools.sass
+
+// -------------
+//  [B] Elements
+// -------------                 
+
+
+
+// button.sass
+
+// -------------
+//  [B] Layout  
+// -------------
+
+// section
+$section-padding: 0 16px 16px
+
+// -------------
+// [B]  Components  
+// -------------
+
+
+
+// -------------
+// [B]  Utilities  
+// -------------
+
+// initial-variables.css
+$radius-small: 4px
+$radius: 5px
+
+// derived-variables.sass
+$text-strong: $color-black
+
+// controls.sass
+$control-radius: 6px // 버튼
+$control-height: 50px
+$control-padding-vertical: 13px
+$control-padding-horizontal: 15px
+$control-radius: 0px
+
+
+
+
+
+
+
+
+// 기존 bulma css 
+@import 'utilities/_all'
+@import 'base/_all'
+@import 'grid/_all'
+@import 'form/_all'
+@import 'elements/_all'
+@import 'components/_all'
+@import 'helpers/_all'
+
+
+// custom css
+@import 'marketapp/_all'
+
+/** 0323 **/
+
+// generic.sass
+$link                    : $color-black
+$body-color              : $color-black
+
+// title.sass
+$title-color: $color-black
+$title-weight: $strong-weight
+
+// controls.sass 
+$control-height            : 50px
+$control-padding-vertical  : 13px
+$control-padding-horizontal: 15px
+$control-radius            : 0px
+
+// shared.sass
+$input-radius                      : 0px
+$input-color                       : $color-black03
+$input-border-color                : $color-gray09
+$input-focus-border-color          : $color-gray09
+$input-shadow                      : none
+$input-focus-box-shadow-size       : 0 0 0 0
+$input-placeholder-color           : $color-gray06
+$input-hover-border-color          : $color-gray09
+$input-disabled-background-color   : $color-white02
+$input-disabled-border-color       : $color-gray09
+$input-disabled-color              : $color-gray06
+$input-disabled-placeholder-color  : $color-gray06
+
+// grid.sass
+$column-gap: 6px
+
+// modal.sass
+$modal-background-background-color: rgba(0, 0, 0, .3)
+$modal-card-title-color           : $color-black03
+$modal-card-title-size            : $size-3
+$modal-card-title-line-height     : 28px
+$modal-card-head-background-color : $color-white
+$modal-card-head-border-bottom    : 1px solid $color-gray07
+$modal-card-head-padding          : 16px 20px 15px
+$modal-card-body-padding          : 30px 0px
+$modal-card-foot-border-top       : none
+$modal-content-width              : 550px
+
+// tools.sass
+$label-weight: 400
+$label-color : $color-gray04
+$size-normal : $size-6
+
+// box.sass
+$box-padding: 20px 30px
+$box-color  : $color-black
+
+// tabs.sass
+$tabs-toggle-link-border-color           : $color-gray09
+$tabs-toggle-link-hover-border-color     : $color-gray09
+$tabs-toggle-link-hover-background-color : $color-white02
+$tabs-toggle-link-active-background-color: $color-white
+$tabs-toggle-link-active-border-color    : $color-blue
+$tabs-toggle-link-active-color           : $color-blue
+$tabs-link-color                         : $color-gray06
+$tabs-link-hover-color                   : $color-gray06
+$tabs-link-active-color                  : $color-black
+
+
+
+/** 
+ minireset 
+ **/
+
+html, body
+    height: 100%
+
+.skip
+    position: absolute
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    margin: -1px
+    padding: 0
+    width: 1px
+    height: 1px
+    border: 0
+
+.hide
+    overflow: hidden
+    text-indent: 100%
+    white-space: nowrap
+
+#skipnav
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 101
+
+    > a
+        text-align: center
+        font-size: 0
+
+        &:focus, &:active
+            left: 0
+            font-size: $size-4
+            color: $color-white
+            display: block
+            background-color: $color-blue
+
+
+// swiper
+\:root
+    --swiper-theme-color: #fff
+    --swiper-navigation-size: 20px
+
+.mainslide-box
+    img
+        width: 100%
+
+.swiper-container
+    font-size: 0
+
+
+.swiper-button-next,
+.swiper-button-prev
+    outline: 0
+
+    span
+        overflow: hidden
+        text-indent: 100%
+        white-space: nowrap
+        z-index: 100
+    
+    &::after
+        padding: 10px
+        outline: 0
+
+      
+
+/********
+ Common
+ ********/
+.co-del-btn
+    z-index: 100
+    background-color: $color-transparent
+    border: 0
+
+    > span
+        background: url(/img/ico_del.png) center/100% auto no-repeat
+        overflow: hidden
+        text-indent: 100%
+        white-space: nowrap
+        width: 16px
+        height: 14px
+        display: inline-block
+
+/********
+    Main     
+ ********/
+
+// foodtab-wrap
+.foodtab-wrap
+    position: relative
+
+    &:after
+        +clearfix
+
+    .tab-cont
+        padding-top: 0
+
+.foodctg-list
+    &.columns
+        margin: 0
+
+    > li
+        line-height: 1.5
+        padding: 10px 5px
+        text-align: center
+
+    .img
+        display: block
+
+    img
+        width: 50px
+        height: 40px
+        overflow: hidden
+        display: block
+        margin: 0 auto 10px
+
+    a
+        display: block
+        font-size: $size-7
+
+// delivery-addr
+.delivery-addr
+    width: 100%
+    height: 45px
+    line-height: 45px
+    text-align: center
+    background-color: $color-white
+    border-bottom: 1px solid $color-gray
+    z-index: 10
+    
+    .location-txt
+        position: relative
+        display: inline-block
+        padding: 
+            left: 23px
+            right: 25px
+
+        &::before,
+        &::after
+            content: ''
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            display: inline-block
+
+        &:before
+            background: url(/img/ico_location.png) center/100% auto no-repeat
+            width: 17px
+            height: 20px
+            vertical-align: middle
+            left: 0
+
+        &::after
+            +co-arrow(down)
+            margin:
+                top: -9px
+            right: 0
+
+
+// subtab-box
+.subtab-box
+    width: 100%
+    overflow: hidden
+    z-index: 100
+    border-bottom: 1px solid $color-gray
+
+    .subtab
+        display: block
+        margin: 0 auto
+        padding: 10px 6px
+        width: auto
+        font-size: 0
+        text-align: left
+        overflow-x: scroll
+        white-space: nowrap
+        -webkit-overflow-scrolling: touch
+
+        &::-webkit-scrollbar
+            width: 0
+            height: 0
+            background-color: red
+
+        > li
+            display: inline-block
+            padding: 0 6px
+
+            &.active
+
+                > a
+                    color: $color-white
+                    background-color: $color-blue02
+                    border-color: $color-blue02
+            > a
+                    font-size: $size-7
+                    padding: 5px 8px
+                    border: 1px solid $color-gray02
+                    background-color: $color-white
+                    line-height: 32px
+                    border-radius: 32px
+
+
+/********
+ Address
+ ********/
+.order-list
+    width: 100%
+    margin: 0
+    font-size: $size-4
+
+.btn-search
+    > span
+        background: url(/img/ico_search.png) center/100% auto no-repeat
+        overflow: hidden
+        text-indent: 100%
+        white-space: nowrap
+        width: 22px
+        height: 22px
+        display: inline-block
+
+
+.content
+    ul.list-non-type
+        list-style: none
+        margin: 0
+
+        > li + li
+            margin-top: 5px
+
+// basic-address
+.basic-address
+    > li
+        padding: 10px 0
+
+    .b-title
+        > span
+            font-size: $size-4
+            position: relative
+
+            &::before
+                background: url(/img/ico_bookmark.png) center/100% no-repeat
+                content: ''
+                width: 18px
+                height: 23px
+                display: inline-block
+                vertical-align: middle
+                margin-right: 10px
+
+.addr-list
+    > div
+        margin-top: 10px
+        margin-left: 0
+        font-size: $size-6
+
+        &.addr02
+            display: table
+            table-layout: fixed
+            width: 100%
+            font-size: $size-7
+
+            > div
+                display: table-cell
+
+                &:first-child
+                    width: 60px
+                &:last-child
+                    color: $color-gray03
+            .dpt
+                padding: 0 5px
+                border: 1px solid $color-gray
+                color: $color-black
+
+.basic-address.latest
+    position: relative
+    border-top: 1px solid $color-black
+
+    > li
+        border-bottom: 1px solid $color-gray
+        padding: 0 0 10px 0
+        position: relative
+
+        .co-del-btn
+            position: absolute
+            top: -5px
+            right: 0
+
+            > span
+                width: 10px
+                height: 8px
+
+    .addr-list > div
+        padding-right: 20px
+
+
+// title.sass
+$title-line-height: 2em
+$title-weight: 500
+$title-size: $size-6
+$title-color: $color-black
+
+.button
+    align-items:  center

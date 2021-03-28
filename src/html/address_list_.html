@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body class="has-navbar-fixed-bottom .has-navbar-fixed-top">
+    @@include('./include/header.html',{
+        'title' : '배달 받을 주소'
+    })
+  <!-- container -->
+  <div id="contents" class="container">
+    <section>
+      <div class="field is-expanded">
+        <div class="field has-addons">
+          <p class="control is-expanded">
+            <input class="input" type="tel" placeholder="예) 센텀시티, 전민동">
+          </p>
+          <p class="control">
+            <button class="button btn-search"><span>검색</span></button>
+          </p>
+        </div>
+      </div>
+
+      <div class="address-list-box">
+        <div class="content">
+          <div>
+            <h3>최근주소</h3>
+            <ul class="list-non-type basic-address latest">
+              <li>
+                <div class="addr-list">
+                  <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                  <div class="addr02">
+                    <div><span class="dpt">도로명</span></div>
+                    <div>종로구 율곡로 88, 10층 GSITM</div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="addr-list">
+                  <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                  <div class="addr02">
+                    <div><span class="dpt">도로명</span></div>
+                    <div>종로구 율곡로 88, 10층 GSITM</div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="addr-list">
+                  <button class="co-del-btn"><span>닫기</span></button>
+                  <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                  <div class="addr02">
+                    <div><span class="dpt">도로명</span></div>
+                    <div>종로구 율곡로 88, 10층 GSITM</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- // container -->
+  @@include('./include/btm_nav.html')
+
+</body>
+
+</html>

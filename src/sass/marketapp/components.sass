@@ -1,0 +1,299 @@
+/** 
+	B - navbar.sass
+ **/
+ 
+.navbar.is-fixed-bottom
+	> ul
+		+clearfix
+
+// btm-fix-nav
+.btm-fix-nav
+    border-top: 1px solid $color-gray
+
+    > ul
+        width: 100%
+
+        &::after
+            +clearfix
+
+        > li
+            float: left
+            height: inherit
+            vertical-align: middle
+            text-align: center
+            width: 25%
+            position: relative
+
+            &:first-child
+                > a:before
+                    background-position-x: 0
+
+            &:nth-child(2)
+                > a:before
+                    background-position-x: -39px
+
+            &:nth-child(3)
+                > a:before
+                    background-position-x: -78px
+
+            &:nth-child(4)
+                > a:before
+                    background-position-x: -117px
+
+        a
+            display: block
+            position: relative
+            height: inherit
+            font-size: $size-7
+            font-weight: 600
+            padding-top: 10px
+            padding-bottom: 20px
+            color: $color-gray05
+
+            &::before
+                background: url(../img/btm_ico.png) center 0/auto 27px no-repeat
+                content: ''
+                display: block
+                margin: 0 auto 10px
+                width: 39px
+                height: 27px
+                text-align: center
+
+
+
+
+/** 
+	B - modal.sass 
+
+ **/
+$modal-msg-color: $color-black
+
+.modal
+	&.medium
+		.modal-card-head
+			padding:
+				right: 18px
+		.modal-msg
+			+font-set(15px, -.3px, 23px)
+			font: 
+				size: 15px
+			letter-spacing: -.3px
+			line-height: 23px
+			color: $modal-msg-color
+		.modal-content,
+		.modal-card
+			+tablet
+				width: 400px
+				height: auto
+				max-height: none
+			+mobile
+				width: calc(100% - #{$gap * 2})
+				height: auto
+				max-height: none
+		.modal-card-body
+			padding: 30px 20px
+	&.system
+		.modal-card-head
+			padding:
+				top: 60px
+				right: 18px
+		.modal-content,
+		.modal-card
+				width: calc(100% - #{$gap * 2})
+				height: auto
+				max-height: none
+		.modal-card-body
+			padding: 30px 20px
+	&.is-active
+		.modal-card
+			animation : modal-animattion .5s
+
+.modal-card-head
+	padding:
+		right: 60px + 18px
+
+.modal-card-title
+	font:
+		size: $size-5
+		weight: $weight-medium
+	flex:
+		shrink: unset
+
+.modal-card-foot		
+	justify-content: center
+	padding: 0px 20px 20px
+	.buttons
+		width: 100%
+		margin:
+			top: 0
+		.button
+			min-width: auto
+			width: calc(50% - 6px)
+			border: 0
+			&.is-fullwidth
+				width: 100%
+			&:not(:last-child)
+				margin:
+					right: 12px
+	
+	// modal-btm-btn
+	&.modal-btm-btn
+		border:
+			top: 1px solid $color-gray06
+		padding: 0
+
+
+.modal-inner-box
+	padding: 0 20px
+
+.modal-card-body
+	overflow: hidden
+	padding: 30px 0px
+
+	.box
+		padding: 20px 0 0 0
+	
+.modal-content,
+.modal-card
+	+tablet
+		height: 600px
+		max-height: 600px
+		&.is-auto
+			height: auto
+			max-height: none
+.modal-card
+	+mobile
+		max-height: 100vh
+		height: 100vh
+		
+.modal-close
+	position: absolute
+	background: none
+	top: 0
+	right: 0
+	min: 
+		width: 60px
+		height: 60px
+	max:
+		width: 60px
+		height: 60px
+	border: 
+		radius: 0
+	&::before,
+	&::after
+		background:
+			color: $color-black
+	&::before			
+		width: 24px
+	&::after	
+		height: 24px
+	&:hover
+		background: none
+
+@keyframes modal-animattion
+	0%
+		opacity : 0
+		transform : translateY(100px)
+	100%
+		opacity : 1
+		transform : translateY(0px)
+
+
+/** 
+	B - tabs.sass 
+ **/
+$tab-total : 12
+@for $i from 1 through $tab-total
+	.tabs
+		> ul.is-#{$i}
+			> li
+				width: calc(100% / #{$i})
+
+.tabs
+	&:not(:last-child)
+		margin:
+			bottom: 0
+	> ul
+		min-width: 320px
+		width: 100%
+		overflow: 
+			y: hidden
+			
+		@media screen and (max-width: 320px)
+			overflow:
+				x: scroll
+			width: auto
+
+		&.tab-list
+			position: relative
+
+			> li 
+				position: relative
+		
+		&:after
+        	+clearfix
+
+		> li
+			text-align: center
+			font-size: $size-6
+
+			a:hover
+				border: none
+			
+	a
+		font-size: $size-6
+		height: 40px
+		line-height: 40px
+		padding: 0
+		border-bottom: 0
+  
+	li.is-active
+        a
+            border-bottom: 0
+
+	.tab-title
+		display: block
+
+	.tab-bar
+    position: absolute
+    left: 0
+    top: 37px
+    display: block
+    background-color: $color-blue
+    height: 3px
+    content: ''
+    transition: 0.3s
+    width: 100%
+
+.tab-cont
+    width: 100%
+    left: 0
+    display: none
+    padding-top: 40px
+
+
+
+// level.sass
+// 0323
+.level
+	> *
+		+font-set(14px, 0, 23px)
+
+.level-left
+	@include mobile
+		& + .level-right
+			margin-top: 15px
+
+// 팝업
+// modal-dl-list
+.modal-dl-list
+	dl 
+		+ dl
+			padding:
+				top: 20px
+		dd
+			padding:
+				top: 10px
+			font:
+				size: $size-7
+			color: $color-gray04 

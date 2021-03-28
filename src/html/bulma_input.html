@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body>
+  <!-- container -->
+  <div id="contents" class="container">
+    <section class="section">
+      <h2 class="title is-2 is-spaced">도로명, 건물명을 입력하세요.</h2>
+
+      <div class="field-body is-spaced">
+        <div class="field is-expanded">
+          <div class="field has-addons">
+            <p class="control is-expanded">
+              <input class="input" type="tel" placeholder="예) 센텀시티, 전민동">
+            </p>
+            <p class="control">
+              <button class="button btn-search"><span>검색</span></button>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <a class="button is-fullwidth is-spaced">
+        Button
+      </a>
+
+      <div class="column is-full">
+      <div class="field has-addons">
+        <div class="control">
+          <input class="input" type="text" placeholder="Find a repository">
+        </div>
+        <div class="control">
+          <a class="button is-info">
+            Search
+          </a>
+        </div>
+      </div>
+    </div>
+
+      <!-- Main container -->
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Find a repository">
+        </p>
+        <p class="control">
+          <a class="button is-info">
+            Search
+          </a>
+        </p>
+      </div>
+      <div class="field is-grouped">
+        <p class="control is-expanded">
+          <input class="input" type="text" placeholder="Find a repository">
+        </p>
+        <p class="control">
+          <a class="button is-info">Search</a>
+        </p>
+        <div class="buttons">
+          <button type="button" class="button is-large is-green is-fullwidth">
+            로그인
+          </button>
+        </div>
+      </div>
+
+      <div class="field-grid">
+        <div class="field">
+          <label class="label">아이디</label>
+          <div class="columns">
+            <div class="control column">
+              <input type="text" class="input is-medium" placeholder="아이디 입력">
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">비밀번호</label>
+          <div class="columns">
+            <div class="control column">
+              <input type="password" class="input is-medium" placeholder="비밀번호 입력">
+            </div>
+          </div>
+          <div class="list hyphen">
+            <ul>
+              <li>
+                비밀번호가 타인에게 노출되지 않도록 주의하시기
+                바랍니다.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- // container -->
+  @@include('./include/btm_nav.html')
+
+</body>
+
+</html>

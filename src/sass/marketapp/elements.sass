@@ -1,0 +1,380 @@
+// button.sass
+$button-gray-bg-color          : $color-gray06
+$button-gray-hover-bg-color    : $color-gray08
+$button-gray-active-bg-color   : $color-gray08
+$button-gray-color             : $color-white
+$button-green-bg-color         : $color-blue
+$button-green-hover-bg-color   : $color-green02
+$button-green-active-bg-color  : $color-green02
+$button-green-color            : $color-white
+$button-outline-hover-color    : $color-blue
+$button-text-color             : $color-gray05
+
+// is-blue
+$button-blue-bg-color         : $color-blue
+$button-blue-hover-bg-color   : $color-blue
+$button-blue-active-bg-color  : $color-blue
+$button-blue-color            : $color-white
+
+// is-black
+$button-black-bg-color         : $color-black
+$button-black-hover-bg-color   : $color-black
+$button-black-active-bg-color  : $color-black
+$button-black-color            : $color-white
+
+// is-yellow
+$button-yellow-bg-color         : $color-yellow
+$button-yellow-hover-bg-color   : $color-yellow
+$button-yellow-active-bg-color  : $color-yellow
+$button-yellow-color            : $color-white
+
+// is-ygreen
+$button-ygreen-bg-color         : $color-green
+$button-ygreen-hover-bg-color   : $color-green
+$button-ygreen-active-bg-color  : $color-green
+$button-ygreen-color            : $color-white
+
+// is-cred
+$button-cred-bg-color         : $color-red02
+$button-cred-hover-bg-color   : $color-red02
+$button-cred-active-bg-color  : $color-red02
+$button-cred-color            : $color-black 
+
+
+// is-outline
+$button-outline-bg-color       : $color-white
+$button-outline-border-color   : $color-blue
+$button-outline-color          : $color-blue
+
+=button-large
+	font: 
+		size: 18px
+	height: 55px
+	padding:
+		left: 30px
+		right: 30px
+	min:
+		width: 164px
+=button-medium
+	font: 
+		size: 16px
+	height: 50px
+	padding:
+		left: 20px
+		right: 20px
+	min:
+		width: 140px
+.button	
+	border:
+		radius: 6px	
+	&.is-large
+		+button-large
+	&.is-medium
+		+button-medium
+	&.is-small
+		&:not(.is-rounded)
+		border-radius: 4px
+	&.is-gray
+		background:
+			color: $button-gray-bg-color
+		color: $button-gray-color
+		border: none
+		transition: background .2s
+		+desktop
+			&:hover
+				background: 
+					color: $button-gray-hover-bg-color
+		+tablet-only
+			&:active
+				background: 
+					color: $button-gray-active-bg-color
+		+mobile
+			&:active
+				background: 
+					color: $button-gray-active-bg-color
+	&.is-green
+		background:
+			color: $button-green-bg-color
+		color: $button-green-color
+		border: none
+		transition: background .2s
+		+desktop
+			&:hover
+				background: 
+					color: $button-green-hover-bg-color
+		+tablet-only
+			&:active
+				background: 
+					color: $button-green-active-bg-color
+		+mobile
+			&:active
+				background: 
+					color: $button-green-active-bg-color
+	// 0323
+	&.is-blue
+		background:
+			color: $button-blue-bg-color
+		color: $button-blue-color
+		border: none
+		transition: background .2s
+		&:active
+			background: 
+				color: $button-blue-active-bg-color
+
+	&.is-black
+		background:
+			color: $button-black-bg-color
+		color: $button-black-color
+		border: none
+		transition: background .2s
+		&:active
+			background: 
+				color: $button-black-active-bg-color
+	
+	&.is-yellow
+		background:
+			color: $button-yellow-bg-color
+		color: $button-yellow-color
+		border: none
+		transition: background .2s
+		&:active
+			background: 
+				color: $button-yellow-active-bg-color
+
+	&.is-ygreen
+		background:
+			color: $button-ygreen-bg-color
+		color: $button-ygreen-color
+		border: none
+		transition: background .2s
+		&:active
+			background: 
+				color: $button-ygreen-active-bg-color
+
+	&.is-cred
+		background:
+			color: $button-cred-bg-color
+		color: $button-cred-color
+		border: none
+		transition: background .2s
+		&:active
+			background: 
+				color: $button-cred-active-bg-color
+	
+	&.is-outline
+		background:
+			color: $button-outline-bg-color
+		border: 1px solid $button-outline-border-color
+		color: $button-outline-color
+	&:hover,
+	&.focus
+		&:not(.is-outline)
+			border: none
+	&:focus:not(:active),
+	&.is-focused:not(:active)
+		box-shadow: none
+	&.is-text
+		padding: 0
+		min-width: auto
+		height: auto
+		border: none
+		+font-set(15px, -.28px, 23px)
+		color: $button-text-color
+		&:hover,
+		&:focus
+			background: none
+			color: $button-text-color
+
+// buttons
+%buttons-is-fixed
+	+mobile
+		&.is-fixed
+			width: 100%
+			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%)
+			margin: 
+				top: 0
+			position: fixed
+			bottom: 0px
+			left: 0px
+			padding: 
+				left: 16px
+				right: 16px
+				bottom: 34px
+				top: 30px
+			z-index: 10
+
+.buttons
+	margin: 
+		bottom: 0
+		top: 60px
+	.button
+		margin: 
+			bottom: 0
+	&:not(:last-child),
+	&:last-child
+		margin:
+			bottom: 0
+	&.is-centered
+		margin:
+			top: 40px
+		&:not(.has-addons)
+			.is-fullwidth
+				margin:
+					left: 0
+					right: 0
+				+ .is-fullwidth
+					margin:
+						top: 10px
+			.button:not(.is-fullwidth)
+				width: calc(50% - 6px)
+				min-width: auto
+				margin:
+					left: 6px
+					right: 6px
+				&:first-child
+					margin:
+						left: 0
+				&:last-child
+					margin:
+						right: 0
+				&.is-mobile-fullwidth
+					margin:
+						left: 0
+						right: 0
+					+ .is-mobile-fullwidth
+						margin:
+							top: 15px
+					
+	&.is-reverse
+		+mobile
+			flex-direction: column-reverse
+
+	
+	&.is-multirow
+		margin:
+			top: 40px
+		.button
+			+ .button
+					margin-top: 6px
+
+	
+	@extend %buttons-is-fixed
+
+// box.sass
+$box-gray-background-color : $color-white02
+$box-white-background-color: $color-white
+$box-agree-color           : $color-gray05
+$box-complete-color        : $color-black
+$box-complete-color2       : $color-gray05
+
+.box
+	&.is-gray
+		background:
+			color: $box-gray-background-color
+	&.is-white
+		background:
+			color: $box-white-background-color
+	&.agree
+		padding: 20px 30px
+		border:
+			radius: 0px
+		margin:
+			bottom: 0
+		+mobile
+			padding: 20px 20px
+		p
+			+font-set(13px, -.26px, 21px)
+			color: $box-agree-color
+	&.complete
+		padding: 30px
+		+mobile
+			padding: 30px 20px
+		margin:
+			bottom: 0
+		p
+			+font-set(20px, -.8px, 28px)
+			color: $box-complete-color
+			font:
+				weight: $weight-medium
+			+ p
+				margin:
+					top: 5px
+				+font-set(15px, -.3px, 23px)
+				font:
+					weight: $weight-normal
+				+ p
+					margin:
+						top: 15px
+					+font-set(13px, -.26px, 21px)
+					font:
+						weight: $weight-normal
+					color: $box-complete-color2
+			+ .box
+				width: 400px
+				+mobile
+					width: auto
+				margin: 30px auto 0
+				border:
+					radius: 4px
+				padding: 14px 0
+				p
+					+font-set(15px, -.3px, 23px)
+	&.form-list-box
+		padding: 30px
+		margin:
+			bottom: 0
+		+mobile
+			padding: 30px 20px
+		li
+			+ li
+				margin:
+					top: 20px
+	&.bullet-dotted-box
+		border:
+			radius: 0
+		+mobile
+			padding: 20px
+
+
+
+// 0323
+// B - Container
+
+.container
+    width: 100%
+    height: 100%
+    max-width: 100%
+    overflow-y: auto
+
+
+// title.sass
+$title-line-height: 1.2
+$title-weight: 500
+$title-size: $size-6
+$title-color: $color-black
+
+
+
+// arrow
+.co-arrow
+    &.up
+        +co-arrow(up)
+        +prefix(transform, rotate(135deg))
+    &.down
+        +co-arrow(down)
+        +prefix(transform, rotate(-45deg))
+    &.left
+        +co-arrow(left)
+        +prefix(transform, rotate(45deg))
+    &.right
+        +co-arrow(right)
+        +prefix(transform, rotate(-135deg))
+
+
+
+
+// color
+.fc-blue
+	color : $color-blue
+	&:active, &:focus 
+		color : $color-blue

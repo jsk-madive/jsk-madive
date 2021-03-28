@@ -1,0 +1,40 @@
+=prefix($property, $value) 
+    -webkit-#{$property}: #{$value}
+    -moz-#{$property}: #{$value}
+    -ms-#{$property}: #{$value}
+    #{$property}: #{$value}
+
+=prefix02($property, $value, $value02) 
+    -webkit-#{$property}: #{$value} #{$value02}
+    -moz-#{$property}: #{$value} #{$value02}
+    -ms-#{$property}: #{$value} #{$value02}
+    #{$property}: #{$value} #{$value02}
+
+
+=co-arrow($direction)
+    border: 3px solid $color-black
+    border-right: 0
+    border-top: 0
+    content: ''
+    display: inline-block
+    height: 13px
+    width: 13px
+    pointer-events: none
+    +prefix(transform-origin, center)
+
+
+    @if $direction == up
+        +prefix(transform, rotate(135deg))
+    @else if $direction == down
+        +prefix(transform, rotate(-45deg))
+    @else if $direction == left
+        +prefix(transform, rotate(45deg))
+    @else if $direction == right
+        +prefix(transform, rotate(-135deg))
+
+
+=font-set($font-size, $spacing, $line-height)
+    font:
+        size: $font-size
+    letter-spacing: $spacing
+    line-height: $line-height
