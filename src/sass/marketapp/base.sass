@@ -1,0 +1,45 @@
+/** 
+ reset 
+ **/
+
+
+
+// minireset.sass
+$body-family: $family-primary
+
+
+html, body
+    height: 100%
+
+.skip
+    position: absolute
+    overflow: hidden
+    clip: rect(0 0 0 0)
+    margin: -1px
+    padding: 0
+    width: 1px
+    height: 1px
+    border: 0
+
+.hide
+    overflow: hidden
+    text-indent: 100%
+    white-space: nowrap
+
+#skipnav
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 101
+
+    > a
+        text-align: center
+        font-size: 0
+
+        &:focus, &:active
+            left: 0
+            font-size: $size-4
+            color: $color-white
+            display: block
+            background-color: $color-blue

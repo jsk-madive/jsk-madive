@@ -82,45 +82,8 @@ $border-color   : $color-gray07
 	.is-border-#{$position}
 		border-#{$position}: 1px solid $border-color
 
-/* 타이틀 */
-$title-point-color: $color-red
-// B - Title
 
 
-
-.title-field
-	padding:
-		bottom: 30px
-		left: $gap
-		right: $gap
-	+desktop
-		padding:
-			left: 0px
-			right: 0px
-	.title
-		&:not(:last-child)
-			margin: 
-				bottom: 15px
-	p
-		+font-set(15px, -.3px, 23px)
-		+ p
-			margin: 
-				top: 4px
-			+font-set(13px, -.26px, 21px)
-			color: $title-point-color
-	&.type-2
-		text-align: center
-	&.type-3
-		border:
-			bottom: none
-		margin:
-			top: 50px
-
-	&.is-centered
-		text-align: center
-
-	&.is-right
-		text-align: right
 
 /* Search */
 .is-search
@@ -220,116 +183,74 @@ $welcome-box-title-color   : $color-black03
 $welcome-box-sub-copy-color: $color-gray05
 
 .login
-	// padding:
-	// 	top: 100px
-	// +mobile
-	// 	padding:
-	// 		top: 20px
-	h1
-		// padding:
-		// 	bottom: 30px
-		// border:
-		// 	bottom: 1px solid $border-color
-		span
-			display: block
-			text-align: center
-			img
-				width: 120px
-				height: 34px
-		strong
-			+font-set(30px, -1.8px, 45px)
-			margin:
-				top: 15px
-			display: block
-			text-align: center
-			font:
-				weight: 300
-		+ .form-grid
-			margin: 
-				top: calc(30px - #{$column-gap})
-			+mobile
-				margin: 
-					top: calc(40px - #{$column-gap})
-		+ .complete-grid
-			padding:
-				top: 100PX
-			border:
-				top: 1px solid $border-color
-			margin:
-				top: 30px
-		&.is-hidden-mobile
-			+ .complete-grid
-				+mobile
-					margin:
-						top: 0px
-					padding:
-						top: 40px
-					border:
-						top: none
-	.form-grid
-		+mobile
-			width: auto
-		.field
-			&:not(:last-child)
-				margin-bottom: calc(10px - #{$column-gap})
-		.filed-grid
-			+ .buttons
-				margin:
-					top: 20px
-
-		// .buttons
-		.util
-			margin:
-				top: 15px
-				bottom: 0
-				
-				
-			.checkbox
-				+font-set(14px, 0px, 20px)
-			//.util-link
-			//	justify-content: flex-end
-				a
-					display: flex
-					+font-set(14px, -.28px, 22px)
-					padding:
-						left: 8px
-						right: 7px
-					color: $search-link-color
-					position: relative
-					&::before							
-						content: ''
-						width: 1px
-						height: 12px
-						background:
-							color: $search-link-hypen
-						position: absolute
-						top: 50%
-						left: 0
-						transform: translateY(-50%)
-					&:first-child
-						&::before
-							display: none
-					&:last-child
-						padding:
-							right: 0
-			.util-link
-				a
-					display: inline-block
-					+font-set(14px, -.28px, 22px)
-					vertical-align: top
-					&:first-child
-						padding:
-							left: 0
-	.join
+	+ .complete-grid
+		padding:
+			top: 100PX
+		border:
+			top: 1px solid $border-color
 		margin:
-			top: 50px
-			bottom: 0
-		+ .join
-			margin:
-				top: 25px
-		.is-text
-			margin:
+			top: 30px
+		
+.field
+	&:not(:last-child)
+		margin-bottom: calc(10px - #{$column-gap})
+.filed-grid
+	+ .buttons
+		margin:
+			top: 20px
+
+// .buttons
+.util
+	margin:
+		top: 15px
+		bottom: 0
+		
+		
+	.checkbox
+		+font-set(14px, 0px, 20px)
+	//.util-link
+	//	justify-content: flex-end
+		a
+			display: flex
+			+font-set(14px, -.28px, 22px)
+			padding:
+				left: 8px
+				right: 7px
+			color: $search-link-color
+			position: relative
+			&::before							
+				content: ''
+				width: 1px
+				height: 12px
+				background:
+					color: $search-link-hypen
+				position: absolute
+				top: 50%
 				left: 0
+				transform: translateY(-50%)
+			&:first-child
+				&::before
+					display: none
+			&:last-child
+				padding:
+					right: 0
+	.util-link
+		a
+			display: inline-block
+			+font-set(14px, -.28px, 22px)
+			vertical-align: top
+			&:first-child
+				padding:
+					left: 0
+.join
+	margin:
+		top: 50px
+	+ .join
+		margin:
+			top: 25px
+	.is-text
+		margin:
+			left: 0
 			
 
 /* 통합회원 가입 Gate */
@@ -1428,6 +1349,13 @@ $loading-box-background-color: rgba($color-black, 0.1)
 .msg
 	margin: 
 		top: 5px
+
+
+.chktxtarea
+	.level
+		margin: 
+			bottom: 8px
+				
 
 // column.has-addons
 .columns

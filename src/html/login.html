@@ -8,7 +8,7 @@
     })
     <!-- container -->
     <div id="contents" class="container">
-        <div class="login is-mobile-inner is-centered">
+        <section class="login section">
             <div class="title-field is-centered">
                 <h2 class="title is-4">로그인을 해주세요</h2>
             </div>
@@ -28,6 +28,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <div class="buttons">
                     <button type="button" class="button is-medium is-black is-fullwidth">
@@ -35,20 +36,20 @@
                     </button>
                 </div>
 
-                <div class="level util is-mobile">
-                    <div class="level-left">
-                        <label class="checkbox">
-                            <input type="checkbox">
-                            <i></i>
-                            <strong>로그인 유지하기</strong>
-                        </label>
+                    <div class="level util is-mobile">
+                        <div class="level-left">
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <i></i>
+                                <strong>로그인 유지하기</strong>
+                            </label>
+                        </div>
+                        <div class="level-right util-link">
+                            <a href="javascript:;" class="fc-blue">비밀번호를 잊으셨나요?</a>
+                        </div>
                     </div>
-                    <div class="level-right util-link">
-                        <a href="#" class="fc-blue">비밀번호를 잊으셨나요?</a>
-                    </div>
-                </div>
 
-                <div class="level util is-mobile">
+                <div class="level util">
                     <p class="level-item has-text-centered">
                         아직 회원이 아니신가요? <a href="#" class="fc-blue pl-2">회원가입</a>
                     </p>
@@ -56,17 +57,17 @@
 
                 <div class="buttons is-centered">
                     <button type="button" class="button is-medium is-yellow is-fullwidth">
-                      카카오톡 로그인
+                        카카오톡 로그인
                     </button>
                     <button type="button" class="button is-medium is-ygreen is-fullwidth">
-                      네이버 로그인
+                        네이버 로그인
                     </button>
                     <button type="button" class="button is-medium is-cred is-fullwidth">
-                      구글 로그인
+                        구글 로그인
                     </button>
-                  </div>
+                </div>
             </div>
-        </div>
+        </section>
     </div>
     <!-- // container -->
     @@include('./include/btm_nav.html')

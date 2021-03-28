@@ -1,12 +1,30 @@
-// button.sass
+
+/** 
+	Button
+ **/
+
+/* button.sass */
+
+
+
+$button-hover-color: $border
+
+$text-strong: $color-black
+
+$link-hover: $border
+$link-hover-border: $border
+
+$link-focus: $border
+$link-focus-border: $border
+
+$link-active: $border
+$link-active-border: $border
+
+
 $button-gray-bg-color          : $color-gray06
 $button-gray-hover-bg-color    : $color-gray08
 $button-gray-active-bg-color   : $color-gray08
 $button-gray-color             : $color-white
-$button-green-bg-color         : $color-blue
-$button-green-hover-bg-color   : $color-green02
-$button-green-active-bg-color  : $color-green02
-$button-green-color            : $color-white
 $button-outline-hover-color    : $color-blue
 $button-text-color             : $color-gray05
 
@@ -39,7 +57,6 @@ $button-cred-bg-color         : $color-red02
 $button-cred-hover-bg-color   : $color-red02
 $button-cred-active-bg-color  : $color-red02
 $button-cred-color            : $color-black 
-
 
 // is-outline
 $button-outline-bg-color       : $color-white
@@ -74,49 +91,18 @@ $button-outline-color          : $color-blue
 	&.is-small
 		&:not(.is-rounded)
 		border-radius: 4px
+
 	&.is-gray
 		background:
 			color: $button-gray-bg-color
 		color: $button-gray-color
 		border: none
-		transition: background .2s
-		+desktop
-			&:hover
-				background: 
-					color: $button-gray-hover-bg-color
-		+tablet-only
-			&:active
-				background: 
-					color: $button-gray-active-bg-color
-		+mobile
-			&:active
-				background: 
-					color: $button-gray-active-bg-color
-	&.is-green
-		background:
-			color: $button-green-bg-color
-		color: $button-green-color
-		border: none
-		transition: background .2s
-		+desktop
-			&:hover
-				background: 
-					color: $button-green-hover-bg-color
-		+tablet-only
-			&:active
-				background: 
-					color: $button-green-active-bg-color
-		+mobile
-			&:active
-				background: 
-					color: $button-green-active-bg-color
-	// 0323
+
 	&.is-blue
 		background:
 			color: $button-blue-bg-color
 		color: $button-blue-color
 		border: none
-		transition: background .2s
 		&:active
 			background: 
 				color: $button-blue-active-bg-color
@@ -126,7 +112,6 @@ $button-outline-color          : $color-blue
 			color: $button-black-bg-color
 		color: $button-black-color
 		border: none
-		transition: background .2s
 		&:active
 			background: 
 				color: $button-black-active-bg-color
@@ -136,7 +121,6 @@ $button-outline-color          : $color-blue
 			color: $button-yellow-bg-color
 		color: $button-yellow-color
 		border: none
-		transition: background .2s
 		&:active
 			background: 
 				color: $button-yellow-active-bg-color
@@ -146,7 +130,6 @@ $button-outline-color          : $color-blue
 			color: $button-ygreen-bg-color
 		color: $button-ygreen-color
 		border: none
-		transition: background .2s
 		&:active
 			background: 
 				color: $button-ygreen-active-bg-color
@@ -156,7 +139,6 @@ $button-outline-color          : $color-blue
 			color: $button-cred-bg-color
 		color: $button-cred-color
 		border: none
-		transition: background .2s
 		&:active
 			background: 
 				color: $button-cred-active-bg-color
@@ -166,10 +148,23 @@ $button-outline-color          : $color-blue
 			color: $button-outline-bg-color
 		border: 1px solid $button-outline-border-color
 		color: $button-outline-color
+	//Status
 	&:hover,
-	&.focus
-		&:not(.is-outline)
-			border: none
+	&.is-hovered
+		border-color: $border
+		color: $color-black
+	&:focus,
+	&.is-focused
+		border-color: $border
+		color: $color-black
+		&:not(:active)
+		box-shadow: none
+	&:active,
+	&.is-active
+		border-color: $border
+		color: $color-black
+
+
 	&:focus:not(:active),
 	&.is-focused:not(:active)
 		box-shadow: none
@@ -185,24 +180,13 @@ $button-outline-color          : $color-blue
 			background: none
 			color: $button-text-color
 
-// buttons
-%buttons-is-fixed
-	+mobile
-		&.is-fixed
-			width: 100%
-			background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%)
-			margin: 
-				top: 0
-			position: fixed
-			bottom: 0px
-			left: 0px
-			padding: 
-				left: 16px
-				right: 16px
-				bottom: 34px
-				top: 30px
-			z-index: 10
+	&.btn-search
+		background:
+			color: $color-white
+		border: 1px solid $color-gray02
+		color: $color-gray02
 
+// buttons
 .buttons
 	margin: 
 		bottom: 0
@@ -245,11 +229,6 @@ $button-outline-color          : $color-blue
 						margin:
 							top: 15px
 					
-	&.is-reverse
-		+mobile
-			flex-direction: column-reverse
-
-	
 	&.is-multirow
 		margin:
 			top: 40px
@@ -258,8 +237,6 @@ $button-outline-color          : $color-blue
 					margin-top: 6px
 
 	
-	@extend %buttons-is-fixed
-
 // box.sass
 $box-gray-background-color : $color-white02
 $box-white-background-color: $color-white
@@ -336,10 +313,7 @@ $box-complete-color2       : $color-gray05
 			padding: 20px
 
 
-
-// 0323
-// B - Container
-
+// container(container.sass)
 .container
     width: 100%
     height: 100%
@@ -347,11 +321,45 @@ $box-complete-color2       : $color-gray05
     overflow-y: auto
 
 
-// title.sass
-$title-line-height: 1.2
-$title-weight: 500
-$title-size: $size-6
-$title-color: $color-black
+/** 
+	Title
+ **/
+
+// title
+.title-field
+	padding:
+		bottom: 30px
+	.title
+		font-family: $body-family
+		letter-spacing: -0.23px
+		&:not(:last-child)
+			margin: 
+				bottom: 15px
+	p
+		+font-set(15px, -.3px, 23px)
+		+ p
+			+font-set(13px, -.26px, 21px)
+	&.type-2
+		text-align: center
+	&.type-3
+		border:
+			bottom: none
+		margin:
+			top: 50px
+	&.is-centered
+		text-align: center
+	&.is-right
+		text-align: right
+
+	&.title-underline
+		padding: 
+			top: 30px
+			bottom: 15px
+		border: 
+			bottom: 2px solid $color-black
+
+
+
 
 
 
@@ -370,11 +378,10 @@ $title-color: $color-black
         +co-arrow(right)
         +prefix(transform, rotate(-135deg))
 
-
-
-
 // color
-.fc-blue
+a.fc-blue
 	color : $color-blue
-	&:active, &:focus 
+	&:active,
+	&:focus,
+	&:active
 		color : $color-blue

@@ -1,14 +1,7 @@
-$input-radio-checked-color                    : $color-blue
-$input-checkbox-checked-background-color      : $color-blue
-$input-checkbox-checked-border-color          : $color-blue
-$input-checkbox-checekd-color                 : $color-white
-$input-radio-checkbox-default-bacgkround-color: $color-white
 
-$input-label-color                            : $color-black03
-$input-disabled-background-color-2            : $color-white
-$input-disabled-color-2                       : $color-black03
-$input-hover-border-color                      : $color-blue
+
 	
+
 %form-radio-checkbox
 	position: relative
 	padding: 
@@ -215,3 +208,12 @@ $input-readonly-color-2           : $color-black03
 	&:not(:last-child)
 		margin:
 			bottom: calc(25px - #{$column-gap})
+
+/*
+	Tools*/
+
+// tools.sass
+
+.level
+	+ .control
+		margin-bottom: 5px

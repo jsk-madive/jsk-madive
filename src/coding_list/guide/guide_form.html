@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<title>Input 가이드</title>
 	<link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/css/style.css">
 
@@ -34,55 +35,39 @@
 
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="field">
-				<div class="control">
-					<input type="text" class="input is-medium" placeholder="This text is value">
-				</div>
-			</div>
-			<div class="field">
-				<div class="control">
-					<input type="text" class="input is-medium" value="This text is value"
-						placeholder="This text is value">
-				</div>
-			</div>
+		<div class="field">
+			<input type="text" class="input is-medium" placeholder="Input Text">
+		</div>
+		<div class="field">
+			<input type="text" class="input is-medium" placeholder="Input Text Disabled" disabled>
+		</div>
+		<div class="field">
+			<input type="text" class="input is-medium" value="Input Text ReadOnly"
+						placeholder="This text is value" readonly>
 		</div>
 		<!-- // View -->
 
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<input type="text" class="input is-medium" placeholder="This text is value">
+<input type="text" class="input is-medium" placeholder="Input Text">
+<input type="text" class="input is-medium" placeholder="Input Text Disabled" disabled>
+<input type="text" class="input is-medium" value="Input Text ReadOnly"
+			placeholder="This text is value" readonly>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-
-
-		<!-- code -->
-		<div class="d_desc code">
-			<xmp class="prettyprint linenums javascript">
-/*
-* readonly일때 배경과 텍스트 색상이 일반과 동일할경우 class="is-readonly"
-*/
-<input type="text" class="input is-medium" placeholder="This text is disabled"
-	value="This text is disabled" disabled>
-<input type="text" class="input is-medium" placeholder="This text is readonly"
-	value="This text is readonly" readonly>
-<input type="text" class="input is-medium input is-medium is-readonly"
-	placeholder="This text is readonly" value="This text is readonly" readonly>
-			</xmp>
-		</div>
-		<!-- // code -->
 
 		<h2 class="h2_guide">Input Box Add Button</h2>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="columns add-util-btn is-mobile">
 				<div class="control column">
-					<input type="text" class="input is-medium">
+					<input type="text" class="input">
 				</div>
 				<div class="column is-one-quarter">
-					<button type="button" class="button is-medium is-green">중복확인</button>
+					<button type="button" class="button is-medium is-blue">중복확인</button>
 				</div>
 			</div>
 		</div>
@@ -91,14 +76,14 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="columns add-util-btn is-mobile">
-	<div class="control column">
-		<input type="text" class="input is-medium">
-	</div>
-	<div class="column is-one-quarter">
-		<button type="button" class="button is-medium is-green">중복확인</button>
-	</div>
-</div>
+				<div class="columns add-util-btn is-mobile">
+					<div class="control column">
+						<input type="text" class="input">
+					</div>
+					<div class="column is-one-quarter">
+						<button type="button" class="button is-medium is-blue">중복확인</button>
+					</div>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -107,27 +92,56 @@
 		<h2 class="h2_guide">Input Box has-addons Button</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-<div class="columns has-addons certify-box is-mobile">
-	<div class="column is-10">
-		<input class="input is-medium" type="text" placeholder="입력">
-	</div>
-	<div class="column is-2">
-		<button class="button is-medium is-blue is-fullwidth">확인</button>
-	</div>
-</div>
+			<div class="columns has-addons certify-box is-mobile">
+				<div class="column is-10">
+					<input class="input is-medium" type="text" placeholder="입력">
+				</div>
+				<div class="column is-2">
+					<button class="button is-medium is-blue is-fullwidth">확인</button>
+				</div>
+			</div>
 		</div>
 		<!-- // View -->
 
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="columns has-addons certify-box is-mobile">
-	<div class="column is-10">
-		<input class="input is-medium" type="text" placeholder="입력">
-	</div>
-	<div class="column is-2">
-		<button class="button is-medium is-blue is-fullwidth">확인</button>
-	</div>
+				<div class="columns has-addons certify-box is-mobile">
+					<div class="column is-10">
+						<input class="input is-medium" type="text" placeholder="입력">
+					</div>
+					<div class="column is-2">
+						<button class="button is-medium is-blue is-fullwidth">확인</button>
+					</div>
+				</div>
+			</xmp>
+		</div>
+		<!-- // code -->
+
+		<h2 class="h2_guide">Input Search</h2>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field has-addons">
+                <p class="control is-expanded">
+                    <input class="input" type="tel" placeholder="예) 센텀시티, 전민동">
+                </p>
+                <p class="control">
+                    <button class="button btn-search"><span>검색</span></button>
+                </p>
+            </div>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<div class="field has-addons">
+	<p class="control is-expanded">
+		<input class="input" type="tel" placeholder="예) 센텀시티, 전민동">
+	</p>
+	<p class="control">
+		<button class="button btn-search"><span>검색</span></button>
+	</p>
 </div>
 			</xmp>
 		</div>
@@ -153,17 +167,17 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="columns has-addons certify-box is-mobile">
-	<div class="column is-2">
-		<div class="time-limt is-medium is-fullwidth">03:00</div>
-	</div>
-	<div class="column is-8">
-		<input class="input is-medium" type="number" placeholder="인증번호 입력">
-	</div>
-	<div class="column is-2">
-		<button class="button is-medium is-blue is-fullwidth">확인</button>
-	</div>
-</div>
+				<div class="columns has-addons certify-box is-mobile">
+					<div class="column is-2">
+						<div class="time-limt is-medium is-fullwidth">03:00</div>
+					</div>
+					<div class="column is-8">
+						<input class="input is-medium" type="text" placeholder="인증번호 입력">
+					</div>
+					<div class="column is-2">
+						<button class="button is-medium is-blue is-fullwidth">확인</button>
+					</div>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -182,20 +196,19 @@
 					<strong>Checkbox</strong>
 				</label>
 			</div>
-
 		</div>
 		<!-- // View -->
 
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="control">
-	<label class="checkbox">
-		<input type="checkbox">
-		<i></i>
-		<strong>Checkbox</strong>
-	</label>
-</div>
+				<div class="control">
+					<label class="checkbox">
+						<input type="checkbox">
+						<i></i>
+						<strong>Checkbox</strong>
+					</label>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -203,9 +216,8 @@
 		<h2 class="h2_guide">Checkbox / Text</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			
 			<div class="field">
-				<div class="level util is-mobile">
+				<div class="level util">
 					<p class="level-left">
 						<label class="checkbox">
 							<input type="checkbox">
@@ -221,17 +233,58 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="field">
-	<div class="level util is-mobile">
-		<p class="level-left">
-			<label class="checkbox">
-				<input type="checkbox">
-				<i></i>
-				<strong>필수약관, 선택약관 모두에 동의합니다.</strong>
-			</label>
-		</p>
-	</div>
-</div>
+				<div class="field">
+					<div class="level util">
+						<p class="level-left">
+							<label class="checkbox">
+								<input type="checkbox">
+								<i></i>
+								<strong>필수약관, 선택약관 모두에 동의합니다.</strong>
+							</label>
+						</p>
+					</div>
+				</div>
+			</xmp>
+		</div>
+		<!-- // code -->
+
+		<h2 class="h2_guide">Checkbox / Text right</h2>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field">
+				<div class="level util is-mobile">
+					<div class="level-left">
+						<label class="checkbox">
+							<input type="checkbox">
+							<i></i>
+							<strong>로그인 유지하기</strong>
+						</label>
+					</div>
+					<div class="level-right util-link">
+						<a href="javascript:;" class="fc-blue">비밀번호를 잊으셨나요?</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+				<div class="field">
+					<div class="level util is-mobile">
+						<div class="level-left">
+							<label class="checkbox">
+								<input type="checkbox">
+								<i></i>
+								<strong>로그인 유지하기</strong>
+							</label>
+						</div>
+						<div class="level-right util-link">
+							<a href="javascript:;" class="fc-blue">비밀번호를 잊으셨나요?</a>
+						</div>
+					</div>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -242,7 +295,7 @@
 		<h2 class="h2_guide">Title + 입력폼 / 기본</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="columns">
+			<div class="columns is-mobile">
 				<div class="column">
 					<label class="label">이름</label>
 					<div class="control">
@@ -256,14 +309,14 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="columns">
-	<div class="column">
-		<label class="label">이름</label>
-		<div class="control">
-			<input type="text" class="input is-medium">
-		</div>
-	</div>
-</div>
+				<div class="columns is-mobile">
+					<div class="column">
+						<label class="label">이름</label>
+						<div class="control">
+							<input type="text" class="input is-medium">
+						</div>
+					</div>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -271,13 +324,13 @@
 		<h2 class="h2_guide">Title + 입력폼 / 3Column</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="columns">
+			<div class="columns is-mobile">
 				<div class="column">
 					<label class="label">생년월일</label>
 					<div class="columns">
-						<div class="column is-mobile">
+						<div class="column">
 							<div class="control">
-								<input type="number" class="input is-medium" placeholder="년">
+								<input type="text" class="input is-medium" placeholder="년">
 							</div>
 						</div>
 						<div class="column">
@@ -290,9 +343,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="column is-mobile">
+						<div class="column">
 							<div class="control">
-								<input type="number" class="input is-medium" placeholder="일">
+								<input type="text" class="input is-medium" placeholder="일">
 							</div>
 						</div>
 					</div>
@@ -304,31 +357,33 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="column">
-	<label class="label">생년월일</label>
-	<div class="columns">
-		<div class="column is-mobile">
-			<div class="control">
-				<input type="text" class="input is-medium" placeholder="년">
-			</div>
-		</div>
-		<div class="column">
-			<div class="control">
-				<div class="select is-medium is-fullwidth">
-					<select>
-						<option value="self" selected="selected">월</option>
-						<option>1월</option>
-					</select>
+				<div class="columns is-mobile">
+					<div class="column">
+						<label class="label">생년월일</label>
+						<div class="columns">
+							<div class="column">
+								<div class="control">
+									<input type="text" class="input is-medium" placeholder="년">
+								</div>
+							</div>
+							<div class="column">
+								<div class="control">
+									<div class="select is-medium is-fullwidth">
+										<select>
+											<option value="self" selected="selected">월</option>
+											<option>1월</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="control">
+									<input type="text" class="input is-medium" placeholder="일">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</div>
-		<div class="column is-mobile">
-			<div class="control">
-				<input type="text" class="input is-medium" placeholder="일">
-			</div>
-		</div>
-	</div>
-</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -340,8 +395,8 @@
 		<h2 class="h2_guide">Checkbox + Textarea</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="field">
-				<div class="level util is-mobile">
+			<div class="field chktxtarea">
+				<div class="level util">
 					<p class="level-left">
 						<label class="checkbox">
 							<input type="checkbox">
@@ -350,7 +405,7 @@
 						</label>
 					</p>
 				</div>
-				<div class="control mt-2">
+				<div class="control">
 					<textarea class="textarea is-medium">개인정보 처리방침</textarea>
 				</div>
 			</div>
@@ -360,20 +415,20 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<div class="field">
-	<div class="level util is-mobile">
-		<p class="level-left">
-			<label class="checkbox">
-				<input type="checkbox">
-				<i></i>
-				<strong>개인정보 처리방침(필수)</strong>
-			</label>
-		</p>
-	</div>
-	<div class="control mt-2">
-		<textarea class="textarea is-medium">개인정보 처리방침</textarea>
-	</div>
-</div>
+				<div class="field chktxtarea">
+					<div class="level util">
+						<p class="level-left">
+							<label class="checkbox">
+								<input type="checkbox">
+								<i></i>
+								<strong>개인정보 처리방침(필수)</strong>
+							</label>
+						</p>
+					</div>
+					<div class="control">
+						<textarea class="textarea is-medium">개인정보 처리방침</textarea>
+					</div>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -386,7 +441,7 @@
 		<h2 class="h2_guide">input validation 하단 문구표시 / 기본</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="columns">
+			<div class="columns is-mobile">
 				<div class="column">
 					<label class="label">이름</label>
 					<div class="control">
@@ -401,18 +456,18 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-/*
-* 메세지가 표시될 class="columns" 형재 요소로 <p class="msg">메세지</p> 추가
-*/
-<div class="columns">
-	<div class="column">
-		<label class="label">이름</label>
-		<div class="control">
-			<input type="text" class="input is-medium">
-		</div>
-	</div>
-</div>
-<p class="msg">메세지</p>
+				<!--
+	- 메세지가 표시될 class="columns" 형재 요소로 <p class="msg">메세지</p> 추가
+-->
+				<div class="columns is-mobile">
+					<div class="column">
+						<label class="label">이름</label>
+						<div class="control">
+							<input type="text" class="input is-medium">
+						</div>
+					</div>
+				</div>
+				<p class="msg">메세지</p>
 			</xmp>
 		</div>
 		<!-- // code -->
@@ -420,7 +475,7 @@
 		<h2 class="h2_guide">input validation 하단 문구 표시 / error</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="columns is-error">
+			<div class="columns is-error is-mobile">
 				<div class="column">
 					<label class="label">이름</label>
 					<div class="control">
@@ -435,18 +490,20 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-/*
-* 메세지가 표시될 class="columns" class="is-error" 추가
-*/
-<div class="columns is-error">
-	<div class="column">
-		<label class="label">이름</label>
-		<div class="control">
-			<input type="text" class="input is-medium">
-		</div>
-	</div>
-</div>
-<p class="msg">메세지</p>
+				<!--
+  메세지가 표시될 class="columns" class="is-error" 추가
+-->
+				<div class="guide_wrap">
+					<div class="columns is-error is-mobile">
+						<div class="column">
+							<label class="label">이름</label>
+							<div class="control">
+								<input type="text" class="input is-medium">
+							</div>
+						</div>
+					</div>
+					<p class="msg">메세지</p>
+				</div>
 			</xmp>
 		</div>
 		<!-- // code -->

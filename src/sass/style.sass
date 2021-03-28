@@ -62,13 +62,12 @@ $size-9: 12px
 
 $weight-black: 900
 
-
 $border-color : $color-gray09
 
-// derived-variables.address-list-box
-$link-hover: $color-black
+$block-spacing: 15px
 
-
+// derived-variables.sass
+$family-primary: $family-sans-serif
 
 // 
 //  [B - Base]   //
@@ -79,6 +78,9 @@ $body-background-color: $color-white
 $body-min-width: 280px
 $body-font-size: 16px
 $body-line-height: 1.2
+$body-color              : $color-black
+
+$link                    : $color-black
 
 $widescreen-enabled: false
 $fullhd-enabled: false
@@ -89,32 +91,24 @@ $container-max-width: 100%
 $link: $color-black
 $body-color: $color-black
 
+// 
+//  [B - Grid]   //
 
+// grid.sass
+$column-gap: 6px
+//   
 
 // 
 //  [B - Utilities]  //
 //   
 $navbar-height: 5.125rem    // navbar / 16px
 
-
-
-
-
-// shared.sass
-// $input-color: $color-black03
-// $input-border-color: $color-gray09
+// control.sass
 $input-focus-border-color: $color-gray
 $input-shadow: none
-// $input-focus-box-shadow-size: 0 0 0 0
-// $input-placeholder-color: $color-gray06
-// $input-hover-border-color: $color-gray09
-// $input-disabled-background-color: $color-white02
-// $input-disabled-border-color: $color-gray09
-// $input-disabled-color: $color-gray06
-// $input-disabled-placeholder-color: $color-gray06
 
-// grid.sass
-$column-gap: 6px
+
+
 
 // modal.sass
 $modal-background-background-color: rgba(0, 0, 0, .3)
@@ -132,17 +126,6 @@ $size-normal: $size-6
 // box.sass
 $box-padding: 20px 30px
 
-// tabs.sass
-// $tabs-toggle-link-border-color: $color-gray09
-// $tabs-toggle-link-hover-border-color: $color-gray09
-// $tabs-toggle-link-hover-background-color: $color-white02
-// $tabs-toggle-link-active-background-color: $color-white
-// $tabs-toggle-link-active-border-color: $color-blue
-// $tabs-toggle-link-active-color: $color-blue
-// $tabs-link-color: $color-gray06
-// $tabs-link-hover-color: $color-gray06
-// $tabs-link-active-color: $color-black
-
 // Image Path
 $image-path: '/img/'
 
@@ -150,30 +133,51 @@ $image-path: '/img/'
 //  [B] Form
 // -------------    
 
-// shared.sass (input css)
+// shared.sass //
 $input-color: $color-black  // text
-$input-border-color: $color-gray
+
+$input-border-color: $color-gray02
+
 $input-radius: 4px
+$input-hover-border-color: $color-gray
+
 $input-focus-border-color: none
 $input-focus-box-shadow-size: 0
 $input-focus-box-shadow-color: transparent
+
+$input-radio-checked-color: $color-blue
+$input-radio-checkbox-default-bacgkround-color: $color-white
+
+$input-checkbox-checked-background-color: $color-blue
+$input-checkbox-checked-border-color: $color-blue
+$input-checkbox-checekd-color: $color-white
+
+$input-label-color: $color-black03
+$input-disabled-background-color-2: $color-white
+$input-disabled-color-2 : $color-black03
+
 
 // tools.sass
 
 // -------------
 //  [B] Elements
-// -------------                 
-
+// -------------
+// title.sass
+$title-family: true
+$title-size: $size-4
+$title-weight: 700
 
 
 // button.sass
+
+
 
 // -------------
 //  [B] Layout  
 // -------------
 
 // section
-$section-padding: 0 16px 16px
+$section-padding : 0 $gap $gap $gap
 
 // -------------
 // [B]  Components  
@@ -190,7 +194,8 @@ $radius-small: 4px
 $radius: 5px
 
 // derived-variables.sass
-$text-strong: $color-black
+
+
 
 // controls.sass
 $control-radius: 6px // 버튼
@@ -198,11 +203,6 @@ $control-height: 50px
 $control-padding-vertical: 13px
 $control-padding-horizontal: 15px
 $control-radius: 0px
-
-
-
-
-
 
 
 
@@ -216,18 +216,16 @@ $control-radius: 0px
 @import 'helpers/_all'
 
 
+
 // custom css
 @import 'marketapp/_all'
+
 
 /** 0323 **/
 
 // generic.sass
-$link                    : $color-black
-$body-color              : $color-black
 
-// title.sass
-$title-color: $color-black
-$title-weight: $strong-weight
+
 
 // controls.sass 
 $control-height            : 50px
@@ -236,21 +234,8 @@ $control-padding-horizontal: 15px
 $control-radius            : 0px
 
 // shared.sass
-$input-radius                      : 0px
-$input-color                       : $color-black03
-$input-border-color                : $color-gray09
-$input-focus-border-color          : $color-gray09
-$input-shadow                      : none
-$input-focus-box-shadow-size       : 0 0 0 0
-$input-placeholder-color           : $color-gray06
-$input-hover-border-color          : $color-gray09
-$input-disabled-background-color   : $color-white02
-$input-disabled-border-color       : $color-gray09
-$input-disabled-color              : $color-gray06
-$input-disabled-placeholder-color  : $color-gray06
 
-// grid.sass
-$column-gap: 6px
+
 
 // modal.sass
 $modal-background-background-color: rgba(0, 0, 0, .3)
@@ -267,7 +252,6 @@ $modal-content-width              : 550px
 // tools.sass
 $label-weight: 400
 $label-color : $color-gray04
-$size-normal : $size-6
 
 // box.sass
 $box-padding: 20px 30px
@@ -285,46 +269,6 @@ $tabs-link-hover-color                   : $color-gray06
 $tabs-link-active-color                  : $color-black
 
 
-
-/** 
- minireset 
- **/
-
-html, body
-    height: 100%
-
-.skip
-    position: absolute
-    overflow: hidden
-    clip: rect(0 0 0 0)
-    margin: -1px
-    padding: 0
-    width: 1px
-    height: 1px
-    border: 0
-
-.hide
-    overflow: hidden
-    text-indent: 100%
-    white-space: nowrap
-
-#skipnav
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    z-index: 101
-
-    > a
-        text-align: center
-        font-size: 0
-
-        &:focus, &:active
-            left: 0
-            font-size: $size-4
-            color: $color-white
-            display: block
-            background-color: $color-blue
 
 
 // swiper
@@ -369,9 +313,10 @@ html, body
         overflow: hidden
         text-indent: 100%
         white-space: nowrap
-        width: 16px
+        width: 14px
         height: 14px
         display: inline-block
+
 
 /********
     Main     
@@ -410,6 +355,7 @@ html, body
         display: block
         font-size: $size-7
 
+
 // delivery-addr
 .delivery-addr
     width: 100%
@@ -436,10 +382,7 @@ html, body
             display: inline-block
 
         &:before
-            background: url(/img/ico_location.png) center/100% auto no-repeat
-            width: 17px
-            height: 20px
-            vertical-align: middle
+            +location
             left: 0
 
         &::after
@@ -509,6 +452,14 @@ html, body
         height: 22px
         display: inline-block
 
+.now-location
+    position: relative
+    
+    &::before
+        +location
+        content: ''
+        margin:
+            right: 5px
 
 .content
     ul.list-non-type
@@ -518,76 +469,78 @@ html, body
         > li + li
             margin-top: 5px
 
-// basic-address
-.basic-address
-    > li
-        padding: 10px 0
-
-    .b-title
-        > span
-            font-size: $size-4
-            position: relative
-
-            &::before
-                background: url(/img/ico_bookmark.png) center/100% no-repeat
-                content: ''
-                width: 18px
-                height: 23px
-                display: inline-block
-                vertical-align: middle
-                margin-right: 10px
-
-.addr-list
-    > div
-        margin-top: 10px
-        margin-left: 0
-        font-size: $size-6
-
-        &.addr02
-            display: table
-            table-layout: fixed
-            width: 100%
-            font-size: $size-7
-
-            > div
-                display: table-cell
-
-                &:first-child
-                    width: 60px
-                &:last-child
-                    color: $color-gray03
-            .dpt
-                padding: 0 5px
-                border: 1px solid $color-gray
-                color: $color-black
-
-.basic-address.latest
-    position: relative
-    border-top: 1px solid $color-black
-
-    > li
+.address-box
+    padding: 10px 0
+    
+    
+    &.type02
+        position: relative
         border-bottom: 1px solid $color-gray
-        padding: 0 0 10px 0
+        padding: 
+            right: 30px
+
+        .co-delete
+            +co-delete
+            position: absolute
+            top: 5px
+            right: 0
+            font-size: 0
+
+                
+.addr-stitle
+    font-size: 0
+    margin: 
+        bottom: 10px
+    > span
+        font: 
+            size: $size-5
+            weight : 700
         position: relative
 
-        .co-del-btn
-            position: absolute
-            top: -5px
-            right: 0
+        &::before
+            background:
+                size: 100% auto
+                position: center
+                repeat: no-repeat
+            content: ''
+            width: 20px
+            height: 20px
+            display: inline-block
+            vertical-align: middle
+            margin: 
+                right: 5px
+                top: -2px
 
-            > span
-                width: 10px
-                height: 8px
+        &.addr-dpt01::before
+            background-image: url(/img/ico_addr01.png)
+        &.addr-dpt02::before
+            background-image: url(/img/ico_addr02.png)
+        &.addr-dpt03::before
+            background-image: url(/img/ico_addr03.png)
 
-    .addr-list > div
-        padding-right: 20px
 
+.addr01,
+.addr02
+    font-size: $size-7
 
-// title.sass
-$title-line-height: 2em
-$title-weight: 500
-$title-size: $size-6
-$title-color: $color-black
+.addr02
+    display: table
+    margin-top: 10px
+    table-layout: fixed
+    width: 100%
+    font-size: $size-7
+
+    > div
+        display: table-cell
+
+        &.left
+            width: 60px
+        &.right
+            color: $color-gray04
+    .dpt
+        padding: 0 5px
+        border: 1px solid $color-gray
+        color: $color-black
 
 .button
     align-items:  center

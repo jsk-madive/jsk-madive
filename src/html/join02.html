@@ -8,50 +8,46 @@
   })
   <!-- container -->
   <div id="contents" class="container">
-    <div class="login is-mobile-inner join pt-5 is-centered">
+    <div class="join section">
       <div class="title-field is-centered">
         <h2 class="title is-4">회원가입</h2>
       </div>
       <div class="form-grid">
         <div class="filed-grid">
-
-          <div class="columns add-util-btn">
+          <div class="field">
+            <label class="label" for="join-id">아이디</label>
+            <div class="columns add-util-btn is-mobile">
+              <div class="control column">
+                <input type="text" class="input" id="join-id">
+              </div>
+              <div class="column is-one-quarter">
+                <button type="button" class="button is-medium is-blue">중복확인</button>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
             <div class="column">
-              <label class="label">아이디</label>
-              <div class="columns add-util-btn is-mobile">
-                <div class="control column">
-                  <input type="text" class="input is-medium">
-                </div>
-                <div class="column is-one-quarter">
-                  <button type="button" class="button is-medium is-green">중복확인</button>
-                </div>
+              <label class="label" for="join-pw">비밀번호</label>
+              <div class="control">
+                <input type="password" class="input is-medium" id="join-pw">
               </div>
             </div>
           </div>
 
           <div class="columns">
             <div class="column">
-              <label class="label">비밀번호</label>
+              <label class="label" for="join_pw02">비밀번호 확인</label>
               <div class="control">
-                <input type="password" class="input is-medium">
+                <input type="password" class="input is-medium" id="join-pw02">
               </div>
             </div>
           </div>
 
           <div class="columns">
             <div class="column">
-              <label class="label">비밀번호 확인</label>
+              <label class="label" for="join-email">이메일</label>
               <div class="control">
-                <input type="password" class="input is-medium">
-              </div>
-            </div>
-          </div>
-
-          <div class="columns">
-            <div class="column">
-              <label class="label">이메일</label>
-              <div class="control">
-                <input type="text" class="input is-medium">
+                <input type="text" class="input is-medium" id="join-email">
               </div>
             </div>
           </div>
@@ -59,9 +55,9 @@
 
           <div class="columns">
             <div class="column">
-              <label class="label">이름</label>
+              <label class="label" for="join-name">이름</label>
               <div class="control">
-                <input type="text" class="input is-medium">
+                <input type="text" class="input is-medium" id="join-name">
               </div>
             </div>
           </div>
@@ -70,7 +66,7 @@
             <div class="column">
               <label class="label">생년월일</label>
               <div class="columns">
-                <div class="column is-mobile">
+                <div class="column">
                   <div class="control">
                     <input type="text" class="input is-medium" placeholder="년">
                   </div>
@@ -96,7 +92,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="column is-mobile">
+                <div class="column">
                   <div class="control">
                     <input type="text" class="input is-medium" placeholder="일">
                   </div>
@@ -115,7 +111,7 @@
           </div>
 
           <div class="field">
-            <button class="button is-large is-gray is-fullwidth">인증번호받기</button>
+            <button class="button is-medium is-gray is-fullwidth">인증번호받기</button>
           </div>
 
           <div class="columns has-addons certify-box is-mobile is-error">
