@@ -1,7 +1,7 @@
 
-/** 
+/*
 	Header
- **/
+ */
 
 .header
 	height: 50px
@@ -52,10 +52,16 @@
 				radius: 20px
 			+prefix02 (transform, rotate(-135deg), translate(22px, 15px))
 
+.bookmark
+	position: absolute
+	top: 0
+	right: 0
+	height: inherit
 
-/** 
+
+/* 
 	Skip navi
- **/
+ */
 .skipnavi
 	positon: absolute
 	top: 0
@@ -71,18 +77,19 @@
 			font: 
 				size: 14px
 
-/** 
+/*
 	Section
- **/
+ */
 
 // section.sass
 .section
 	padding: 0 $gap $gap $gap
+	background: $color-white
 
 
-/** 
+/* 
 	Contents
- **/
+ */
 #contents
 	&.container
 		> .title-field
@@ -91,15 +98,7 @@
 		> .complete-grid
 			padding:
 				top: 60px
-		> .login
-			padding:
-				top: 60px
-			&.button-fixed
-				padding:
-					bottom: 154px
-		> .join
-			&.is-centered 
-				justify-content: center
+
 			
 .contents-grid
 	padding:
@@ -108,14 +107,6 @@
 		padding:
 			top: 0
 
-
-.is-inner
-	padding:
-		left: $gap
-		right: $gap
-		bottom: $gap
-	overflow: hidden
-	
 
 // Bi-box
 $bi-box-border-color: $color-gray07

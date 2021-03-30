@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
-
-<body class="has-navbar-fixed-bottom">
+<body>
     @@include('./include/header.html',{
-    'title' : '로그인'
-    })
+        'backbtn' : true,
+        'title' : '로그인'
+      })
     <!-- container -->
     <div id="contents" class="container">
-        <section class="login section">
+        <div class="login section">
             <div class="title-field is-centered">
                 <h2 class="title is-4">로그인을 해주세요</h2>
             </div>
             <div class="form-grid">
-                <div class="filed-grid">
+                <div class="field-grid">
                     <div class="field">
                         <div class="columns">
                             <div class="control column">
@@ -67,10 +67,9 @@
                     </button>
                 </div>
             </div>
-        </section>
+        </div>
     </div>
     <!-- // container -->
-    @@include('./include/btm_nav.html')
 
 </body>
 

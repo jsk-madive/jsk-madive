@@ -1,9 +1,11 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Contents Guide</title>
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
+	<meta name="viewport"
+		content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
 	<link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/css/style.css">
 
@@ -15,43 +17,45 @@
 	<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
 	<script type="text/javascript" src="/js/style.js"></script>
 	<style>
-		.tag:not(body){
-			align-items : baseline;
-			background : none;
-			display : inline;
-			padding : 0;
-			height : auto;
+		.tag:not(body) {
+			align-items: baseline;
+			background: none;
+			display: inline;
+			padding: 0;
+			height: auto;
 		}
+
 	</style>
 </head>
+
 <body>
 
-<div id="wrap" class="coding_guide">
-	<h1 class="h1_guide">Contents Guide</h1>
+	<div id="wrap" class="coding_guide">
+		<h1 class="h1_guide">Contents Guide</h1>
 
+		<h2 class="h2_guide">탭메뉴</h2>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="tabs is-fullwidth">
+				<ul class="tab-list is-3">
+					<li class="on">
+						<h3 class="tab-title"><a href="javascript:;">음식배달</a></h3>
+					</li>
+					<li>
+						<h3 class="tab-title"><a href="javascript:;">전통시장</a></h3>
+					</li>
+					<li>
+						<h3 class="tab-title"><a href="javascript:;">쇼핑몰</a></h3>
+					</li>
+				</ul>
+			</div>
 
-	<h2 class="h2_guide">탭메뉴</h2>
-	<!-- View -->
-	<div class="guide_wrap">
-		<div class="tabs is-fullwidth" id="tabs">
-			<ul class="tab-list is-3">
-				<li class="on">
-					<h3 class="tab-title"><a href="javascript:;">음식배달</a></h3>
-				</li>
-				<li>
-					<h3 class="tab-title"><a href="javascript:;">전통시장</a></h3>
-				</li>
-				<li>
-					<h3 class="tab-title"><a href="javascript:;">쇼핑몰</a></h3>
-				</li>
-			</ul>
 		</div>
-	</div>
-	<!-- // View -->
+		<!-- // View -->
 
-<!-- Code -->
-<div class="d_desc code">
-	<xmp class="prettyprint linenums javascript">
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
 <!--- 
 	- 탭 개수에 따른 클래스 부여 : is-n  (is-2, is-3, is-4 ...) 
 -->
@@ -68,12 +72,302 @@
 		</li>
 	</ul>
 </div>
-	</xmp>
-</div>
-<!-- // Code -->
+			</xmp>
+		</div>
+		<!-- // Code -->
+
+<!-- --------------------------
+		주소
+ ---------------------------- -->
 
 
+		<h2 class="h2_guide">주소</h2>
+		
+		<!--  기본주소  -->
+		<h3 class="h3_guide">기본주소</h3>
+
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field">
+				<ul class="address-list">
+					<li class="address-box type01">
+						<h4 class="addr-stitle"><span class="addr-dpt01">음식배달</span></h4>
+						<div class="addr-cont">
+							<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+							<div class="addr02">
+								<div class="left"><span class="dpt">도로명</span></div>
+								<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+							</div>
+						</div>
+					</li>
+					<li class="address-box type01">
+						<h4 class="addr-stitle"><span class="addr-dpt02">전통시장</span></h4>
+						<div class="addr-cont">
+							<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+							<div class="addr02">
+								<div class="left"><span class="dpt">도로명</span></div>
+								<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+							</div>
+						</div>
+					</li>
+					<li class="address-box type01">
+						<h4 class="addr-stitle"><span class="addr-dpt03">택배</span></h4>
+						<div class="addr-cont">
+							<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+							<div class="addr02">
+								<div class="left"><span class="dpt">도로명</span></div>
+								<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // View -->
+
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!-- 
+	- Class : type01
+	- Icon Class : addr-dpt01 ~ addr-dpt03
+ -->
+<div class="field">
+	<ul class="address-list">
+		<li class="address-box type01">
+			<h4 class="addr-stitle"><span class="addr-dpt01">음식배달</span></h4>
+			<div class="addr-cont">
+				<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+				<div class="addr02">
+					<div class="left"><span class="dpt">도로명</span></div>
+					<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+				</div>
+			</div>
+		</li>
+		<li class="address-box type01">
+			<h4 class="addr-stitle"><span class="addr-dpt02">전통시장</span></h4>
+			<div class="addr-cont">
+				<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+				<div class="addr02">
+					<div class="left"><span class="dpt">도로명</span></div>
+					<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+				</div>
+			</div>
+		</li>
+		<li class="address-box type01">
+			<h4 class="addr-stitle"><span class="addr-dpt03">택배</span></h4>
+			<div class="addr-cont">
+				<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+				<div class="addr02">
+					<div class="left"><span class="dpt">도로명</span></div>
+					<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 </div>
-<script type="text/javascript" src="/coding_list/js/pretty.js"></script>
+			</xmp>
+		</div>
+		<!-- // Code -->
+
+		<!--  주소 삭제  -->
+		<h3 class="h3_guide">주소 삭제</h3>
+
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field">
+				<ul class="address-list">
+					<li class="address-box type02">
+						<div class="addr-cont">
+							<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+							<div class="addr02">
+								<div class="left"><span class="dpt">도로명</span></div>
+								<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+							</div>
+						</div>
+						<button class="btn-delete is-small" type="button"><span class="skip">삭제</span></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // View -->
+
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!-- 
+- Class : type02
+-->
+<div class="field">
+	<ul class="address-list">
+		<li class="address-box type02">
+			<h4 class="addr-stitle"><span>음식배달</span></h4>
+			<div class="addr-cont">
+				<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+				<div class="addr02">
+					<div class="left"><span class="dpt">도로명</span></div>
+					<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+			</xmp>
+		</div>
+		<!-- // Code -->
+
+
+		<!--  주소 목록  -->
+		<h3 class="h3_guide">주소 목록</h3>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field">
+				<ul class="address-list">
+					<li class="address-box type03">
+						<p class="addr-stitle"><span>보헌빌딩</span></p>
+						<div class="addr-cont">
+							<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+							<div class="addr02">
+								<div class="left"><span class="dpt">도로명</span></div>
+								<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- // View -->
+
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!-- 
+- Class : type03
+-->
+<div class="field">
+	<ul class="address-list">
+		<li class="address-box type03">
+			<p class="addr-stitle"><span>보헌빌딩</span></p>
+			<div class="addr-cont">
+				<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+				<div class="addr02">
+					<div class="left"><span class="dpt">도로명</span></div>
+					<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+			</xmp>
+		</div>
+		<!-- // Code -->
+
+
+		<!--  주소 수정  -->
+		<h3 class="h3_guide">주소 수정</h3>
+
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field">
+				<ul class="address-list">
+					<li class="address-box type04">
+						<h4 class="addr-stitle"><span class="addr-dpt01">음식배달</span></h4>
+						<div class="addr-cont">
+							<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+							<div class="addr02">
+								<div class="left"><span class="dpt">도로명</span></div>
+								<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+							</div>
+						</div>
+						<a href="javascript:;" class="btn-modify"><span>수정</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!-- 
+	- Class : type04
+-->
+<div class="field">
+	<ul class="address-list">
+		<li class="address-box type04">
+			<p class="addr-stitle"><span>보헌빌딩</span></p>
+			<div class="addr-cont">
+				<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+				<div class="addr02">
+					<div class="left"><span class="dpt">도로명</span></div>
+					<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+			</xmp>
+		</div>
+		<!-- // Code -->
+
+
+
+		<!--  맵 주소  -->
+		<h3 class="h3_guide">맵 주소</h3>
+
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="field">
+				<div class="address-box type05">
+					<div class="addr-cont">
+						<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+						<div class="addr02">
+							<div class="left"><span class="dpt">도로명</span></div>
+							<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!-- 
+	- Class : type05
+-->
+<div class="field">
+	<div class="address-box type05">
+		<div class="addr-cont">
+			<div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+			<div class="addr02">
+				<div class="left"><span class="dpt">도로명</span></div>
+				<div class="right">종로구 율곡로 88, 10층 GSITM</div>
+			</div>
+		</div>
+	</div>
+</div>
+			</xmp>
+		</div>
+		<!-- // Code -->
+
+
+		<!-- --------------------------
+	// 주소
+ ---------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+	<script type="text/javascript" src="/coding_list/js/pretty.js"></script>
 </body>
+
 </html>

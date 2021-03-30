@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body>
+    @@include('./include/header.html',{
+        'backbtn' : true,
+        'title' : '약관동의'
+      })
+    <div id="contents" class="container">
+
+        <div class="terms section">
+            <p class="cont">
+                반갑습니다! <br>
+                앱을 사용하기 위해서는 <br>
+                아래 약관에 동의가 필요합니다.
+            </p>
+
+            <div class="form-gird">
+                <div class="field-grid">
+                    <div class="field">
+                        <div class="level">
+                            <p class="level-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="joinchk-all">
+                                    <i class="is-rounded"></i>
+                                    <strong>필수약관, 선택약관 모두에 동의합니다.</strong>
+                                </label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="field chktxtarea">
+                        <div class="level">
+                            <p class="level-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="joinchk">
+                                    <i class="is-rounded"></i>
+                                    <strong>개인정보 처리방침(필수)</strong>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <textarea class="textarea is-medium">개인정보 처리방침</textarea>
+                        </div>
+                    </div>
+                    <div class="field chktxtarea">
+                        <div class="level">
+                            <p class="level-left">
+                                <label class="checkbox">
+                                    <input type="checkbox" name="joinchk">
+                                    <i class="is-rounded"></i>
+                                    <strong>이용약관 (필수)</strong>
+                                </label>
+                            </p>
+                        </div>
+                        <div class="control">
+                            <textarea class="textarea is-medium">개인정보 처리방침</textarea>
+                        </div>
+                    </div>
+
+                    <div class="buttons is-centered">
+                        <a href="javascript:;" class="button is-medium is-gray">취소</a>
+                        <button class="button is-medium is-blue">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+
+
+    </div>
+</body>
+
+</html>

@@ -4,9 +4,6 @@
  **/
 
 /* button.sass */
-
-
-
 $button-hover-color: $border
 
 $text-strong: $color-black
@@ -22,11 +19,11 @@ $link-active-border: $border
 
 
 $button-gray-bg-color          : $color-gray06
-$button-gray-hover-bg-color    : $color-gray08
-$button-gray-active-bg-color   : $color-gray08
+$button-gray-hover-bg-color    : $color-gray06
+$button-gray-active-bg-color   : $color-gray06
 $button-gray-color             : $color-white
 $button-outline-hover-color    : $color-blue
-$button-text-color             : $color-gray05
+$button-text-color             : $color-gray06
 
 // is-blue
 $button-blue-bg-color         : $color-blue
@@ -58,10 +55,6 @@ $button-cred-hover-bg-color   : $color-red02
 $button-cred-active-bg-color  : $color-red02
 $button-cred-color            : $color-black 
 
-// is-outline
-$button-outline-bg-color       : $color-white
-$button-outline-border-color   : $color-blue
-$button-outline-color          : $color-blue
 
 =button-large
 	font: 
@@ -81,6 +74,17 @@ $button-outline-color          : $color-blue
 		right: 20px
 	min:
 		width: 140px
+=button-small
+	&:not(.is-rounded)
+    border-radius: 0
+	font: 
+		size: 14px
+	height: 40px
+	padding:
+		left: 10px
+		right: 10px
+	min:
+		width: 100px
 .button	
 	border:
 		radius: 6px	
@@ -89,34 +93,47 @@ $button-outline-color          : $color-blue
 	&.is-medium
 		+button-medium
 	&.is-small
-		&:not(.is-rounded)
-		border-radius: 4px
+		+button-small
 
 	&.is-gray
-		background:
+		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
+			background:
+				color: $button-gray-bg-color
+			color: $button-gray-color
+			border:
+				color: $button-gray-bg-color
+		&.is-inverted
+			&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
+			background:
+				color: $button-gray-color
 			color: $button-gray-bg-color
-		color: $button-gray-color
-		border: none
+			border:
+				color: $button-gray-bg-color
 
 	&.is-blue
-		background:
+		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
+			background:
+				color: $button-blue-bg-color
+			color: $button-blue-color
+			border:
+				color: $button-blue-bg-color
+		&.is-inverted
+			&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
+			background:
+				color: $button-blue-color
 			color: $button-blue-bg-color
-		color: $button-blue-color
-		border: none
-		&:active
-			background: 
-				color: $button-blue-active-bg-color
+			border:
+				color: $button-blue-bg-color
 
 	&.is-black
+		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
 		background:
 			color: $button-black-bg-color
 		color: $button-black-color
 		border: none
-		&:active
-			background: 
-				color: $button-black-active-bg-color
 	
 	&.is-yellow
+		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
 		background:
 			color: $button-yellow-bg-color
 		color: $button-yellow-color
@@ -126,6 +143,7 @@ $button-outline-color          : $color-blue
 				color: $button-yellow-active-bg-color
 
 	&.is-ygreen
+		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
 		background:
 			color: $button-ygreen-bg-color
 		color: $button-ygreen-color
@@ -135,34 +153,27 @@ $button-outline-color          : $color-blue
 				color: $button-ygreen-active-bg-color
 
 	&.is-cred
-		background:
-			color: $button-cred-bg-color
-		color: $button-cred-color
-		border: none
-		&:active
-			background: 
-				color: $button-cred-active-bg-color
+		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
+			background:
+				color: $button-cred-bg-color
+			color: $button-cred-color
+			border: none
 	
-	&.is-outline
-		background:
-			color: $button-outline-bg-color
-		border: 1px solid $button-outline-border-color
-		color: $button-outline-color
 	//Status
 	&:hover,
 	&.is-hovered
 		border-color: $border
-		color: $color-black
+		color: $color-white
 	&:focus,
 	&.is-focused
 		border-color: $border
-		color: $color-black
+		color: $color-white
 		&:not(:active)
 		box-shadow: none
 	&:active,
 	&.is-active
 		border-color: $border
-		color: $color-black
+		color: $color-white
 
 
 	&:focus:not(:active),
@@ -179,12 +190,6 @@ $button-outline-color          : $color-blue
 		&:focus
 			background: none
 			color: $button-text-color
-
-	&.btn-search
-		background:
-			color: $color-white
-		border: 1px solid $color-gray02
-		color: $color-gray02
 
 // buttons
 .buttons
@@ -332,6 +337,7 @@ $box-complete-color2       : $color-gray05
 	.title
 		font-family: $body-family
 		letter-spacing: -0.23px
+		
 		&:not(:last-child)
 			margin: 
 				bottom: 15px
@@ -362,6 +368,9 @@ $box-complete-color2       : $color-gray05
 
 
 
+/** 
+	Icon
+ **/
 
 // arrow
 .co-arrow
@@ -378,6 +387,8 @@ $box-complete-color2       : $color-gray05
         +co-arrow(right)
         +prefix(transform, rotate(-135deg))
 
+
+
 // color
 a.fc-blue
 	color : $color-blue
@@ -385,3 +396,102 @@ a.fc-blue
 	&:focus,
 	&:active
 		color : $color-blue
+
+
+// delete
+.btn-delete
+	+co-delete
+
+
+// search
+
+.btn-search
+	background:
+		color: $color-white
+	border: 1px solid $color-gray02
+	color: $color-gray02
+	
+	> span
+        background: url(/img/ico_search.png) center/100% auto no-repeat
+        overflow: hidden
+        text-indent: 100%
+        white-space: nowrap
+        width: 22px
+        height: 22px
+        display: inline-block
+
+.is-search
+	.input
+		padding:
+			right: 60px
+	.btn-search
+		width: 60px
+		height: 50px
+		position: absolute
+		top: 0
+		right: 0
+		border:
+			left: 0
+			radius: $input-radius
+		font: 
+			size: 0
+		cursor: pointer
+		&:focus
+			outline: 0
+
+
+// bookmark
+.bookmark
+	height: inherit
+	width: 50px
+	> span
+			background: url(/img/ico_bookmark.png) center/100% auto no-repeat
+			overflow: hidden
+			text-indent: 100%
+			white-space: nowrap
+			width: 18px
+			height: 23px
+			display: inline-block
+			vertical-align: middle
+
+
+
+// modify
+.btn-modify
+	height: 40px
+	width: 40px
+	display: flex
+	background-color: $input-background-color
+	border: 1px solid $input-border-color
+	border-radius: $input-radius
+	
+	> span
+		background: url(/img/ico_pencil.png) center/100% auto no-repeat
+		overflow: hidden
+		text-indent: 100%
+		white-space: nowrap
+		width: 22px
+		height: 22px
+		display: inline-block
+		vertical-align: middle
+		margin: auto
+
+// btn-map
+.btn-map
+	height: 50px
+	width: 50px
+	display: flex
+	background-color: $input-background-color
+	border: 1px solid $input-border-color
+	border-radius: $input-radius
+
+	> span
+		background: url(/img/ico_mapmark.png) center/100% auto no-repeat
+		overflow: hidden
+		text-indent: 100%
+		white-space: nowrap
+		width: 24px
+		height: 24px
+		display: inline-block
+		vertical-align: middle
+		margin: auto

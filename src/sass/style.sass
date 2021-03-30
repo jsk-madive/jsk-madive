@@ -19,7 +19,7 @@ $color-black04 : #080808
 
 $color-blue : #1C67FF  // 기본 
 $color-blue02  : #3273DC
-$color-blue03 : #4869B1
+$color-blue03 : #16295A
 
 
 $color-gray : #DBDBDB
@@ -80,7 +80,6 @@ $body-font-size: 16px
 $body-line-height: 1.2
 $body-color              : $color-black
 
-$link                    : $color-black
 
 $widescreen-enabled: false
 $fullhd-enabled: false
@@ -91,8 +90,11 @@ $container-max-width: 100%
 $link: $color-black
 $body-color: $color-black
 
+
+
 // 
 //  [B - Grid]   //
+// 
 
 // grid.sass
 $column-gap: 6px
@@ -138,7 +140,7 @@ $input-color: $color-black  // text
 
 $input-border-color: $color-gray02
 
-$input-radius: 4px
+$input-radius : 5px
 $input-hover-border-color: $color-gray
 
 $input-focus-border-color: none
@@ -162,8 +164,11 @@ $input-disabled-color-2 : $color-black03
 // -------------
 //  [B] Elements
 // -------------
+
+
 // title.sass
-$title-family: true
+
+$title-family : 'NotoSansKR', sans-serif
 $title-size: $size-4
 $title-weight: 700
 
@@ -193,6 +198,8 @@ $section-padding : 0 $gap $gap $gap
 $radius-small: 4px
 $radius: 5px
 
+
+
 // derived-variables.sass
 
 
@@ -221,7 +228,6 @@ $control-radius: 0px
 @import 'marketapp/_all'
 
 
-/** 0323 **/
 
 // generic.sass
 
@@ -300,9 +306,9 @@ $tabs-link-active-color                  : $color-black
 
       
 
-/********
- Common
- ********/
+/*************
+    Common
+ *************/
 .co-del-btn
     z-index: 100
     background-color: $color-transparent
@@ -318,19 +324,87 @@ $tabs-link-active-color                  : $color-black
         display: inline-block
 
 
+
+/*************
+    Login
+ *************/
+.container
+    > .login
+        padding:
+            top: 50px
+            bottom: 30px
+.login
+    .field
+        &:not(:last-child)
+            margin-bottom: calc(10px - #{$column-gap})
+    .field-grid
+        + .buttons
+                margin:
+                    top: 20px
+
+
+/*************
+    Join
+ *************/
+.container
+    > .join
+        padding:
+            top: 50px
+            bottom: 30px
+
+.join
+    .field
+        &:first-of-type
+            margin-bottom: 10px
+    
+
+/*************
+    Terms
+ *************/
+.container
+    > .terms
+        padding:
+            top: 100px
+            bottom: 30px
+
+.terms
+    .cont
+        font: 
+            size: $size-3
+            weight: $weight-medium
+        line-height: 1.6
+
+
+
+/********
+    App Main     
+ ********/
+.appmain
+    position: absolute
+    top: 50%
+    left: 0
+    width: 100%
+    +prefix (transform, translateY(-50%))
+
+    .title
+        text-align: center
+        padding-bottom: 10px
+
+    .logo-img
+        img
+            width: 100%
+
+
 /********
     Main     
  ********/
 
-// foodtab-wrap
-.foodtab-wrap
+// foodtab-section
+.foodtab-section
     position: relative
 
     &:after
         +clearfix
-
-    .tab-cont
-        padding-top: 0
 
 .foodctg-list
     &.columns
@@ -437,21 +511,6 @@ $tabs-link-active-color                  : $color-black
 /********
  Address
  ********/
-.order-list
-    width: 100%
-    margin: 0
-    font-size: $size-4
-
-.btn-search
-    > span
-        background: url(/img/ico_search.png) center/100% auto no-repeat
-        overflow: hidden
-        text-indent: 100%
-        white-space: nowrap
-        width: 22px
-        height: 22px
-        display: inline-block
-
 .now-location
     position: relative
     
@@ -470,46 +529,77 @@ $tabs-link-active-color                  : $color-black
             margin-top: 5px
 
 .address-box
-    padding: 10px 0
-    
+    padding: 10px 0 13px 
+    border: 
+        bottom: 1px solid $color-gray
+
+    &.type01
+        border: 
+            bottom: 0
+        .addr-stitle
+            font-size: 0
+        
     
     &.type02
         position: relative
-        border-bottom: 1px solid $color-gray
+        
         padding: 
             right: 30px
 
-        .co-delete
-            +co-delete
+        .btn-delete
             position: absolute
             top: 5px
             right: 0
             font-size: 0
+    
+    &.type03
+        .addr01
+            color: $color-gray04
+        
+        .addr02
+            .dpt
+                color: $color-gray04
+
+    &.type04
+        position: relative
+        padding:
+            right: 40px
+        .btn-modify
+            position: absolute
+            top: 50%
+            right: 0
+            +prefix(transform, translateY(-50%))
+
+    &.type05
+        padding: 0
+        border: 0
+        .addr01
+            font-size: 17px
 
                 
 .addr-stitle
-    font-size: 0
     margin: 
         bottom: 10px
     > span
         font: 
-            size: $size-5
+            size: 17px
             weight : 700
         position: relative
 
-        &::before
-            background:
-                size: 100% auto
-                position: center
-                repeat: no-repeat
-            content: ''
-            width: 20px
-            height: 20px
-            display: inline-block
-            vertical-align: middle
-            margin: 
-                right: 5px
-                top: -2px
+        &[class^='addr-dpt'] 
+            &::before
+                background:
+                    size: 100% auto
+                    position: center
+                    repeat: no-repeat
+                content: ''
+                width: 20px
+                height: 20px
+                display: inline-block
+                vertical-align: middle
+                margin: 
+                    right: 5px
+                    top: -2px
 
         &.addr-dpt01::before
             background-image: url(/img/ico_addr01.png)
@@ -544,3 +634,145 @@ $tabs-link-active-color                  : $color-black
 
 .button
     align-items:  center
+
+
+// map-box
+.map-wrap
+    padding-bottom: 217px
+
+.map-area
+    position: relative
+    height: inherit
+    
+    .btn-map
+        position: absolute
+        bottom: 10px
+        right: 10px
+
+
+
+// address-fixed-bottom
+.address-fixed-bottom
+    padding: $gap
+    background-color: $color-white
+
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 30
+
+    input
+        margin: 15px 0
+
+
+/********
+ Order List
+ ********/
+.ordertab-section
+    padding-bottom: 10px
+.order-list
+    width: 100%
+    margin: 0
+    font-size: $size-4
+
+.order-box 
+    border: 1px solid $color-gray
+    margin: 6px
+    padding: 10px
+
+.order-title
+    +clearfix
+    
+    font: 
+        size: $size-7
+        weight: $weight-medium
+    padding-bottom: 8px;
+    border-bottom: 2px solid $color-blue
+
+    .left
+        float: left
+        color: $color-blue03
+
+    .right
+        float: right
+        color: $color-blue
+        font-size: $size-8
+        padding-top: 2px
+
+.order-info
+    padding-top: 10px
+
+    .media-left
+        margin-right: 10px
+
+        .img-box
+            width: 100px
+
+.order-cont
+    dt
+        font: 
+            size: $size-6
+            weight: $weight-medium
+        color: $color-blue03
+
+    dd
+        font: 
+            size: $size-7
+            weight: $weight-normal
+        color: $color-blue03
+        margin-top: 6px
+
+    .odr-menu-opt
+        font:
+            size: $size-8
+        color: $color-gray05
+
+
+    .odr-price
+        span
+            color : $color-gray05
+            &:first-child
+                font: 
+                    size: $size-5
+                    weight: $weight-medium
+                color: $color-blue03
+
+            &:last-child
+                position: relative
+                padding-left: 10px 
+                font:
+                    size: $size-6
+
+                &::before
+                    position: absolute
+                    top: 2px
+                    left: 0
+                    content: ''
+                    width: 2px
+                    height: 18px
+                    background-color: $color-gray08
+                    display: inline-block
+                    margin-left: 1px
+
+.order-btnbox
+    margin-top: 10px
+
+    .odr-btn
+        display: inline-block
+        text-align: center
+        min-width: 80px
+        height: 30px
+        line-height: 30px
+        color: $color-gray06
+        border: 1px solid $color-gray06
+        background-color: $color-white
+        font-size: $size-7
+
+        &:hover,
+        &:focus,
+        &:active
+            color : $color-gray06
+
+        + .odr-btn
+            margin-left: 10px

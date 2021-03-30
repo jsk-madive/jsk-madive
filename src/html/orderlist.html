@@ -3,61 +3,323 @@
 @@include('./include/head.html')
 
 <body>
-    @@include('./include/header.html',{
-    'title' : 'Tab'
-    })
-    <!-- container -->
-    <div id="contents" class="container">
-        <div class="tablist-box">
-            <ul class="tab-list tab04">
-                <li class="on">
-                    <h3 class="tab-title"><a href="javascript:;">전체</a></h3>
-                    <div class="tab-cont">
-                        <article class="media">
-                            
-                            <figure class="media-left">
-                              <p class="image is-128x128">
-                                <img src="https://bulma.io/images/placeholders/128x128.png">
-                              </p>
-                            </figure>
-                            <div class="media-content">
-                              <div class="content">
-                                <p>
-                                  <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-                                  <br>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-                                </p>
-                              </div>
-                            </div>
-                            <div class="media-right">
-                              <button class="delete"></button>
-                            </div>
-                          </article>
+  @@include('./include/header.html',{
+  'title' : '주문내역'
+  })
+  <!-- container -->
+  <div id="contents" class="container">
+    <section class="ordertab-section">
+      <div class="tabs is-fullwidth">
+        <ul class="tab-list is-4">
+          <li class="on">
+            <a href="javascript:;" class="tab-title">전체</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="tab-title">음식배달</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="tab-title">전통시장</a>
+          </li>
+          <li>
+            <a href="javascript:;" class="tab-title">쇼핑몰</a>
+          </li>
+        </ul>
+      </div>
+      <div class="tab-contbox">
+        <div class="tab-cont">
+          <h3 class="skip">전체</h3>
+          <ul class="order-list">
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>음식배달 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
                     </div>
-                </li>
-                <li>
-                    <h3 class="tab-title"><a href="javascript:;">음식배달</a></h3>
-                    <div class="tab-cont">
-                        <div>tab02</div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
                     </div>
-                </li>
-                <li>
-                    <h3 class="tab-title"><a href="javascript:;">전통시장</a></h3>
-                    <div class="tab-cont">
-                        <div>tab03</div>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>전통시장 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
                     </div>
-                </li>
-                <li>
-                    <h3 class="tab-title"><a href="javascript:;">쇼핑몰</a></h3>
-                    <div class="tab-cont">
-                        <div>tab03</div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
                     </div>
-                </li>
-            </ul>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>전통시장 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
+                    </div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>전통시장 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
+                    </div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
-    </div>
-    <!-- // container -->
-    @@include('./include/btm_nav.html')
+        <!-- 음식배달 -->
+        <div class="tab-cont">
+          <h3 class="skip">음식배달</h3>
+          <ul class="order-list">
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>음식배달 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
+                    </div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 전통시장 -->
+        <div class="tab-cont">
+          <h3 class="skip">전통시장</h3>
+          <ul class="order-list">
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>전통시장 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
+                    </div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- 쇼핑몰 -->
+        <div class="tab-cont">
+          <h3 class="skip">쇼핑몰</h3>
+          <ul class="order-list">
+            <li class="order-box">
+              <div class="order-title">
+                <div class="left">
+                  <p>쇼핑몰 <span>[배송완료]</span></p>
+                </div>
+                <div class="right">
+                  <span>주문배송상세</span>
+                </div>
+              </div>
+              <div class="order-info">
+                <div class="media">
+                  <figure class="media-left">
+                    <div class="img-box">
+                      <p class="image is-3by2">
+                        <img src="https://bulma.io/images/placeholders/480x320.png">
+                      </p>
+                    </div>
+                  </figure>
+                  <div class="media-content">
+                    <div class="order-cont">
+                      <dl>
+                        <dt>원할머니보쌈</dt>
+                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
+                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+                        <dd class="odr-price">
+                          <span>29,000 원</span>
+                          <span>2021.03.15</span>
+                        </dd>
+                      </dl>
+                    </div>
+                  </div>
+                </div>
+                <div class="order-btnbox">
+                  <a href="javascript:;" class="odr-btn">별점</a>
+                  <a href="javascript:;" class="odr-btn">가게정보</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- // container -->
+  @@include('./include/btm_nav.html')
 </body>
 
 </html>

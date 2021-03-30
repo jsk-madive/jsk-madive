@@ -1,4 +1,6 @@
-/* Navbar */
+/* 
+	Navbar 
+ */
 
 // navbar.sass
 .navbar.is-fixed-bottom
@@ -24,19 +26,19 @@
             position: relative
 
             &:first-child
-                > a:before
+                .ico
                     background-position-x: 0
 
             &:nth-child(2)
-                > a:before
+                .ico
                     background-position-x: -39px
 
             &:nth-child(3)
-                > a:before
+                .ico
                     background-position-x: -78px
 
             &:nth-child(4)
-                > a:before
+                .ico
                     background-position-x: -117px
 
         a
@@ -45,11 +47,11 @@
             height: inherit
             font-size: $size-7
             font-weight: 600
-            padding-top: 10px
+            padding-top: 13px
             padding-bottom: 20px
             color: $color-gray05
 
-            &::before
+            .ico
                 background: url(../img/btm_ico.png) center 0/auto 27px no-repeat
                 content: ''
                 display: block
@@ -57,6 +59,30 @@
                 width: 39px
                 height: 27px
                 text-align: center
+                position: relative
+				
+
+.newico-cnt
+	position: absolute
+	top: -6px
+	right: -1px
+
+	> span
+		display: inline-block
+		color: $color-white
+		background-color: $color-blue
+		padding: 3px 5px
+		line-height: 1
+		border-radius: 50%
+		display: inline-block
+		font: 
+			size: 10px
+			weight: $weight-bold
+		min-width: 16px 
+		text-align: center
+		letter-spacing: 0
+
+
 
 
 /** 
@@ -266,8 +292,6 @@ $tab-total : 12
     width: 100%
     left: 0
     display: none
-    padding-top: 40px
-
 
 
 // level.sass
@@ -293,3 +317,10 @@ $tab-total : 12
 			font:
 				size: $size-7
 			color: $color-gray04 
+
+
+/* Media */
+
+// media.sass
+.media-content
+	overflow: hidden

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body class="is-gray">
+  <!-- container -->
+  @@include('./include/header.html',{
+  'title' : '배달 받을 주소',
+  'bookmark' : true
+  })
+
+  <div id="contents" class="container map-wrap">
+    <div class="map-area">
+        <a href="javascript:;" class="btn-map">
+          <span>현재 위치</span>
+        </a>
+    </div>
+  </div>
+  <!-- // container -->
+
+  <div class="field-grid address-fixed-bottom">
+    <div class="field">
+      <div class="address-box type05">
+        <div class="addr-cont">
+          <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+          <div class="addr02">
+            <div class="left"><span class="dpt">도로명</span></div>
+            <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="text" class="input is-medium" placeholder="상세주소를 입력하세요 (건물명, 동/호수 등)">
+    <button class="button is-large is-blue is-fullwidth">완료</button>
+  </div>
+</body>
+
+</html>

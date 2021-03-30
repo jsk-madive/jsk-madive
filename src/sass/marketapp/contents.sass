@@ -85,29 +85,7 @@ $border-color   : $color-gray07
 
 
 
-/* Search */
-.is-search
-	.input
-		padding:
-			right: 60px
-	.btn-search
-		width: 60px
-		height: 50px
-		position: absolute
-		top: 0
-		right: 0
-		background:
-			color: transparent
-			image: url(#{$image-path}btn_search.svg)
-			repeat: no-repeat
-			position: center
-		border: none
-		font: 
-			size: 0
-		cursor: pointer
-		&:focus
-			outline: none
-			border: none
+
 
 /* No Data */
 $no-data-font-color: $color-gray05
@@ -175,29 +153,7 @@ $success-color      : $color-blue
 	color: $field-message-color
 		
 
-/* Login */
-$search-link-color         : $color-gray05
-$search-link-hypen         : $color-gray09
-$welcome-box-line-color    : $color-gray09
-$welcome-box-title-color   : $color-black03
-$welcome-box-sub-copy-color: $color-gray05
 
-.login
-	+ .complete-grid
-		padding:
-			top: 100PX
-		border:
-			top: 1px solid $border-color
-		margin:
-			top: 30px
-		
-.field
-	&:not(:last-child)
-		margin-bottom: calc(10px - #{$column-gap})
-.filed-grid
-	+ .buttons
-		margin:
-			top: 20px
 
 // .buttons
 .util
@@ -243,8 +199,8 @@ $welcome-box-sub-copy-color: $color-gray05
 				padding:
 					left: 0
 .join
-	margin:
-		top: 50px
+	padding:
+		top: 60px
 	+ .join
 		margin:
 			top: 25px
@@ -1323,14 +1279,14 @@ $loading-box-background-color: rgba($color-black, 0.1)
 		top: calc(10px - #{$column-gap})
 .msg + .list,
 .is-search + .list,
-.filed-grid + .list
+.field-grid + .list
 	margin: 
 		top: 10px
 .address-box + .list
 	margin: 
 		top: 15px
 .contents-grid + .msg-box,
-.modal-msg + .filed-grid
+.modal-msg + .field-grid
 	margin: 
 		top: 20px
 .title-box + .field-box

@@ -2,13 +2,13 @@
 <html lang="ko">
 @@include('./include/head.html')
 
-<body class="has-navbar-fixed-bottom">
+<body class="is-gray">
   <!-- container -->
   <div id="contents" class="container">
     <section class="section">
       <h1 class="skip">배달 주소 선택</h1>
-      <div class="title-field mt-6">
-        <h2 class="title is-3">도로명, 건물명을 입력해 주세요.</h2>
+      <div class="title-field pt-5">
+        <h2 class="title is-3 ">도로명, 건물명을 입력해 주세요.</h2>
       </div>
 
       <div class="field has-addons">
@@ -26,12 +26,12 @@
         </a>
       </div>
 
-      <div class="filed-grid">
+      <div class="field-grid">
         <div class="title-field title-underline">
           <h3 class="title is-4">기본주소</h3>
         </div>
-        <div class="address-list-box">
-          <ul class="basic-address">
+        <div class="field">
+          <ul class="address-list">
             <li class="address-box type01">
               <h4 class="addr-stitle"><span class="addr-dpt01">음식배달</span></h4>
               <div class="addr-cont">
@@ -53,7 +53,7 @@
               </div>
             </li>
             <li class="address-box type01">
-              <h4 class="addr-stitle"><span class="addr-dpt02">택배</span></h4>
+              <h4 class="addr-stitle"><span class="addr-dpt03">택배</span></h4>
               <div class="addr-cont">
                 <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
                 <div class="addr02">
@@ -66,51 +66,51 @@
         </div>
       </div>
 
-      
+      <div class="field-grid">
         <div class="title-field title-underline">
           <h3 class="title is-4">최근주소</h3>
         </div>
-      <div class="address-list-box">
-        <ul class="basic-address">
-          <li class="address-box type02">
-            <button class="co-delete is-small" type="button"><span class="skip">삭제</span></button>
-            <div class="addr-cont">
-              <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
-              <div class="addr02">
-                <div class="left"><span class="dpt">도로명</span></div>
-                <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+        <div class="field">
+          <ul class="address-list">
+            <li class="address-box type02">
+              <div class="addr-cont">
+                <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                <div class="addr02">
+                  <div class="left"><span class="dpt">도로명</span></div>
+                  <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="address-box type02">
-            <button class="co-delete is-medium" type="button"><span class="skip">삭제</span></button>
-            <div class="addr-cont">
-              <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
-              <div class="addr02">
-                <div class="left"><span class="dpt">도로명</span></div>
-                <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+              <button class="btn-delete is-small" type="button"><span class="skip">삭제</span></button>
+            </li>
+            <li class="address-box type02">
+              <div class="addr-cont">
+                <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                <div class="addr02">
+                  <div class="left"><span class="dpt">도로명</span></div>
+                  <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+                </div>
               </div>
-            </div>
-          </li>
-          <li class="address-box type02">
-            <button class="co-delete is-large" type="button"><span class="skip">삭제</span></button>
-            <div class="addr-cont">
-              <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
-              <div class="addr02">
-                <div class="left"><span class="dpt">도로명</span></div>
-                <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+              <button class="btn-delete is-small" type="button"><span class="skip">삭제</span></button>
+            </li>
+            <li class="address-box type02">
+              <div class="addr-cont">
+                <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                <div class="addr02">
+                  <div class="left"><span class="dpt">도로명</span></div>
+                  <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+              <button class="btn-delete is-small" type="button"><span class="skip">삭제</span></button>
+            </li>
+          </ul>
+        </div>
       </div>
 
 
 
-  </section>
+    </section>
   </div>
   <!-- // container -->
-  @@include('./include/btm_nav.html')
 
 </body>
 
