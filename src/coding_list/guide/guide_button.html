@@ -33,12 +33,18 @@
 
 	<div id="wrap" class="coding_guide">
 		<h1 class="h1_guide">Button Guide</h1>
+
+
+<!-- 
+	-------- [Size] --------
+ -->
 		<h2 class="h2_guide">Size</h2>
 		<!-- View -->
 		<div class="guide_wrap">
 			<button type="button" class="button is-small is-gray">취소</button>
 			<button type="button" class="button is-medium is-blue">확인</button>
 			<button type="button" class="button is-large is-blue">확인</button>
+
 			<br>
 			<br>
 			
@@ -51,24 +57,30 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				
 <!--
--  기능에 따라 button태그 or a태그 사용
--  기본 class="button"
-- 버튼 크기 : is-small, is-medium, is-large
-- 버튼 outline : is-inverted 클래스 추가
-- button 태그 type=button 기본 설정, 용도에 따라 변경해주세요.
+	-  기능에 따라 button태그 or a태그 사용
+	-  기본 class="button"
+	- 버튼 크기 : is-small, is-medium, is-large
+	- 버튼 outline : is-inverted 클래스 추가
+	- button 태그 type=button 기본 설정, 용도에 따라 변경해주세요.
 -->
-<button type="button" class="button is-large is-gray">취소</button>
+<button type="button" class="button is-small is-gray">취소</button>
+<button type="button" class="button is-medium is-blue">확인</button>
 <button type="button" class="button is-large is-blue">확인</button>
 
-<a href="javascript:;" type="button" class="button is-large is-gray is-inverted">확인</a>
-<a href="javascript:;" type="button" class="button is-large is-blue is-inverted">확인</a>
+<a href="javascript:;" class="button is-small is-gray is-inverted">취소</a>
+<a href="javascript:;" class="button is-medium is-blue is-inverted">확인</a>
+<a href="javascript:;" class="button is-large is-blue is-inverted">확인</a>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">2 button </h2>
+
+<!-- 
+	-------- [2 Button ] --------
+ -->
+
+		<h2 class="h2_guide">2 button</h2>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="buttons is-centered">
@@ -89,7 +101,10 @@
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">full Width</h2>
+<!-- 
+	-------- [Full Width] --------
+ -->
+		<h2 class="h2_guide">Full Width</h2>
 		<!-- View -->
 		<div class="guide_wrap">
 			<button type="button" class="button is-large is-blue is-fullwidth">확인</button>
@@ -115,6 +130,11 @@
 			</xmp>
 		</div>
 		<!-- // code -->
+
+
+<!-- 
+	-------- [Delete button] --------
+ -->
 
 		<h2 class="h2_guide">Delete Button</h2>
 		<!-- View -->
