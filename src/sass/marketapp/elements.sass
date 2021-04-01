@@ -195,7 +195,7 @@ $button-cred-color            : $color-black
 .buttons
 	margin: 
 		bottom: 0
-		top: 60px
+		top: 40px
 	.button
 		margin: 
 			bottom: 0
@@ -203,14 +203,12 @@ $button-cred-color            : $color-black
 	&:last-child
 		margin:
 			bottom: 0
-	&.is-centered
-		margin:
-			top: 40px
 		&:not(.has-addons)
 			.is-fullwidth
 				margin:
 					left: 0
 					right: 0
+				justify-content: center
 				+ .is-fullwidth
 					margin:
 						top: 10px
@@ -240,6 +238,11 @@ $button-cred-color            : $color-black
 		.button
 			+ .button
 					margin-top: 6px
+
+
+.button,
+	&.is-centered
+		justify-content: center
 
 	
 // box.sass
@@ -388,16 +391,6 @@ $box-complete-color2       : $color-gray05
         +prefix(transform, rotate(-135deg))
 
 
-
-// color
-a.fc-blue
-	color : $color-blue
-	&:active,
-	&:focus,
-	&:active
-		color : $color-blue
-
-
 // delete
 .btn-delete
 	+co-delete
@@ -471,8 +464,8 @@ a.fc-blue
 		text-indent: 100%
 		white-space: nowrap
 		width: 22px
-		height: 22px
-		display: inline-block
+		height: inherit
+		display: block
 		vertical-align: middle
 		margin: auto
 

@@ -85,10 +85,9 @@
 
 
 
-/** 
-	B - modal.sass 
 
- **/
+
+ // modal.sass
 $modal-msg-color: $color-black
 
 .modal
@@ -223,8 +222,6 @@ $modal-msg-color: $color-black
 
 
 /* Tabs */
-
-
 $tab-total : 12
 @for $i from 1 through $tab-total
 	.tabs
@@ -294,15 +291,17 @@ $tab-total : 12
     display: none
 
 
-// level.sass
-// 0323
+/* 
+    Level 
+ */
+.field
+	.level
+		&:first-of-type
+			margin-top: 15px
+
 .level
 	> *
 		+font-set(14px, 0, 23px)
-
-.level-left
-		& + .level-right
-			margin-top: 15px
 
 // 팝업
 // modal-dl-list

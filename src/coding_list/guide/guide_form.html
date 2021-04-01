@@ -212,13 +212,26 @@
 		<br>
 		<br>
 		<h2 class="h2_guide">Checkbox</h2>
+
+		<!-- ---------------------
+			Checkbox
+		--------------------------- -->
+		<h3 class="h3_guide">Checkbox</h3>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="control">
-				<label class="checkbox">
+			<div class="field">
+			<label class="checkbox">
+				<input type="checkbox">
+				<i></i>
+				<strong>Checkbox</strong>
+			</label>
+		</div>
+		
+		<div class="field">
+				<label class="checkbox is-rounded">
 					<input type="checkbox">
 					<i></i>
-					<strong>Checkbox</strong>
+					<strong>Round Checkbox</strong>
 				</label>
 			</div>
 		</div>
@@ -227,57 +240,30 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<div class="control">
-					<label class="checkbox">
-						<input type="checkbox">
-						<i></i>
-						<strong>Checkbox</strong>
-					</label>
-				</div>
+<label class="checkbox">
+	<input type="checkbox">
+	<i></i>
+	<strong>Checkbox</strong>
+</label>
+
+<!--  
+	클래스 추가 : is-rounded
+	-->
+<label class="checkbox is-rounded">
+	<input type="checkbox">
+	<i></i>
+	<strong>Round Checkbox</strong>
+</label>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">Checkbox / Text</h2>
+
+		<h3 class="h3_guide">Checkbox /  right Text</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="field">
-				<div class="level util">
-					<p class="level-left">
-						<label class="checkbox">
-							<input type="checkbox">
-							<i></i>
-							<strong>필수약관, 선택약관 모두에 동의합니다.</strong>
-						</label>
-					</p>
-				</div>
-			</div>
-		</div>
-		<!-- // View -->
-
-		<!-- code -->
-		<div class="d_desc code">
-			<xmp class="prettyprint linenums javascript">
-				<div class="field">
-					<div class="level util">
-						<p class="level-left">
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<strong>필수약관, 선택약관 모두에 동의합니다.</strong>
-							</label>
-						</p>
-					</div>
-				</div>
-			</xmp>
-		</div>
-		<!-- // code -->
-
-		<h2 class="h2_guide">Checkbox / Text right</h2>
-		<!-- View -->
-		<div class="guide_wrap">
-			<div class="field">
-				<div class="level util is-mobile">
+				<div class="level is-mobile">
 					<div class="level-left">
 						<label class="checkbox">
 							<input type="checkbox">
@@ -285,7 +271,7 @@
 							<strong>로그인 유지하기</strong>
 						</label>
 					</div>
-					<div class="level-right util-link">
+					<div class="level-right">
 						<a href="javascript:;" class="fc-blue">비밀번호를 잊으셨나요?</a>
 					</div>
 				</div>
@@ -294,22 +280,28 @@
 		<!-- // View -->
 
 		<!-- code -->
+	
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<div class="field">
-					<div class="level util is-mobile">
-						<div class="level-left">
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<strong>로그인 유지하기</strong>
-							</label>
-						</div>
-						<div class="level-right util-link">
-							<a href="javascript:;" class="fc-blue">비밀번호를 잊으셨나요?</a>
-						</div>
-					</div>
-				</div>
+<!-- 
+	- 클래스 부여 : is-mobile
+	- class=level 영역 상단 여백 필요시 div.field 감싸기
+		class=level 영역 상단 여백필요 없을 경우 div.level 영역만 사용
+-->
+	<div class="field">
+		<div class="level is-mobile">
+			<div class="level-left">
+				<label class="checkbox">
+					<input type="checkbox">
+					<i></i>
+					<strong>로그인 유지하기</strong>
+				</label>
+			</div>
+			<div class="level-right">
+				<a href="javascript:;" class="fc-blue">비밀번호를 잊으셨나요?</a>
+			</div>
+		</div>
+	</div>
 			</xmp>
 		</div>
 		<!-- // code -->

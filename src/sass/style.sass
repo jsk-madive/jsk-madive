@@ -309,19 +309,12 @@ $tabs-link-active-color                  : $color-black
 /*************
     Common
  *************/
-.co-del-btn
-    z-index: 100
-    background-color: $color-transparent
-    border: 0
-
-    > span
-        background: url(/img/ico_del.png) center/100% auto no-repeat
-        overflow: hidden
-        text-indent: 100%
-        white-space: nowrap
-        width: 14px
-        height: 14px
-        display: inline-block
+a.fc-blue
+	color : $color-blue
+	&:active,
+	&:focus,
+	&:active
+		color : $color-blue
 
 
 
@@ -352,10 +345,6 @@ $tabs-link-active-color                  : $color-black
             top: 50px
             bottom: 30px
 
-.join
-    .field
-        &:first-of-type
-            margin-bottom: 10px
     
 
 /*************
@@ -373,6 +362,19 @@ $tabs-link-active-color                  : $color-black
             size: $size-3
             weight: $weight-medium
         line-height: 1.6
+    
+    .field 
+        &:first-child
+            border-bottom: 1px solid $color-gray
+            padding:
+                top: 20px
+                bottom: 20px
+
+            .level > *
+                font-size: $size-4
+		
+
+    
 
 
 
@@ -391,8 +393,11 @@ $tabs-link-active-color                  : $color-black
         padding-bottom: 10px
 
     .logo-img
+        display: table
+        margin: 0 auto
+
         img
-            width: 100%
+            margin: 0 auto
 
 
 /********
@@ -512,13 +517,23 @@ $tabs-link-active-color                  : $color-black
  Address
  ********/
 .now-location
-    position: relative
+    &:hover,
+    &.is-hovered,
+    &:focus,
+    &.is-focused,
+    &:active,
+    &.is-active
+        color: $color-black
+        
+    > span
+        position: relative
     
-    &::before
-        +location
-        content: ''
-        margin:
-            right: 5px
+        &::before
+            +location
+            content: ''
+            margin:
+                right: 5px
+
 
 .content
     ul.list-non-type
@@ -529,30 +544,45 @@ $tabs-link-active-color                  : $color-black
             margin-top: 5px
 
 .address-box
-    padding: 10px 0 13px 
     border: 
         bottom: 1px solid $color-gray
 
     &.type01
         border: 
             bottom: 0
+
+        > a
+            padding:
+                top: 10px
+                bottom: 13px
+        
         .addr-stitle
             font-size: 0
         
+
     
     &.type02
         position: relative
         
-        padding: 
-            right: 30px
+        > a
+            padding: 
+                top: 10px
+                bottom: 13px
+                right: 30px
 
         .btn-delete
             position: absolute
             top: 5px
             right: 0
             font-size: 0
+            z-index: 10
     
     &.type03
+        > a
+            padding:
+                top: 10px
+                bottom: 13px
+
         .addr01
             color: $color-gray04
         
@@ -563,18 +593,27 @@ $tabs-link-active-color                  : $color-black
     &.type04
         position: relative
         padding:
-            right: 40px
+            top: 10px
+            bottom: 13px
+            right: 45px
+
         .btn-modify
+            display: inline-block
             position: absolute
             top: 50%
             right: 0
             +prefix(transform, translateY(-50%))
 
     &.type05
-        padding: 0
         border: 0
         .addr01
             font-size: 17px
+    
+    > a
+        display: block
+
+
+            
 
                 
 .addr-stitle
@@ -635,7 +674,16 @@ $tabs-link-active-color                  : $color-black
 .button
     align-items:  center
 
+// address-search
+.address-search
+    .is-search-box
+        background-color: $color-white
+        padding: $gap
+        margin-bottom: 10px
 
+    .addrs-list
+        background-color: $color-white
+        
 // map-box
 .map-wrap
     padding-bottom: 217px
@@ -645,9 +693,10 @@ $tabs-link-active-color                  : $color-black
     height: inherit
     
     .btn-map
-        position: absolute
-        bottom: 10px
+        position: fixed
+        bottom: 225px
         right: 10px
+        z-index: 10
 
 
 
@@ -655,13 +704,16 @@ $tabs-link-active-color                  : $color-black
 .address-fixed-bottom
     padding: $gap
     background-color: $color-white
+    border-top: 1px solid $color-gray
 
     position: fixed
     bottom: 0
     left: 0
     right: 0
     z-index: 30
-
+    
+    .field
+        margin-bottom: 0
     input
         margin: 15px 0
 
@@ -746,11 +798,11 @@ $tabs-link-active-color                  : $color-black
 
                 &::before
                     position: absolute
-                    top: 2px
+                    top: 5px
                     left: 0
                     content: ''
-                    width: 2px
-                    height: 18px
+                    width: 1px
+                    height: 15px
                     background-color: $color-gray08
                     display: inline-block
                     margin-left: 1px

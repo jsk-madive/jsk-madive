@@ -33,7 +33,7 @@
 
 	<div id="wrap" class="coding_guide">
 		<h1 class="h1_guide">Button Guide</h1>
-		<h2 class="h2_guide">01. Large Button</h2>
+		<h2 class="h2_guide">Size</h2>
 		<!-- View -->
 		<div class="guide_wrap">
 			<button type="button" class="button is-small is-gray">취소</button>
@@ -57,45 +57,45 @@
 -  기본 class="button"
 - 버튼 크기 : is-small, is-medium, is-large
 - 버튼 outline : is-inverted 클래스 추가
+- button 태그 type=button 기본 설정, 용도에 따라 변경해주세요.
 -->
 <button type="button" class="button is-large is-gray">취소</button>
 <button type="button" class="button is-large is-blue">확인</button>
-<br>
-<br>
-<a href="javascript:;" class="button is-large is-gray is-inverted">확인</a>
-<a href="javascript:;" class="button is-large is-blue is-inverted">확인</a>
+
+<a href="javascript:;" type="button" class="button is-large is-gray is-inverted">확인</a>
+<a href="javascript:;" type="button" class="button is-large is-blue is-inverted">확인</a>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">02. Medium Button</h2>
+		<h2 class="h2_guide">2 button </h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<button type="button" class="button is-large is-blue">아이디 확인</button>
+			<div class="buttons is-centered">
+				<a href="javascript:;" class="button is-medium is-gray">취소</a>
+				<button type="button" class="button is-medium is-blue">확인</button>
+			</div>
 		</div>
 		<!-- // View -->
 
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<!--
-- 기능에 따라 button태그 or a태그 사용
-- 기본 class="button"
-- class="is-large" / Height : 50px / form요소 input에 대한 기능실행시 사용
--->
-<button type="button" class="button is-large is-blue">아이디 확인</button>
-<a href="#" class="button is-large is-blue">아이디 확인</a>
+<div class="buttons is-centered">
+	<a href="javascript:;" class="button is-medium is-gray">취소</a>
+	<button type="button" class="button is-medium is-blue">확인</button>
+</div>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">03. full Width</h2>
+		<h2 class="h2_guide">full Width</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<button class="button is-large is-blue is-fullwidth">확인</button>
+			<button type="button" class="button is-large is-blue is-fullwidth">확인</button>
 
-			<div class="buttons">
-				<button class="button is-large is-blue is-fullwidth">상단 여백 버튼</button>
+			<div class="buttons is-centered">
+				<button type="button" class="button is-large is-blue is-fullwidth">상단 여백 버튼</button>
 			</div>
 		</div>
 		<!-- // View -->
@@ -104,25 +104,24 @@
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
 <!--
-	- class="button"에 class="is-fullwidth" 추가
+	- 클래스 부여 : is-fullwidth
 -->
-<button class="button is-large is-blue is-fullwidth">가입</button>
+<button type="button" class="button is-large is-blue is-fullwidth">확인</button>
 
-
-<div class="buttons">
-	<button class="button is-large is-blue is-fullwidth">상단 여백 버튼</button>
+<div class="buttons is-centered">
+	<button type="button" class="button is-large is-blue is-fullwidth">상단 여백 버튼</button>
 </div>
 
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">03. Delete Button</h2>
+		<h2 class="h2_guide">Delete Button</h2>
 		<!-- View -->
 		<div class="guide_wrap">
-			<button class="btn-delete is-small" type="button"><span class="skip">삭제</span></button>
-			<button class="btn-delete is-medium" type="button"><span class="skip">삭제</span></button>
-			<button class="btn-delete is-large" type="button"><span class="skip">삭제</span></button>
+			<button type="button" class="btn-delete is-small"><span class="skip">삭제</span></button>
+			<button type="button" class="btn-delete is-medium"><span class="skip">삭제</span></button>
+			<button type="button" class="btn-delete is-large"><span class="skip">삭제</span></button>
 			
 		</div>
 		<!-- // View -->
@@ -130,10 +129,9 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-<button class="btn-delete is-small" type="button"><span class="skip">삭제</span></button>
-<button class="btn-delete is-medium" type="button"><span class="skip">삭제</span></button>
-<button class="btn-delete is-large" type="button"><span class="skip">삭제</span></button>
-
+<button type="button" class="btn-delete is-small"><span class="skip">삭제</span></button>
+<button type="button" class="btn-delete is-medium"><span class="skip">삭제</span></button>
+<button type="button" class="btn-delete is-large"><span class="skip">삭제</span></button>
 			</xmp>
 		</div>
 		<!-- // code -->

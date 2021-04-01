@@ -1,86 +1,86 @@
 =prefix($property, $value) 
-    -webkit-#{$property}: #{$value}
-    -moz-#{$property}: #{$value}
-    -ms-#{$property}: #{$value}
-    #{$property}: #{$value}
+	-webkit-#{$property}: #{$value}
+	-moz-#{$property}: #{$value}
+	-ms-#{$property}: #{$value}
+	#{$property}: #{$value}
 
 =prefix02($property, $value, $value02) 
-    -webkit-#{$property}: #{$value} #{$value02}
-    -moz-#{$property}: #{$value} #{$value02}
-    -ms-#{$property}: #{$value} #{$value02}
-    #{$property}: #{$value} #{$value02}
+	-webkit-#{$property}: #{$value} #{$value02}
+	-moz-#{$property}: #{$value} #{$value02}
+	-ms-#{$property}: #{$value} #{$value02}
+	#{$property}: #{$value} #{$value02}
 
 
 =location
-    background: url(/img/ico_location.png) center/100% auto no-repeat
-    width: 17px
-    height: 20px
-    vertical-align: middle
-    display: inline-block
+	background: url(/img/ico_location.png) center/100% auto no-repeat
+	width: 17px
+	height: 20px
+	vertical-align: middle
+	display: inline-block
 
 =co-arrow($direction)
-    border: 3px solid $color-black
-    border-right: 0
-    border-top: 0
-    content: ''
-    display: inline-block
-    height: 13px
-    width: 13px
-    pointer-events: none
-    +prefix(transform-origin, center)
+	border: 3px solid $color-black
+	border-right: 0
+	border-top: 0
+	content: ''
+	display: inline-block
+	height: 13px
+	width: 13px
+	pointer-events: none
+	+prefix(transform-origin, center)
 
 
-    @if $direction == up
-        +prefix(transform, rotate(135deg))
-    @else if $direction == down
-        +prefix(transform, rotate(-45deg))
-    @else if $direction == left
-        +prefix(transform, rotate(45deg))
-    @else if $direction == right
-        +prefix(transform, rotate(-135deg))
+	@if $direction == up
+		+prefix(transform, rotate(135deg))
+	@else if $direction == down
+		+prefix(transform, rotate(-45deg))
+	@else if $direction == left
+		+prefix(transform, rotate(45deg))
+	@else if $direction == right
+		+prefix(transform, rotate(-135deg))
 
 
-    
+	
 =co-delete
-    +delete
-    background-color: transparent
+	+delete
+	background-color: transparent
 
-    &::after,
-    &::before
-        background-color: $color-black
+	&::after,
+	&::before
+		background-color: $color-black
 
-    &:hover,
-    &:focus,
-    &:active
-        background-color: transparent
-    
-    &.is-small
-        height: 30px
-        max-height: 30px
-        max-width: 30px
-        min-height: 30px
-        min-width: 30px
-        width: 30px
+	&:hover,
+	&:focus,
+	&:active
+		background-color: transparent
+	
+	&.is-small
+		height: 30px
+		max-height: 30px
+		max-width: 30px
+		min-height: 30px
+		min-width: 30px
+		width: 30px
 
-    &.is-medium
-        height: 36px
-        max-height: 36px
-        max-width: 36px
-        min-height: 36px
-        min-width: 36px
-        width: 36px
-        
-    &.is-large
-        height: 44px
-        max-height: 44px
-        max-width: 44px
-        min-height: 44px
-        min-width: 44px
-        width: 44px
+	&.is-medium
+		height: 36px
+		max-height: 36px
+		max-width: 36px
+		min-height: 36px
+		min-width: 36px
+		width: 36px
+		
+	&.is-large
+		height: 44px
+		max-height: 44px
+		max-width: 44px
+		min-height: 44px
+		min-width: 44px
+		width: 44px
 
 
 =font-set($font-size, $spacing, $line-height)
-    font:
-        size: $font-size
-    letter-spacing: $spacing
-    line-height: $line-height
+	font:
+		size: $font-size
+	letter-spacing: $spacing
+	line-height: $line-height

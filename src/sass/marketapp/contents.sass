@@ -155,49 +155,7 @@ $success-color      : $color-blue
 
 
 
-// .buttons
-.util
-	margin:
-		top: 15px
-		bottom: 0
-		
-		
-	.checkbox
-		+font-set(14px, 0px, 20px)
-	//.util-link
-	//	justify-content: flex-end
-		a
-			display: flex
-			+font-set(14px, -.28px, 22px)
-			padding:
-				left: 8px
-				right: 7px
-			color: $search-link-color
-			position: relative
-			&::before							
-				content: ''
-				width: 1px
-				height: 12px
-				background:
-					color: $search-link-hypen
-				position: absolute
-				top: 50%
-				left: 0
-				transform: translateY(-50%)
-			&:first-child
-				&::before
-					display: none
-			&:last-child
-				padding:
-					right: 0
-	.util-link
-		a
-			display: inline-block
-			+font-set(14px, -.28px, 22px)
-			vertical-align: top
-			&:first-child
-				padding:
-					left: 0
+
 .join
 	padding:
 		top: 60px
@@ -1318,7 +1276,7 @@ $loading-box-background-color: rgba($color-black, 0.1)
 	&.has-addons
 		display: flex
 		justify-content: flex-start
-		margin: 0
+		margin: 0 
 		.column
 			padding: 6px 0
 			&:not(:last-child)

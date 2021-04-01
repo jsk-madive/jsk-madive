@@ -1,8 +1,6 @@
 'use strict';
 
-/* 
-  Tab Event 
-*/
+/* Tab Event */
 
 // tabBar
 function tabBar(nowTab, MenuPosX, transition) {
@@ -23,10 +21,10 @@ function tabAnimate() {
 
     var tabIdx = $(this).index();
     $(tabs).siblings('.tab-contbox').children('.tab-cont').eq(tabIdx).show().siblings('.tab-cont').hide();
-    
+
     var MenuPosX = $(this).position().left,
-          nowTab = $(this).parent('.tab-list');
-    
+      nowTab = $(this).parent('.tab-list');
+
     tabBar(nowTab, MenuPosX, 0.3);
   });
 }
@@ -34,10 +32,10 @@ function tabAnimate() {
 $(window).on('resize', function () {
   var tabsCnt = $('.tab-list').length;
   if (tabsCnt > 0) {
-    $('.tab-list > li.on').each(function(){
+    $('.tab-list > li.on').each(function () {
       var nowTab = $(this).parent('.tab-list'),
-            MenuPosX = $(this).position().left;
-      tabBar(nowTab, MenuPosX, 0); 
+        MenuPosX = $(this).position().left;
+      tabBar(nowTab, MenuPosX, 0);
     });
   } else {
     return 0
@@ -61,28 +59,31 @@ function listTabScroll() {
   });
 }
 
-// joinChk
-function joinTermsChk(){
-  var $joinChk = $('input[name=joinchk]'),
-        joinChkCnt = $('input[name=joinchk]').length;
-  
+
+// inputChkAll
+function inputChkAll(){
   // 전체 선택
-  $(document).on('click', '#joinchk-all', function (){
+  $(document).on('click', '.inputchk-all', function () {
+    var allChkId = $(this).attr('id'),
+      $chkList = $('input[name=' + allChkId + ']');
+
     if ($(this).is(':checked')) {
-      $joinChk.prop('checked', true);
+      $chkList.prop('checked', true);
     } else {
-      $joinChk.prop('checked', false);
+      $chkList.prop('checked', false);
     }
   });
 
+  // 체크박스 개수
+  $(document).on('click', 'input:checkbox', function () {
+    var chkName = $(this).attr('name'),
+      chkTotalCnt = $('input[name=' + chkName + ']').length,
+      chkedCnt = $('input[name=' + chkName + ']:checked').length;
 
-  $joinChk.click(function () {
-    var chkedCnt = $('input:checkbox[name=joinchk]:checked').length;
-    if (joinChkCnt == chkedCnt) {
-      $joinChk.prop('checked', true);
-      $('#joinchk-all').prop('checked', true);
-    } else if (joinChkCnt > chkedCnt) {
-      $('#joinchk-all').prop('checked', false);
+    if (chkTotalCnt == chkedCnt) {
+      $('#' + chkName).prop('checked', true);
+    } else if (chkTotalCnt > chkedCnt) {
+      $('#' + chkName).prop('checked', false);
     }
   });
 }
@@ -95,5 +96,5 @@ $(function () {
 
   tabAnimate();
   listTabScroll();
-  joinTermsChk();
+  inputChkAll();
 });

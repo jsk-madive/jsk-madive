@@ -5,66 +5,62 @@
 <body class="is-gray">
   <!-- container -->
   @@include('./include/header.html',{
-  'title' : '배달 받을 주소'
+  'backbtn' : true,
+  'title' : '배달 받을 주소',
   })
-  <div id="contents" class="container">
-    <section class="section pt-2">
-      <div class="field">
-        <div class="control is-search">
-          <input type="text" class="input is-medium" placeholder="예) 센텀시티, 전민동">
-          <button class="btn-search" type="button"><span>검색</span></button>
-        </div>
+  <div id="contents" class="container address-search">
+    <div class="is-search-box">
+      <div class="control is-search">
+        <input type="text" class="input is-medium" placeholder="예) 센텀시티, 전민동">
+        <button class="btn-search" type="button"><span>검색</span></button>
       </div>
-
+    </div>
+    <section class="section">
       <div class="field-grid">
-        <div class="title-field title-underline">
-          <h3 class="title is-4">기본주소</h3>
-        </div>
         <div class="field">
           <ul class="address-list">
             <li class="address-box type03">
-              <p class="addr-stitle"><span>보헌빌딩</span></p>
-              <div class="addr-cont">
-                <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
-                <div class="addr02">
-                  <div class="left"><span class="dpt">도로명</span></div>
-                  <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+              <a href="javascript:;">
+                <p class="addr-stitle"><span>보헌빌딩</span></p>
+                <div class="addr-cont">
+                  <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                  <div class="addr02">
+                    <div class="left"><span class="dpt">도로명</span></div>
+                    <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="address-box type03">
-              <p class="addr-stitle"><span>보헌빌딩</span></p>
-              <div class="addr-cont">
-                <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
-                <div class="addr02">
-                  <div class="left"><span class="dpt">도로명</span></div>
-                  <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+              <a href="javascript:;">
+                <p class="addr-stitle"><span>보헌빌딩</span></p>
+                <div class="addr-cont">
+                  <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                  <div class="addr02">
+                    <div class="left"><span class="dpt">도로명</span></div>
+                    <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="address-box type03">
-              <p class="addr-stitle"><span>보헌빌딩</span></p>
-              <div class="addr-cont">
-                <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
-                <div class="addr02">
-                  <div class="left"><span class="dpt">도로명</span></div>
-                  <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+              <a href="javascript:;">
+                <p class="addr-stitle"><span>보헌빌딩</span></p>
+                <div class="addr-cont">
+                  <div class="addr01">서울시 종로구 계동 20, ~~~~빌딩 10층</div>
+                  <div class="addr02">
+                    <div class="left"><span class="dpt">도로명</span></div>
+                    <div class="right">종로구 율곡로 88, 10층 GSITM</div>
+                  </div>
                 </div>
-              </div>
+              </a>
             </li>
           </ul>
         </div>
       </div>
-
-
-      
-
-
-
     </section>
   </div>
   <!-- // container -->
-  @@include('./include/btm_nav.html')
 
 </body>
 
