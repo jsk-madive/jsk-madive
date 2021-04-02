@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="ko" class="has-navbar-fixed-bottom">
+<html lang="ko">
 @@include('./include/head.html')
 
 <body>
-  @@include('./include/header.html',{
-    'title' : '주문내역'
-    })
   <!-- container -->
   <div id="contents" class="container">
+    <!-- ordertab-section -->
     <section class="ordertab-section">
-      <div class="tabs is-fullwidth">
+      <div class="tabs is-fullwidth is-fixed">
         <ul class="tab-list is-4">
           <li class="on">
             <a href="javascript:;" class="tab-title">전체</a>
@@ -35,7 +33,7 @@
                   <p>음식배달 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -73,7 +71,7 @@
                   <p>전통시장 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -111,7 +109,7 @@
                   <p>전통시장 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -149,7 +147,7 @@
                   <p>전통시장 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -193,7 +191,7 @@
                   <p>음식배달 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -237,7 +235,7 @@
                   <p>전통시장 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -281,7 +279,7 @@
                   <p>쇼핑몰 <span>[배송완료]</span></p>
                 </div>
                 <div class="right">
-                  <span>주문배송상세</span>
+                  <a href="javascript:;" class="order-link">주문배송상세</a>
                 </div>
               </div>
               <div class="order-info">
@@ -319,7 +317,6 @@
     </section>
   </div>
   <!-- // container -->
-  @@include('./include/btm_nav.html')
 </body>
 
 </html>

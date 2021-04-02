@@ -39,7 +39,7 @@ $color-white03 : #F9F9F9
 $color-red : #FF0000
 $color-red02 : #D64C3E // chrome
 
-$color-yellow : #FFEB33
+$color-yellow : #FEE500
 
 $color-green : #03C75A
 $color-green02 : #058B8B 
@@ -103,6 +103,7 @@ $column-gap: 6px
 // 
 //  [B - Utilities]  //
 //   
+
 $navbar-height: 5.125rem    // navbar / 16px
 
 // control.sass
@@ -180,6 +181,7 @@ $title-weight: 700
 // -------------
 //  [B] Layout  
 // -------------
+
 
 // section
 $section-padding : 0 $gap $gap $gap
@@ -309,7 +311,7 @@ $tabs-link-active-color                  : $color-black
 /*************
     Common
  *************/
-a.fc-blue
+a.link-blue
 	color : $color-blue
 	&:active,
 	&:focus,
@@ -324,7 +326,7 @@ a.fc-blue
 .container
     > .login
         padding:
-            top: 50px
+            top: 100px
             bottom: 30px
 .login
     .field
@@ -335,6 +337,31 @@ a.fc-blue
                 margin:
                     top: 20px
 
+.sns-login
+    .button
+        position: relative
+    
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            width: 50px
+            height: 50px
+            line-height: 50px
+            background: 
+                position: center
+                repeat: no-repeat
+
+        &.kakao
+            color: rgba(0, 0, 0, .85)
+            &:before
+                background: 
+                    image: url(/img/ico_kakao.png)
+                    size: 30px auto
+
+
+
+
 
 /*************
     Join
@@ -342,11 +369,15 @@ a.fc-blue
 .container
     > .join
         padding:
-            top: 50px
+            top: 100px
+            bottom: 30px
+
+    > .join02
+        padding: 
+            top: 60px
             bottom: 30px
 
     
-
 /*************
     Terms
  *************/
@@ -407,6 +438,7 @@ a.fc-blue
 // foodtab-section
 .foodtab-section
     position: relative
+    padding-bottom: 20px
 
     &:after
         +clearfix
@@ -420,18 +452,41 @@ a.fc-blue
         padding: 10px 5px
         text-align: center
 
-    .img
+    .img-box
         display: block
+        margin-bottom: 5px
+
+        .img
+            display: table
+            table-layout: fixed
+            margin: 0 auto
+            padding: 10px
+            background-color: $color-gray07
+            border-radius: 10px
+            outline: 0
+
+        &:hover,
+        &:focus,
+        &:active
+            outline: 0
 
     img
         width: 50px
         height: 40px
         overflow: hidden
         display: block
-        margin: 0 auto 10px
+        margin: 0 auto
+        outline: 0
+        background-color: transparent
+        
+        &:hover,
+        &:focus,
+        &:active
+            outline: 0
 
     a
-        display: block
+        display: inline-block
+        margin: 0 auto
         font-size: $size-7
 
 
@@ -679,7 +734,17 @@ a.fc-blue
     .is-search-box
         background-color: $color-white
         padding: $gap
-        margin-bottom: 10px
+        position: fixed
+        top: $header-height
+        left: 0
+        right: 0
+        z-index: 10
+
+        + .section
+            margin-top: 92px
+
+        
+
 
     .addrs-list
         background-color: $color-white
@@ -723,6 +788,7 @@ a.fc-blue
  ********/
 .ordertab-section
     padding-bottom: 10px
+
 .order-list
     width: 100%
     margin: 0
@@ -747,11 +813,18 @@ a.fc-blue
         color: $color-blue03
 
     .right
-        float: right
-        color: $color-blue
-        font-size: $size-8
-        padding-top: 2px
+         float: right
 
+.order-link
+    color: $color-blue
+    font-size: $size-8
+    padding-top: 2px
+
+    &:hover,
+    &:focus,
+    &:active
+        color: $color-blue
+    
 .order-info
     padding-top: 10px
 

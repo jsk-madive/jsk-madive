@@ -85,8 +85,6 @@
 
 
 
-
-
  // modal.sass
 $modal-msg-color: $color-black
 
@@ -225,6 +223,7 @@ $modal-msg-color: $color-black
 $tab-total : 12
 @for $i from 1 through $tab-total
 	.tabs
+		background-color: #fff
 		> ul.is-#{$i}
 			> li
 				width: calc(100% / #{$i})
@@ -235,9 +234,21 @@ $tab-total : 12
 	&:not(:last-child)
 		margin:
 			bottom: 0
+
+	&.is-fixed
+            position: fixed
+            top: 0
+            left: 0
+            right: 0
+            z-index: 10
+
+	+ .tab-contbox
+			padding-top: 84px;
+
 	> ul
 		min-width: 320px
 		width: 100%
+		padding: 15px 4px
 			
 		@media screen and (max-width: 320px)
 			overflow:
@@ -249,6 +260,8 @@ $tab-total : 12
 
 			> li 
 				position: relative
+				padding: 0 4px
+				font-size: 0
 		
 		&:after
         	+clearfix
@@ -259,31 +272,30 @@ $tab-total : 12
 
 			a:hover
 				border: none
-			
-	a
-		font-size: $size-6
-		height: 40px
-		line-height: 40px
-		padding: 0
-		border-bottom: 0
-  
-	li.is-active
-        a
-            border-bottom: 0
 
-	.tab-title
-		display: block
+			&.on
+				a
+					background-color: $color-blue !important
+					color: $color-white
 
-	.tab-bar
-    position: absolute
-    left: 0
-    top: 37px
-    display: block
-    background-color: $color-blue
-    height: 3px
-    content: ''
-    transition: 0.3s
-    width: 100%
+a.tab-title
+	background-color: $color-gray
+	font-size: $size-6
+	height: 55px
+	line-height: 55px
+	border-radius: 15px
+	border: 0
+	color: #fff
+	position: relative
+	overflow: hidden
+	z-index: 1
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .1)
+
+	&:hover,
+	&:focus,
+	&:active
+		color: $color-white
+		border: 0
 
 .tab-cont
     width: 100%

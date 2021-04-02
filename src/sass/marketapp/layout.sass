@@ -2,11 +2,13 @@
 /*
 	Header
  */
+$header-height: 50px
+
 
 .header
-	height: 50px
-	min-height: 50px
-	line-height: 50px
+	height: $header-height
+	min-height: $header-height
+	line-height: $header-height
 	text-align: center
 	border: 
 		bottom: 1px solid $color-gray
@@ -17,7 +19,7 @@
 		line-height: 50px
 	+ .container
 		padding:
-			top: 50px
+			top: $header-height
 
 
 // btn-back
@@ -83,8 +85,11 @@
 
 // section.sass
 .section
-	padding: 0 $gap $gap $gap
+	padding: 0 $gap 30px
 	background: $color-white
+
+	&.non-hd
+		padding-top: 40px
 
 
 /* 
