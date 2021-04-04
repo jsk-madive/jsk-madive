@@ -64,11 +64,6 @@ $point-color-3           : $color-black
 .point-color-3
 	color: $point-color-3 !important
 
-/* Align */
-$aligns: left center right
-@each $align in $aligns
-	.is-align-#{$align}
-		text-align: #{$align}
 
 /* Style */
 .underline
@@ -1326,7 +1321,3 @@ $loading-box-background-color: rgba($color-black, 0.1)
 				.time-limt
 					@include input
 					justify-content: center
-					
-					&:hover
-						border:
-							color: #b5b5b5

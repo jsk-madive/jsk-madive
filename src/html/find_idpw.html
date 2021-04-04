@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+
+<body>
+  @@include('./include/header.html',{
+  'backbtn': true,
+  'title' : '아이디/비밀번호 찾기'
+  })
+  <!-- container -->
+  <div id="contents" class="container findidpw-box">
+    <div class="tabs is-fullwidth">
+      <ul class="tab-list is-2">
+        <li class="on">
+          <a href="javascript:;" class="tab-title">아이디 찾기</a>
+        </li>
+        <li>
+          <a href="javascript:;" class="tab-title">비밀번호 찾기</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 아이디 찾기  -->
+    <div class="tab-contbox">
+      <div class="tab-cont section">
+        <h3 class="skip">아이디 찾기</h3>
+        <div class="form-grid">
+          <div class="field-grid">
+
+            <div class="field">
+              <div class="columns">
+                <div class="column">
+                  <label class="label" for="find-id">이름</label>
+                  <div class="control">
+                    <input type="text" class="input is-medium" id="find-id">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <div class="columns">
+                <div class="column">
+                  <label class="label" for="find-tel">휴대폰 번호</label>
+                  <div class="control">
+                    <input type="tel" class="input is-medium" id="find-tel" placeholder="010-0000-0000">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="buttons is-centered">
+              <button type="button" class="button is-large is-blue is-fullwidth">확인</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 비밀번호 찾기 -->
+      <div class="tab-cont section">
+        <h3 class="skip">비밀번호 찾기</h3>
+        <div class="contents">
+          <p>입력하신 이메일 주소 또는 핸드폰 번호로 비밀번호 재설정 정보가 발송됩니다. <br>
+            소셜 계정 회원은 비밀번호 찾기가 불가능합니다.
+            </p>
+        </div>
+
+        <div class="buttons is-centered">
+          <button type="button" class="button is-large is-blue is-fullwidth">이메일 발송하기</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>

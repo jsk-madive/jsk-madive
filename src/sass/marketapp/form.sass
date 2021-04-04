@@ -35,9 +35,10 @@
 	strong
 		font: 
 			weight: $weight-normal
+			size: $size-6
 		display: inline-block
+		line-height: 1.2
 		vertical-align: top
-		line-height: 20px
 		color: $input-label-color
 		letter-spacing: -.32px
 	&.reverse
@@ -166,7 +167,7 @@ $label-necessary-color: $color-blue
 $label-help-color     : $color-gray05
 
 .label
-	line-height: 23px
+	line-height: 20px
 	&:not(:last-child)
 		margin:
 			bottom: 8px
@@ -229,6 +230,12 @@ $input-readonly-color-2           : $color-black03
 .textarea
 	@extend %readonly
 
+.input
+	&.is-small
+		height: 40px
+		line-height: 40px
+		border-radius: 0
+
 
 
 /*
@@ -239,3 +246,23 @@ $input-readonly-color-2           : $color-black03
 .level
 	+ .control
 		margin-bottom: 5px
+
+
+.columns 
+	&.has-label-btn
+		margin: -3px -3px -6px -3px
+		.column 
+			margin: auto
+			vertical-align: middle
+			padding: 0 3px
+
+		.label
+			vertical-align: middle
+
+
+		.button
+			min-width: auto
+
+		
+		&.is-label
+			min-height: 40px

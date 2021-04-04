@@ -78,7 +78,7 @@ const scssOptions = {
 	 * indentWidth (>= v3.0.0, Type : Integer , Default : 2) 
 	 * 컴파일 된 CSS의 "들여쓰기" 의 갯수 
 	 **/ 
-	indentWidth : 1, // outputStyle 이 nested, expanded 인 경우에 사용 
+	indentWidth : 4, // outputStyle 이 nested, expanded 인 경우에 사용 
 	/** 
 	 * precision (Type : Integer , Default : 5) 
 	 * 컴파일 된 CSS 의 소수점 자리수. 

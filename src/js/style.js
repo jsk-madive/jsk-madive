@@ -2,7 +2,6 @@
 
 /* Tab Event */
 
-
 // tabAnimate
 function tabAnimate() {
   var tabs = $('.tabs');
@@ -35,7 +34,7 @@ function listTabScroll() {
 
 
 // inputChkAll
-function inputChkAll(){
+function inputChkAll() {
   // 전체 선택
   $(document).on('click', '.inputchk-all', function () {
     var allChkId = $(this).attr('id'),
@@ -63,6 +62,22 @@ function inputChkAll(){
 }
 
 
+/* Modal */
+function modalClose() {
+  // open
+  $(document).on('click', '.modal-open', function () {
+    var selectBtn = $(this).attr('id');
+
+    $('[data-modal=' + selectBtn + ']').addClass('is-active');
+  });
+
+  // close
+  $(document).on('click', '.modal-del-btn, .modal-confirm-btn', function () {
+    $(this).closest('.modal').removeClass('is-active');
+  });
+}
+
+
 $(function () {
   // 탭 화면 초기화
   var nowTab = $('.tabs').children('ul').children('li.on').index();
@@ -71,4 +86,6 @@ $(function () {
   tabAnimate();
   listTabScroll();
   inputChkAll();
+  modalClose();
+
 });
