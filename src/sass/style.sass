@@ -1106,17 +1106,25 @@ a.link-blue
 /*************
     mtminq-write
   *************/
+.mtminq-write
+    display: flex
+    flex-direction: column
+
+
 // inq-photo-box
 .inq-photo-box
 
     width: 100%
-    padding: 16px 0 0 12px
+    padding-top: 16px
     overflow: hidden
 
 .inq-photo-list
     display: block
     margin: 0 auto
-    padding-bottom: 25px
+    padding: 
+        left: 11px
+        right: 11px
+        bottom: 25px
     width: auto
     font-size: 0
     text-align: left
@@ -1128,6 +1136,9 @@ a.link-blue
     > li
         margin: 0 5px
         display: inline-block
+        
+        > a
+            display: block
 
 
 .inq-photo
@@ -1155,6 +1166,7 @@ a.link-blue
             display: block
             margin-top: 5px
             font-size: $size-8
+            color: $color-gray05
 
 
     &.image
@@ -1174,6 +1186,9 @@ a.link-blue
 
 .inq-textarea-box
     border-top: 1px solid $color-gray
+    display: flex
+    flex: 1
+    padding-bottom: 50px
 
     .textarea 
         border: 0
