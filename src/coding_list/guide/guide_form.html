@@ -31,7 +31,14 @@
 
 	<div id="wrap" class="coding_guide">
 		<h1 class="h1_guide">Form Guide</h1>
-		<h2 class="h2_guide">Input Box</h2>
+
+		<!-- ===================  [Input Text]  ======================= -->
+		<h2 class="h2_guide">[Input Text]</h2>
+
+		<!-- 
+			-------- Input Box --------
+		-->
+		<h3 class="h3_guide">Input Text</h3>
 
 		<!-- View -->
 		<div class="guide_wrap">
@@ -45,6 +52,7 @@
 			<input type="text" class="input is-medium" value="Input Text ReadOnly"
 						placeholder="This text is value" readonly>
 		</div>
+	</div>
 		<!-- // View -->
 
 		<!-- code -->
@@ -58,8 +66,17 @@
 		</div>
 		<!-- // code -->
 
+	<br>
+	<br>
+	<!-- ===================  [Input + Button ]  ======================= -->
+	<h2 class="h2_guide">[Input + Button]</h2>
 
-		<h2 class="h2_guide">Input Box Add Button</h2>
+
+		<!-- 
+			-------- Input + Button : Type01 --------
+		-->
+
+		<h3 class="h3_guide">Input + Button : Type01</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="columns add-util-btn is-mobile">
@@ -89,7 +106,10 @@
 		<!-- // code -->
 
 
-		<h2 class="h2_guide">Input Box has-addons Button</h2>
+		<!-- 
+			-------- Input + Button : Type02 --------
+		-->
+		<h3 class="h3_guide">Input + Button : Type02</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="columns has-addons certify-box is-mobile">
@@ -118,7 +138,16 @@
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">Input Search</h2>
+	<br>
+	<br>
+	<!-- ===================  [Input + Search]  ======================= -->
+	<h2 class="h2_guide">[Input + Search]</h2>
+
+
+	<!-- 
+		-------- Input + Search : Type01 --------
+	-->
+		<h3 class="h3_guide">Input + Search : Type01</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="field has-addons">
@@ -147,7 +176,12 @@
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">Input Search02</h2>
+
+	<!-- 
+		-------- Input + Search : Type02 --------
+	-->
+
+		<h3 class="h3_guide">Input + Search : Type02</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="field">
@@ -172,7 +206,12 @@
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">휴대폰 인증 Button</h2>
+
+	<!-- 
+		-------- 휴대폰 인증 Button --------
+	-->
+
+		<h3 class="h3_guide">휴대폰 인증 Button</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="columns has-addons certify-box is-mobile">
@@ -210,8 +249,152 @@
 
 		<br>
 		<br>
+
+	<!-- ===================  [Select]  ======================= -->
+	<h2 class="h2_guide">[Select]</h2>
+
+		<!-- ---------------------
+			Select
+		--------------------------- -->
+		<h3 class="h3_guide">Select</h3>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="select is-subselect is-no-outline">
+				<select>
+				  <option>Select dropdown</option>
+				  <option>With options</option>
+				</select>
+			  </div>
+
+			  
+			<div class="select is-small ">
+				<select>
+				  <option>Select dropdown</option>
+				  <option>With options</option>
+				</select>
+			  </div>
+			  
+			 <div class="select is-medium">
+				<select>
+				  <option>Select dropdown</option>
+				  <option>With options</option>
+				</select>
+			  </div>
+			  
+			  <div class="select is-large">
+				<select>
+				  <option>Select dropdown</option>
+				  <option>With options</option>
+				</select>
+			  </div>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+				<!-- 
+					- 버튼 type :is-subselect, is-small, is-medium, is-large
+					- select border 제거 클래스 부여 : is-no-outline
+
+				 -->
+				 <div class="select is-subselect">
+					<select>
+					  <option>Select dropdown</option>
+					  <option>With options</option>
+					</select>
+				  </div>
+	
+				  
+				<div class="select is-small ">
+					<select>
+					  <option>Select dropdown</option>
+					  <option>With options</option>
+					</select>
+				  </div>
+				  
+				 <div class="select is-medium">
+					<select>
+					  <option>Select dropdown</option>
+					  <option>With options</option>
+					</select>
+				  </div>
+				  
+				  <div class="select is-large">
+					<select>
+					  <option>Select dropdown</option>
+					  <option>With options</option>
+					</select>
+				  </div>
+
+			</xmp>
+		</div>
+		<!-- // code -->
+
+
+		<!-- ---------------------
+			Left + Right Select
+		--------------------------- -->
+		<h3 class="h3_guide">Left + Right Select</h3>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="select-field">
+                <div class="level is-mobile ">
+                    <div class="level-left">
+                        <div class="select is-subselect">
+                            <select>
+                                <option>전체 카테고리</option>
+                                <option>option</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="level-right">
+                        <div class="select is-subselect no-pdr">
+                            <select>
+                                <option>최신순</option>
+                                <option>option</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+				<div class="select-field">
+					<div class="level is-mobile ">
+						<div class="level-left">
+							<div class="select is-subselect">
+								<select>
+									<option>전체 카테고리</option>
+									<option>option</option>
+								</select>
+							</div>
+						</div>
+						<div class="level-right">
+							<div class="select is-subselect no-pdr">
+								<select>
+									<option>최신순</option>
+									<option>option</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</xmp>
+		</div>
+		<!-- // code -->
+
+
 		<br>
-		<h2 class="h2_guide">Checkbox</h2>
+		<br>
+
+	<!-- ===================  [Checkbox]  ======================= -->
+	<h2 class="h2_guide">[Checkbox]</h2>
 
 		<!-- ---------------------
 			Checkbox

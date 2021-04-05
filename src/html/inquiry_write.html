@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+@@include('./include/head.html')
+<!-- has-navbar-btm-button -->
+
+<body class="has-navbar-btm-button">
+    @@include('./include/header.html',{
+    'backbtn': true,
+    'title' : '1:1 문의하기'
+    })
+    <!--  mtminq-write -->
+    <div id="contents" class="container mtminq-write">
+        <div class="inq-photo-box">
+            <ul class="inq-photo-list">
+                <li>
+                    <a href="javascript:;">
+                        <div class="inq-photo mark">
+                            <div>
+                                <i></i>
+                                <span class="cnt">1 / 10</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="inq-photo image">
+                            <div>
+                                <img src="/img/dummy_image.jpg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="inq-photo image">
+                            <div>
+                                <img src="/img/dummy_image.jpg" alt="">
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="inq-textarea-box">
+            <div class="field">
+                <div class="control">
+                  <textarea class="textarea is-medium" placeholder="Large textarea"></textarea>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="button-btm-fixed">
+        <button type="button" class="button is-large is-blue is-fullwidth">문의하기</button>
+    </div>
+</body>
+
+</html>

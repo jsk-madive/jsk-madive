@@ -60,8 +60,8 @@
 	select
 		+font-set(16px, 0, 24px)
 		padding:
-			top: 12px
-			bottom: 12px
+			top: 5px
+			bottom: 5px
 		&:not([multiple])
 			+ltr-property("padding", 40px)
 
@@ -230,16 +230,91 @@ $input-readonly-color-2           : $color-black03
 .textarea
 	@extend %readonly
 
-.input
+.input,
 	&.is-small
 		height: 40px
 		line-height: 40px
+		padding: 
+			top: 10px
+			bottom: 10px
 		border-radius: 0
+
+	&.is-large
+		height: 55px
+		line-height: 55px
+
+
+/*
+	Select
+ */
+	
+.select-field
+	background-color: $color-white
+	
+	.level
+		border-bottom: 1px solid $color-black
+		margin: 15px 16px 0
+			
+	.level-left
+		.select:first-of-type
+			select
+				padding-left: 0
+
+	.level-right
+		.select:last-of-type
+			&:after
+				right: 2px
+	
+.select
+	&.is-small	
+		height: 40px
+		
+		select
+			height: 40px 
+
+	&.is-medium	
+		height: 50px
+		
+		select
+			height: 50px 
+
+	&.is-large
+	 	height: 55px
+		
+		 select
+			height: 55px
+
+	&.is-subselect
+		height: 35px
+		
+		select
+			height: 35px
+			font-size:  $size-6
+			color: $color-gray04
+			border: 0
+			border-radius: 0
+
+		&:not(.is-multiple):not(.is-loading)
+			&::after
+				width: 10px
+				height: 10px
+				border-color: $color-gray04
+				
+	&.is-no-outline
+		select
+			border: 0
+			border-radius: 0
+
+
+
+
+
 
 
 
 /*
-	Tools*/
+	Tools
+ */
 
 // tools.sass
 

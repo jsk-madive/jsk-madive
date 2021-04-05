@@ -119,38 +119,38 @@ $button-cred-color            : $color-black
 				color: $button-blue-bg-color
 		&.is-inverted
 			&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-blue-color
-			color: $button-blue-bg-color
-			border:
+				background:
+					color: $button-blue-color
 				color: $button-blue-bg-color
+				border:
+					color: $button-blue-bg-color
 
 	&.is-black
 		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-		background:
-			color: $button-black-bg-color
-		color: $button-black-color
-		border: none
+			background:
+				color: $button-black-bg-color
+			color: $button-black-color
+			border: none
 	
 	&.is-yellow
 		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-		background:
-			color: $button-yellow-bg-color
-		color: $button-yellow-color
-		border: none
-		&:active
-			background: 
-				color: $button-yellow-active-bg-color
+			background:
+				color: $button-yellow-bg-color
+			color: $button-yellow-color
+			border: none
+			&:active
+				background: 
+					color: $button-yellow-active-bg-color
 
 	&.is-ygreen
 		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-		background:
-			color: $button-ygreen-bg-color
-		color: $button-ygreen-color
-		border: none
-		&:active
-			background: 
-				color: $button-ygreen-active-bg-color
+			background:
+				color: $button-ygreen-bg-color
+			color: $button-ygreen-color
+			border: none
+			&:active
+				background: 
+					color: $button-ygreen-active-bg-color
 
 	&.is-cred
 		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
@@ -237,9 +237,12 @@ $button-cred-color            : $color-black
 					margin-top: 6px
 
 
-.button,
+.button
 	&.is-centered
 		justify-content: center
+
+	&.is-autowidth
+		min-width: auto
 
 	
 // box.sass
@@ -341,9 +344,9 @@ $box-complete-color2       : $color-gray05
 		&:not(:last-child)
 			margin: 
 				bottom: 15px
-	p
+	p:not(.subtitle)
 		+font-set(15px, -.3px, 23px)
-		+ p
+		+ p:not(.subtitle)
 			+font-set(13px, -.26px, 21px)
 	&.type-2
 		text-align: center

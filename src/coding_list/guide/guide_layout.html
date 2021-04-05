@@ -93,25 +93,127 @@
 
 
 
-<!-- 
-	-------- [Body] --------
- -->
+
+ <!-- ===================  [Body]  ======================= -->
  <h2 class="h2_guide">Body</h2>
+
+
+ <!-- 
+	-------- [하단 네비게이션 메뉴 고정 시] --------
+ -->
+
+ <h3 class="h3_guide">하단 네비게이션 메뉴 고정 시</h3>
  <div class="d_desc code">
 	 <!-- code -->
 	 <xmp class="prettyprint linenums javascript">
 <!-- 
-- 기본 : 클래스 없음
-- 하단 navigation 고정 시 클래스 부여: has-navbar-fixed-bottom
-- 회색 배경 적용 시 클래스 부여 : is-gray
+	- 하단 navigation 고정 시 body 클래스 추가 : has-navbar-fixed-bottom 
 -->
+<body class="has-navbar-fixed-bottom">
+	<div id="contents" class="container">
 
-<body class="has-navbar-fixed-bottom is-gray">
+	</div>
+
+	<nav class="navbar is-fixed-bottom btm-fix-nav">
+		<ul>
+			<li>
+				<a href="javascript:;" class="btm-home">
+					<div class="ico"></div>
+					홈
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="btm-cart">
+					<div class="ico">
+						<div class="newico-cnt">
+							<span>8</span>
+						</div>
+					</div>
+					장바구니
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="btm-order">
+					<div class="ico"></div>
+					주문내역
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="btm-mypage">
+					<div class="ico"></div>
+					마이페이지
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+</body>
+
+	 </xmp>
+	 <!-- // code -->
+ </div>
+
+
+ <!-- 
+	-------- [하단 버튼 고정 시] --------
+ -->
+
+ <h3 class="h3_guide">하단 버튼 고정 시</h3>
+ <div class="d_desc code">
+	 <!-- code -->
+	 <xmp class="prettyprint linenums javascript">
+<!-- 
+	- 하단 버튼 고정 시 body 클래스 추가 : has-navbar-btm-button 
+	- padding-bottom: 55px
+-->
+<body class="has-navbar-btm-button">
+	<div id="contents" class="container">
+
+	</div>
+
+
+	<!--  (case2) : 버튼 1개 일 경우  -->
+	<div class="button-btm-fixed">
+		<button type="button" class="button is-large is-blue is-fullwidth">완료</button>
+	</div>
+
+	<!--  (case2) : 버튼 2개 일 경우  -->
+	<div class="button-btm-fixed">
+		<div class="buttons is-centered">
+			<a href="javascript:;" class="button is-large is-gray">취소</a>
+			<button type="button" class="button is-large is-blue">확인</button>
+		</div>
+	</div>
 
 </body>
 	 </xmp>
 	 <!-- // code -->
  </div>
+
+
+
+ <!-- 
+	-------- [ 배경 색상 회색 설정(gray)] --------
+ -->
+
+ <h3 class="h3_guide">전체 배경 색상 설정(gray)</h3>
+ <div class="d_desc code">
+	 <!-- code -->
+	 <xmp class="prettyprint linenums javascript">
+<!-- 
+	- body 기본 배경 회색 색상 설정 시 클래스 추가 : is-gray
+-->
+<body class="is-gray">
+	<div id="contents" class="container">
+
+	</div>
+
+</body>
+
+	 </xmp>
+	 <!-- // code -->
+ </div>
+
 
 	
 
@@ -141,52 +243,12 @@
 
 
 
-<!-- 
-	-------- [Bottom Fix Navigation] --------
- -->
-		<h2 class="h2_guide">Bottom Fix Navigation</h2>
-		<div class="d_desc code">
-			<!-- code -->
-			<xmp class="prettyprint linenums javascript">
-<!-- 
-	- ios Notch 대응을 위해 하단 여백 설정되어 있음
- -->
-<nav class="navbar is-fixed-bottom btm-fix-nav">
-	<ul>
-		<li>
-			<a href="javascript:;" class="btm-home">
-				<div class="ico"></div>
-				홈
-			</a>
-		</li>
-		<li>
-			<a href="javascript:;" class="btm-cart">
-				<div class="ico">
-					<div class="newico-cnt">
-						<span>8</span>
-					</div>
-				</div>
-				장바구니
-			</a>
-		</li>
-		<li>
-			<a href="javascript:;" class="btm-order">
-				<div class="ico"></div>
-				주문내역
-			</a>
-		</li>
-		<li>
-			<a href="javascript:;" class="btm-mypage">
-				<div class="ico"></div>
-				마이페이지
-			</a>
-		</li>
-	</ul>
-</nav>
-			</xmp>
-			<!-- // code -->
-		</div>
 	</div>
+
+
+
+
+
 	<script type="text/javascript" src="/coding_list/js/pretty.js"></script>
 </body>
 

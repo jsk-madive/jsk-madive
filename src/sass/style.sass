@@ -14,7 +14,7 @@
 $color-black: #000000
 $color-black02 : #333333
 $color-black03 : #151515
-$color-black04 : #080808
+$color-black04 : #363636
 
 
 $color-blue : #1C67FF  // 기본 
@@ -37,11 +37,11 @@ $color-white02 : #F5F5F5
 $color-white03 : #F9F9F9
 
 $color-red : #FF0000
-$color-red02 : #D64C3E // chrome
+$color-red02 : #D64C3E // google
 
-$color-yellow : #FEE500
+$color-yellow : #FEE500 // kakao
 
-$color-green : #03C75A
+$color-green : #00C300  // naver
 $color-green02 : #058B8B 
 
 $color-transparent: transparent
@@ -78,7 +78,7 @@ $body-background-color: $color-white
 $body-min-width: 280px
 $body-font-size: 16px
 $body-line-height: 1.2
-$body-color              : $color-black
+$body-color : $color-black
 
 
 $widescreen-enabled: false
@@ -104,7 +104,7 @@ $column-gap: 6px
 //  [B - Utilities]  //
 //   
 
-$navbar-height: 5.125rem    // navbar / 16px
+$navbar-height: 5.437rem    // navbar / 16px
 
 // control.sass
 $input-focus-border-color: $color-gray
@@ -153,6 +153,9 @@ $input-disabled-background-color-2: $color-white
 $input-disabled-color-2 : $color-black03
 
 
+
+
+
 // tools.sass
 
 // -------------
@@ -165,6 +168,12 @@ $input-disabled-color-2 : $color-black03
 $title-family : 'NotoSansKR', sans-serif
 $title-size: $size-4
 $title-weight: 700
+
+$subtitle-color: $color-gray05
+$subtitle-line-height: 1.2
+$subtitle-strong-weight: 700
+$subtitle-strong-color: $color-gray05
+
 
 
 // button.sass
@@ -200,19 +209,30 @@ $modal-content-width: 550px
 $radius-small: 4px
 $radius: 5px
 
+$sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 $size-9
+
+
 
 
 // derived-variables.sass
 
 
 
+
 // controls.sass
 $control-radius: 6px // 버튼
-$control-height: 50px
-$control-padding-vertical: 13px
-$control-padding-horizontal: 15px
+$control-height : 50px
 $control-radius: 0px
 
+
+=control-small
+    $control-height : 40px
+
+=control-medium
+    $control-height : 50px
+
+=control-large
+    $control-height : 55px
 
 
 // 기존 bulma css 
@@ -232,15 +252,8 @@ $control-radius: 0px
 
 
 
-// generic.sass
 
 
-
-// controls.sass 
-$control-height            : 50px
-$control-padding-vertical  : 13px
-$control-padding-horizontal: 15px
-$control-radius            : 0px
 
 // shared.sass
 
@@ -392,8 +405,21 @@ a.link-blue
             color: rgba(0, 0, 0, .85)
             &:before
                 background: 
-                    image: url(/img/ico_kakao.png)
-                    size: 30px auto
+                    image: url(/img/logo_kakao.png)
+                    size: 22px auto
+
+        &.naver 
+             &:before
+                background: 
+                    image: url(/img/logo_naver.png)
+                    size: 34px auto 
+
+        &.google 
+            border-color: #E5E5E5
+            &:before
+                background: 
+                    image: url(/img/logo_google.png)
+                    size: 24px auto
 
 
 
@@ -580,7 +606,7 @@ a.link-blue
 .subtab-box
     width: 100%
     overflow: hidden
-    z-index: 100
+    z-index: 10
     border-bottom: 1px solid $color-gray
 
     .subtab
@@ -836,7 +862,7 @@ a.link-blue
 /********
  Order List
  ********/
-.ordertab-section
+.ordertab
     padding-bottom: 10px
 
     .tab-contbox
@@ -968,24 +994,26 @@ a.link-blue
 
 .label-withsub
     display: table
-    margin-bottom: 14px
+    margin-bottom: 5px
     .label,
     span
         display: table-cell
         vertical-align: middle
 
     span
-        font-size: $size-9
-        color: $color-gray05
         padding-left: 5px
 
 
 .agreechk-box
+    margin-top: 35px
     padding-top: 15px
     border-top: 1px solid $color-gray06
 
     .title-field
         padding-bottom: 0
+
+        p.subtitle
+            color: $color-gray05
 
 
     .toggle-cont
@@ -998,3 +1026,156 @@ a.link-blue
  *************/
 .withdrawal
     padding-top: 30px
+
+    .form-grid
+        padding-top: 60px
+
+
+/* ************
+    available-coupon
+  *************/
+
+.coupon-box
+    border: 1px solid $color-gray
+    background-color: $color-white
+
+    > a
+        padding: 10px
+        display: block
+    
+    + .coupon-box
+        margin-top: 15px
+
+    .coupon-price
+        font: 
+            weight: $weight-bold
+            size: 24px
+            family: 'Malgun Gothic', sans-serif
+        color: #F75531
+        letter-spacing: -0.03em
+
+    .coupon-cont
+        margin-top: 15px
+        color: $color-gray05
+        font-size: $size-7
+
+        dt, dd
+            margin-top: 7px
+
+
+
+/*************
+    mtminq-list
+  *************/
+.mtminq-list
+    // select 고정 시
+    .select-field
+        &.fixed
+            position: fixed
+            left: 0
+            right: 0
+            background-color: #fff
+
+            .section
+                padding-top: 52px
+
+
+.inqlist-box
+    border-bottom: 1px solid $color-gray
+    padding-bottom: 10px
+    .inqlist-cont
+        padding-top: 15px
+        font-size: $size-6
+        line-height: 1.3
+
+    .inqlist-info
+        padding-top: 10px
+        > span
+            display: inline-block
+            font-size: $size-7
+
+            &.status
+                color: #F75531
+                margin-right: 5px
+            
+            &.date
+                color: $color-gray05
+                letter-spacing: 0.03em
+
+
+/*************
+    mtminq-write
+  *************/
+// inq-photo-box
+.inq-photo-box
+
+    width: 100%
+    padding: 16px 0 0 12px
+    overflow: hidden
+
+.inq-photo-list
+    display: block
+    margin: 0 auto
+    padding-bottom: 25px
+    width: auto
+    font-size: 0
+    text-align: left
+    overflow-x: scroll
+    white-space: nowrap
+    -webkit-overflow-scrolling: touch
+
+
+    > li
+        margin: 0 5px
+        display: inline-block
+
+
+.inq-photo
+    border-radius: 6px
+    width: 96px
+    height: 96px
+    overflow: hidden
+
+    &.mark
+        display: table
+        table-layout:  fixed
+        background-color: $color-gray09
+        
+        > div
+            display: table-cell
+        
+        i
+            display: block
+            width: 24px
+            height: 24px
+            margin: 0 auto
+            background: url(/img/ico_camera.png) center 0/24px auto no-repeat;
+
+        .cnt
+            display: block
+            margin-top: 5px
+            font-size: $size-8
+
+
+    &.image
+        img
+            min-width: 100%
+            min-height: 100%
+            max-width: 100%
+            max-height: 100%
+
+
+    > div
+        height: 100%
+        text-align: center
+        vertical-align: middle
+        overflow: hidden
+
+
+.inq-textarea-box
+    border-top: 1px solid $color-gray
+
+    .textarea 
+        border: 0
+        resize: none
+        height: 100%
