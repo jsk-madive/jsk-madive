@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
+@@include('./include/head.html')
+
 <body>
-    @@include('./include/header.html',{
-        'backbtn' : true,
-        'title' : '결제하기'
-    })
-        <!-- container -->
-        <div id="contents" class="container">
-            <div class="tabs is-fullwidth">
-                <ul class="tab-list is-3">
-                    <li class="on">
-                        <a href="javascript:;" class="tab-title">음식배달</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="tab-title">전통시장</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;" class="tab-title">쇼핑몰</a>
-                    </li>
-                </ul>
-            </div>
-      </div>
+  <div class="tabs is-fullwidth is-fixed">
+    <ul class="tab-list is-3" id="tab-payment">
+      <li class="on">
+        <a href="javascript:;" class="tab-title">음식배달</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="tab-title">전통시장</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="tab-title">쇼핑몰</a>
+      </li>
+    </ul>
+  </div>
+  <!-- container -->
+  <div id="contents" class="container">
+    <div class="tab-contbox" data-tab="tab-payment">
+      <div class="tab-cont">음식배달 탭</div>
+      <div class="tab-cont">전통시장 탭</div>
+      <div class="tab-cont">쇼핑몰 탭</div>
+    </div>
+  </div>
 </body>
+
 </html>

@@ -7,26 +7,24 @@
   'backbtn': true,
   'title' : '아이디/비밀번호 찾기'
   })
+  <div class="tabs is-fullwidth is-fixed">
+    <ul class="tab-list is-2" id="tab-idpw">
+      <li class="on">
+        <a href="javascript:;" class="tab-title">아이디 찾기</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="tab-title">비밀번호 찾기</a>
+      </li>
+    </ul>
+  </div>
   <!-- container -->
   <div id="contents" class="container findidpw-box">
-    <div class="tabs is-fullwidth">
-      <ul class="tab-list is-2">
-        <li class="on">
-          <a href="javascript:;" class="tab-title">아이디 찾기</a>
-        </li>
-        <li>
-          <a href="javascript:;" class="tab-title">비밀번호 찾기</a>
-        </li>
-      </ul>
-    </div>
-
     <!-- 아이디 찾기  -->
-    <div class="tab-contbox">
+    <div class="tab-contbox" data-tab="tab-idpw">
       <div class="tab-cont section">
         <h3 class="skip">아이디 찾기</h3>
         <div class="form-grid">
           <div class="field-grid">
-
             <div class="field">
               <div class="columns">
                 <div class="column">
@@ -50,7 +48,7 @@
             </div>
 
             <div class="buttons is-centered">
-              <button type="button" class="button is-medium is-gray is-fullwidth">확인</button>
+              <button type="button" class="button is-medium is-gary is-inverted is-fullwidth">확인</button>
             </div>
           </div>
         </div>
@@ -67,7 +65,7 @@
         </div>
 
         <div class="buttons is-centered">
-          <button type="button" class="button is-medium is-gray is-fullwidth">이메일 발송하기</button>
+          <button type="button" class="button is-medium is-gary is-inverted is-fullwidth">이메일 발송하기</button>
         </div>
       </div>
 

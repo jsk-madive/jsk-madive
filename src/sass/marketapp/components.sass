@@ -1,93 +1,93 @@
 /* 
-  Navbar 
+	Navbar 
  */
 
 // navbar.sass
 .navbar.is-fixed-bottom
-  > ul
-    +clearfix
+	> ul
+		+clearfix
 
 // btm-fix-nav
 .btm-fix-nav
-    border-top: 1px solid $color-gray
+	border-top: 1px solid $color-gray
 
-    > ul
-        width: 100%
+	> ul
+		width: 100%
 
-        &::after
-            +clearfix
+		&::after
+			+clearfix
 
-        > li
-            float: left
-            height: inherit
-            vertical-align: middle
-            text-align: center
-            width: 25%
-            position: relative
+		> li
+			float: left
+			height: inherit
+			vertical-align: middle
+			text-align: center
+			width: 25%
+			position: relative
 
-            &:first-child
-                .ico
-                    background-position-x: 0
+			&:first-child
+				.ico
+					background-position-x: 0
 
-            &:nth-child(2)
-                .ico
-                    background-position-x: -39px
+			&:nth-child(2)
+				.ico
+					background-position-x: -39px
 
-            &:nth-child(3)
-                .ico
-                    background-position-x: -78px
+			&:nth-child(3)
+				.ico
+					background-position-x: -78px
 
-            &:nth-child(4)
-                .ico
-                    background-position-x: -117px
+			&:nth-child(4)
+				.ico
+					background-position-x: -117px
 
-        a
-            display: block
-            position: relative
-            height: inherit
-            font-size: $size-7
-            font-weight: 600
-            padding-top: 13px
-            padding-bottom: 20px
-            color: $color-gray05
+		a
+			display: block
+			position: relative
+			height: inherit
+			font-size: $size-7
+			font-weight: 600
+			padding-top: 13px
+			padding-bottom: 20px
+			color: $color-gray05
 
-            .ico
-                background: url(../img/btm_ico.png) center 0/auto 27px no-repeat
-                content: ''
-                display: block
-                margin: 0 auto 10px
-                width: 39px
-                height: 27px
-                text-align: center
-                position: relative
-        
+			.ico
+				background: url(../img/btm_ico.png) center 0/auto 27px no-repeat
+				content: ''
+				display: block
+				margin: 0 auto 10px
+				width: 39px
+				height: 27px
+				text-align: center
+				position: relative
+			
 
 .newico-cnt
-  position: absolute
-  top: -6px
-  right: -1px
+	position: absolute
+	top: -6px
+	right: -1px
 
-  > span
-    display: inline-block
-    color: $color-white
-    background-color: $color-blue
-    padding: 3px 5px
-    line-height: 1
-    border-radius: 50%
-    display: inline-block
-    font: 
-      size: 10px
-      weight: $weight-bold
-    min-width: 16px 
-    text-align: center
-    letter-spacing: 0
+	> span
+		display: inline-block
+		color: $color-white
+		background-color: $color-blue
+		padding: 3px 5px
+		line-height: 1
+		border-radius: 50%
+		display: inline-block
+		font: 
+			size: 10px
+			weight: $weight-bold
+		min-width: 16px 
+		text-align: center
+		letter-spacing: 0
 
 
 
 
 
 /*
-  Modal
+	Modal
  */
 
 // modal.sass
@@ -217,98 +217,103 @@
  
 // tabs.sass
 .tabs
-  overflow: auto
-  background-color: $color-white
-  &:not(:last-child)
-    margin:
-      bottom: 0
+	overflow: auto
+	background-color: $color-white
+	
 
-  &.is-fixed
-            position: fixed
-            top: 0
-            left: 0
-            right: 0
-            z-index: 10
+	&:not(:last-child)
+		margin:
+			bottom: 0
+
+	&.is-fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		z-index: 10
+
+		+ .container
+			padding-top: 85px
 
 
 
-  > ul
-    min-width: 320px
-    width: 100%
-    padding: 15px 4px
-      
-    @media screen and (max-width: 320px)
-      overflow:
-        x: scroll
-      width: auto
+	> ul
+		min-width: 320px
+		width: 100%
+		padding: 15px 4px
+			
+		@media screen and (max-width: 320px)
+			overflow:
+				x: scroll
+			width: auto
 
-    &.tab-list
-      position: relative
+		&.tab-list
+			position: relative
 
-      > li 
-        position: relative
-        padding: 0 4px
-        font-size: 0
-    
-    &:after
-          +clearfix
+			> li 
+				position: relative
+				padding: 0 4px
+				font-size: 0
+		
+		&:after
+					+clearfix
 
-    > li
-      text-align: center
-      font-size: $size-6
+		> li
+			text-align: center
+			font-size: $size-6
 
-      a:hover
-        border: none
+			a:hover
+				border: none
 
-      &.on
-        a
-          background-color: $color-blue !important
-          color: $color-white
+			&.on
+				a
+					background-color: $color-blue !important
+					color: $color-white
 
 a.tab-title
-  background-color: $color-gray
-  font-size: $size-6
-  height: 55px
-  line-height: 55px
-  border-radius: 15px
-  border: 0
-  color: #fff
-  position: relative
-  overflow: hidden
-  z-index: 1
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .1)
+	background-color: $color-gray
+	font-size: $size-6
+	height: 55px
+	line-height: 55px
+	border-radius: 15px
+	border: 0
+	color: #fff
+	position: relative
+	overflow: hidden
+	z-index: 1
+	box-shadow: 0 1px 5px rgba(0, 0, 0, .1)
 
-  &:hover,
-  &:focus,
-  &:active
-    color: $color-white
-    border: 0
+	&:hover,
+	&:focus,
+	&:active
+		color: $color-white
+		border: 0
 
 .tab-cont
-    width: 100%
-    left: 0
-    display: none
+		width: 100%
+		left: 0
+		display: none
 
 
 /* 
-    Level 
+		Level 
  */
 .field
-  .column
-    .level:first-of-type
-      margin-top: 9px
-      
-  .level
-    &:first-of-type
-      margin-top: 15px
+	.column
+		.level:first-of-type
+			margin-top: 9px
+			
+	.level
+		&:first-of-type
+			margin-top: 15px
 
 
 
 
 
 .level > *
-    font-size: 14px
-    line-height: 1.35
+		font-size: 14px
+		line-height: 1.35
 		
 
 
@@ -316,4 +321,4 @@ a.tab-title
 
 // media.sass
 .media-content
-  overflow: hidden
+	overflow: hidden

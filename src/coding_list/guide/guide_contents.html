@@ -33,9 +33,18 @@
 	<div id="wrap" class="coding_guide">
 		<h1 class="h1_guide">Contents Guide</h1>
 
-		<h2 class="h2_guide">탭메뉴</h2>
+<!-- ===================  [Tab]  ======================= -->
+		<h2 class="h2_guide">Tab</h2>
+
+
+
+		<!-- 
+			-------- Tab Basic --------
+		-->
+    <h3 class="h3_guide">Tab Basic</h3>
 		<!-- View -->
 		<div class="guide_wrap">
+
 			<div class="tabs is-fullwidth">
 				<ul class="tab-list is-4">
 					<li class="on">
@@ -57,24 +66,80 @@
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
 <!--- 
-	- 탭 개수에 따른 클래스 부여 : is-n  (is-2, is-3, is-4 ...) 
+  - 탭 개수에 따른 클래스 부여 : is-n  (is-2, is-3, is-4 ...) 
+  - 상단 헤더 부분 없이 탭 상단 고정 시  [class=tabs] 클래스 부여 : is-fixed (container 태그 바로 이전 위치 지정)
 -->
-<div class="tabs is-fullwidth">
-	<ul class="tab-list is-3">
-		<li class="on">
-			<a href="javascript:;" class="tab-title">음식배달</a>
-		</li>
-		<li>
-			<a href="javascript:;" class="tab-title">전통시장</a>
-		</li>
-		<li>
-			<a href="javascript:;" class="tab-title">쇼핑몰</a>
-		</li>
-	</ul>
+<div class="tabs is-fullwidth is-fixed">
+  <ul class="tab-list is-4">
+    <li class="on">
+      <a href="javascript:;" class="tab-title">음식배달</a>
+    </li>
+    <li>
+      <a href="javascript:;" class="tab-title">전통시장</a>
+    </li>
+    <li>
+      <a href="javascript:;" class="tab-title">쇼핑몰</a>
+    </li>
+  </ul>
 </div>
 			</xmp>
 		</div>
 		<!-- // Code -->
+
+
+		<!-- 
+			-------- Tab Header Fixed --------
+		-->
+    <h3 class="h3_guide">Tab Header Fixed</h3>
+		<!-- View -->
+		<div class="guide_wrap">
+
+			<div class="tabs is-fullwidth">
+				<ul class="tab-list is-4">
+					<li class="on">
+						<a href="javascript:;" class="tab-title">음식배달</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="tab-title">전통시장</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="tab-title">쇼핑몰</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+		<!-- // View -->
+
+		<!-- Code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!--- 
+  - 탭 개수에 따른 클래스 부여 : is-n  (is-2, is-3, is-4 ...) 
+  - 상단 헤더 부분 없이 탭 상단 고정 시  [class=tabs] 클래스 부여 : is-fixed (container 태그 바로 이전 위치 지정)
+-->
+<div class="tabs is-fullwidth is-fixed">
+  <ul class="tab-list is-4">
+    <li class="on">
+      <a href="javascript:;" class="tab-title">음식배달</a>
+    </li>
+    <li>
+      <a href="javascript:;" class="tab-title">전통시장</a>
+    </li>
+    <li>
+      <a href="javascript:;" class="tab-title">쇼핑몰</a>
+    </li>
+  </ul>
+
+  
+  <div id="contents" class="container">
+
+  </div>
+</div>
+			</xmp>
+		</div>
+		<!-- // Code -->
+  
 
 <!-- --------------------------
 		주소

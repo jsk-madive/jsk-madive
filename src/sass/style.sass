@@ -176,9 +176,11 @@ $subtitle-strong-color: $color-gray05
 
 
 
-// button.sass
-
-
+// notification.sass
+$notification-radius: 0
+$notification-padding: $gap
+$notification-padding-ltr: $gap
+$notification-padding-rtl: $gap
 
 // -------------
 //  [B] Layout  
@@ -192,6 +194,7 @@ $section-padding : 0 $gap $gap $gap
 // [B]  Components  
 // -------------
 
+
 // modal.sass
 $modal-background-background-color: rgba(0, 0, 0, .3)
 $modal-card-title-line-height: 26px
@@ -200,6 +203,9 @@ $modal-card-head-background-color: $color-white
 $modal-card-head-padding: 16px 20px 15px
 $modal-card-body-padding: 30px 0px
 $modal-content-width: 550px
+
+
+
 
 // -------------
 // [B]  Utilities  
@@ -865,9 +871,6 @@ a.link-blue
 .ordertab
     padding-bottom: 10px
 
-    .tab-contbox
-        padding-top: 84px;
-
 .order-list
     width: 100%
     margin: 0
@@ -1040,7 +1043,7 @@ a.link-blue
     background-color: $color-white
 
     > a
-        padding: 10px
+        padding: 15px
         display: block
     
     + .coupon-box
@@ -1194,3 +1197,261 @@ a.link-blue
         border: 0
         resize: none
         height: 100%
+
+
+/*************
+  payment-view
+  *************/
+.payment-view
+	.payment-title
+
+.productinfo-box
+	padding: 
+		top: 16px
+		bottom: 40px
+
+
+.paymethod-list
+	display: flex
+	flex-wrap: wrap
+
+	&, 
+	> li
+		border: 
+			color: $color-gray
+			width: 1px
+	
+	&
+		border: 
+			left-style: solid
+			top-style: solid
+
+	> li
+		flex-basis: 25%
+		border:
+			right-style: solid
+			bottom-style: solid
+
+
+.paymtd
+	padding-bottom: 100%
+	position: relative
+	
+	> a
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+
+		> div
+			display: flex
+			width: 100%
+			height: 100%
+			align-items: center
+			justify-content: center
+
+		span
+			display: block
+			width: 100%
+			text-align: center
+			padding: 0 5px
+			font-size: $size-6
+
+
+.totalprice-box
+	background-color: $color-white
+	border-top: 1px solid $color-blue
+	height: 50px
+	line-height: 50px
+	padding:
+		left: 16px
+		right: 16px
+
+	.level 
+		height: 100%
+
+	.price
+		font-size: $size-4
+
+
+
+/*************
+  mypage
+ *************/
+.arrow-column
+	background-color: $color-white
+	> a
+		min-height: 50px	
+		display: flex
+		position: relative
+
+		> i
+			position: absolute
+			top: 50%
+			right: 10px
+
+			+prefix(transform, translateY(-50%))
+			
+			&:after
+				+co-arrow(right)
+				border-color: $color-gray
+
+	.cont
+		display: flex
+		width: 100%
+		align-items: center
+		padding-right: 30px
+	
+	.name
+		font: 
+			size: $size-4
+			weight: $weight-normal
+		
+
+
+	&.user-info
+		margin-bottom: 10px
+		> a
+			min-height: 80px
+
+		.name
+			font-size: $size-3
+
+
+// user-grid
+.user-grid
+	display: flex
+	flex-direction: row
+
+.user-column
+	display: flex
+	text-align: center
+	flex-basis: 100%
+	justify-content: center
+	position: relative
+
+	&:not(:last-child)
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 0
+			width: 1px
+			height: 20px
+			background-color: $color-gray
+
+			+prefix (transform, translateY(-50%))
+
+	a
+		display: block
+		width: 100%
+
+	.cnt
+		display: block
+		padding-bottom: 5px
+
+	.name
+		font: 
+			size: $size-6
+		color: $color-gray05
+
+.myctg-list
+	> li
+		border-bottom: 1px solid $color-gray
+
+
+.user-grid02
+	margin: 
+		top: 20px
+		bottom: 20px
+	border-radius: 2px
+	display: flex
+	flex-direction: row
+	background-color: $color-white02
+	border: 1px solid $color-gray
+	
+	.user-column
+		> a
+			padding:
+				top: 10px
+				bottom: 10px
+		
+		.name	
+			color: $color-black
+
+
+/*************
+  frequentqna
+ *************/
+.qna-question
+	> a
+		padding: $gap
+		display: block
+
+		position: relative
+
+		border-bottom: 1px solid $border-color
+	
+	.cont
+		display: flex
+		width: 100%
+		align-items: center
+		padding-right: 30px
+		line-height: 1.3
+		
+	i
+		position: absolute
+		top: 50%
+		right: 20px
+		margin-top: -3px
+
+		+prefix(transform, translateY(-50%))
+
+		&::after
+			content: ''
+			+co-arrow(down)
+			width: 10px
+			height: 10px
+			border-width: 2px
+
+	&.active
+		.name
+			color: $color-blue
+
+		i::after
+			+co-arrow(up)
+			
+			border-color: $color-blue
+			border-width: 2px
+			width: 10px
+			height: 10px
+		
+
+		
+
+
+.qna-answer
+	padding: $gap
+	background-color: $color-white02
+	display: none
+
+	.btn
+		text-align: right
+		padding-right: 3px
+
+	.qna-close-btn
+		border-bottom: 1px solid $color-blue
+		font-size: $size-6
+		
+
+.co-infowithbox
+	margin: 40px auto 
+	display: table
+	text-align: center
+	line-height: 1.3
+	font-size: $size-5
+	
+	p
+		+ .button
+			margin-top: 20px

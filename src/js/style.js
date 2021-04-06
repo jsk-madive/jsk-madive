@@ -7,10 +7,12 @@ function tabAnimate() {
   var tabs = $('.tabs');
 
   $(document).on('click focus', '.tab-list > li', function () {
+    var nowTab = $(this).parent('ul').attr('id');
+
     $(this).addClass('on').siblings('li').removeClass('on');
 
     var tabIdx = $(this).index();
-    $(tabs).siblings('.tab-contbox').children('.tab-cont').eq(tabIdx).show().siblings('.tab-cont').hide();
+    $('[data-tab=' + nowTab + ']').filter('.tab-contbox').children('.tab-cont').eq(tabIdx).show().siblings('.tab-cont').hide();
   });
 }
 
@@ -80,8 +82,39 @@ function modalClose() {
 
 $(function () {
   // 탭 화면 초기화
-  var nowTab = $('.tabs').children('ul').children('li.on').index();
-  $('.tabs').siblings('.tab-contbox').children('.tab-cont').eq(nowTab).show();
+  $('.tab-list').each(function () {
+    var onIdx = $(this).children('.on').index(),
+      tabId = $(this).attr('id');
+
+    if (onIdx >= 0) {
+      $('[data-tab=' + tabId + ']').find('.tab-cont').eq(onIdx).show();
+    } else {
+      return 0
+    }
+
+  });
+
+  $(".qna-question").on('click', function () {
+
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active')
+    } else {
+
+      $('.qna-question').removeClass('active');
+      $(this).addClass('active');
+    }
+
+    $(this).next('.qna-answer').slideToggle(300);
+
+    // $(this).next().slideDown(300);
+    $(".qna-question").not(this).next('.qna-answer').slideUp(300);
+  });
+
+  $(document).on('click', '.qna-close-btn', function(){
+    $(this).closest('.qna-answer').siblings('.qna-question').removeClass('active');
+    $(this).closest('.qna-answer').slideUp(300);
+  })
+
 
   tabAnimate();
   listTabScroll();

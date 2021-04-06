@@ -4,26 +4,27 @@
 
 <body>
   <!-- container -->
+  <div class="tabs is-fullwidth is-fixed">
+    <ul class="tab-list is-4" id="tab-order">
+      <li class="on">
+        <a href="javascript:;" class="tab-title">전체</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="tab-title">음식배달</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="tab-title">전통시장</a>
+      </li>
+      <li>
+        <a href="javascript:;" class="tab-title">쇼핑몰</a>
+      </li>
+    </ul>
+
+  </div>
   <div id="contents" class="container">
     <!-- ordertab -->
     <section class="ordertab">
-      <div class="tabs is-fullwidth is-fixed">
-        <ul class="tab-list is-4">
-          <li class="on">
-            <a href="javascript:;" class="tab-title">전체</a>
-          </li>
-          <li>
-            <a href="javascript:;" class="tab-title">음식배달</a>
-          </li>
-          <li>
-            <a href="javascript:;" class="tab-title">전통시장</a>
-          </li>
-          <li>
-            <a href="javascript:;" class="tab-title">쇼핑몰</a>
-          </li>
-        </ul>
-      </div>
-      <div class="tab-contbox">
+      <div class="tab-contbox" data-tab="tab-order">
         <div class="tab-cont">
           <h3 class="skip">전체</h3>
           <ul class="order-list">
