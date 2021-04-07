@@ -3,188 +3,192 @@
 @@include('./include/head.html')
 
 <body class="has-navbar-btm-button02">
-  <div class="tabs is-fullwidth is-fixed">
-    <ul class="tab-list is-3" id="tab-paymentview">
-      <li class="on">
-        <a href="javascript:;" class="tab-title">음식배달</a>
-      </li>
-      <li>
-        <a href="javascript:;" class="tab-title">전통시장</a>
-      </li>
-      <li>
-        <a href="javascript:;" class="tab-title">쇼핑몰</a>
-      </li>
-    </ul>
-  </div>
-  <!-- payment-view -->
-  <div id="contents" class="container payment-view">
-    <div class="tab-contbox" data-tab="tab-paymentview">
-      <!-- tab-cont -->
-      <div class="tab-cont">
-        <h3 class="skip">음식배달</h3>
-        <div class="section">
-          <div class="form-grid">
-            <div class="productinfo-box">
-              <div class="order-title">
-                <div class="left">
-                  <h4 class="title is-4 has-text-weight-medium">상품</h4>
-                </div>
-              </div>
-              <div class="order-info">
-                <div class="media">
-                  <figure class="media-left">
-                    <div class="img-box">
-                      <p class="image is-3by2">
-                        <img src="https://bulma.io/images/placeholders/480x320.png" alt="">
-                      </p>
-                    </div>
-                  </figure>
-                  <div class="media-content">
-                    <div class="order-cont">
-                      <dl>
-                        <dt>원할머니보쌈</dt>
-                        <dd class="odr-menu">특바비큐보쌈외 1건</dd>
-                        <dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
-                        <dd class="odr-price">
-                          <span>29,000 원</span>
-                          <span>2021.03.15</span>
-                        </dd>
-                      </dl>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+	<div class="tabs is-fullwidth is-fixed">
+		<ul class="tab-list is-3" id="tab-paymentview">
+			<li class="on">
+				<a href="javascript:;" class="tab-title">음식배달</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="tab-title">전통시장</a>
+			</li>
+			<li>
+				<a href="javascript:;" class="tab-title">쇼핑몰</a>
+			</li>
+		</ul>
+	</div>
+	<!-- payment-view -->
+	<div id="contents" class="container payment-view">
+		<div class="tab-contbox" data-tab="tab-paymentview">
+			<!-- tab-cont -->
+			<div class="tab-cont">
+				<h3 class="skip">음식배달</h3>
+				<div class="section">
+					<div class="form-grid">
+						<div class="productinfo-box">
+							<div class="order-title">
+								<div class="left">
+									<h4 class="title is-4 has-text-weight-medium">상품</h4>
+								</div>
+							</div>
+							<div class="order-info">
+								<div class="media">
+									<figure class="media-left">
+										<div class="img-box">
+											<p class="image is-3by2">
+												<img src="https://bulma.io/images/placeholders/480x320.png" alt="">
+											</p>
+										</div>
+									</figure>
+									<div class="media-content">
+										<div class="order-cont">
+											<dl>
+												<dt>원할머니보쌈</dt>
+												<dd class="odr-menu">특바비큐보쌈외 1건</dd>
+												<dd class="odr-menu-opt">사이다(3,000) + 마늘소스(500)</dd>
+												<dd class="odr-price">
+													<span>29,000 원</span>
+													<span>2021.03.15</span>
+												</dd>
+											</dl>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-            <div class="field">
-              <div class="columns">
-                <div class="column">
-                  <h4 class="title is-4 has-text-weight-medium">쿠폰 사용</h4>
-                  <div class="control">
-                    <div class="select is-medium is-fullwidth">
-                      <select>
-                        <option>사용가능 쿠폰 1장</option>
-                        <option>With options</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+						<div class="field">
+							<div class="columns">
+								<div class="column">
+									<h4 class="title is-4 has-text-weight-medium">쿠폰 사용</h4>
+									<div class="control">
+										<div class="select is-medium is-fullwidth">
+											<select>
+												<option>사용가능 쿠폰 1장</option>
+												<option>With options</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 
-            <div class="field">
-              <div class="columns">
-                <div class="column">
-                  <h4 class="title is-4 has-text-weight-medium">결제 수단 선택</h4>
-                  <div class="control">
-                    <ul class="paymethod-list">
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>카드</span></div>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>무통장입금</span></div>
-                            </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>카카오페이</span></div>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>삼성페이</span></div>
-                            </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>페이코</span></div>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>휴대폰 <br>소액결제</span></div>
-                            </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>동백전</span></div>
-                          </a>
-                        </div>
-                      </li>
-                      <li>
-                        <div class="paymtd">
-                          <a href="javascript:;">
-                            <div><span>온누리</span></div>
-                            </a>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="field">
-
-              <div class="columns">
-                <div class="column">
-                  <div class="level">
-                  <label class="checkbox">
-                    <input type="checkbox">
-                    <i></i>
-                    <strong>아래 내용에 모두 동의합니다.</strong>
-                  </label>
-                </div>
-                  <div class="notification is-gray">
-                    <p>개인정보 제 3자 제공 및 결제 대행 서비스 표준 이용약관</p>
-                  </div>
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- tab-cont -->
-      <div class="tab-cont">전통시장 탭</div>
+						<div class="field">
+							<div class="columns">
+								<div class="column">
+									<h4 class="title is-4 has-text-weight-medium">결제 수단 선택</h4>
+									<div class="control">
+										<ul class="paymethod-list">
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>카드</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>무통장입금</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>카카오페이</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>삼성페이</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>페이코</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>휴대폰 <br>소액결제</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>동백전</span></div>
+													</a>
+												</div>
+											</li>
+											<li>
+												<div class="paymtd">
+													<a href="javascript:;">
+														<div><span>온누리</span></div>
+													</a>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
 
 
-      <!-- tab-cont -->
-      <div class="tab-cont">쇼핑몰 탭</div>
-    </div>
-  
-  </div>
-  <div class="button-btm-fixed">
-    <div class="totalprice-box">
-      <div class="level is-mobile">
-        <div class="level-left">
-          <p class="title has-text-weight-medium">최종결제금액</p>
-        </div>
-        <div class="level-right">
-          <p class="price"><span>10,000</span> 원</p>
-        </div>
-      </div>
-    </div>
-    <button type="button" class="button is-large is-blue is-fullwidth is-btm-fixed">다음</button>
-</div>
+						<div class="field">
+							<div class="columns">
+								<div class="column">
+									<div class="level">
+										<label class="checkbox">
+											<input type="checkbox">
+											<i></i>
+											<strong>아래 내용에 모두 동의합니다.</strong>
+										</label>
+									</div>
+									<div class="notification">
+										<p>개인정보 제 3자 제공 및 결제 대행 서비스 표준 이용약관</p>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="button-btm-fixed">
+					<div class="totalprice-box">
+						<div class="level is-mobile">
+							<div class="level-left">
+								<p class="title has-text-weight-medium">최종결제금액</p>
+							</div>
+							<div class="level-right">
+								<p class="price"><span>10,000</span> 원</p>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="button is-large is-blue is-fullwidth is-btm-fixed">다음</button>
+				</div>
+			</div>
+
+			<!-- tab-cont -->
+			<div class="tab-cont">전통시장 탭</div>
+
+
+			<!-- tab-cont -->
+			<div class="tab-cont">쇼핑몰 탭</div>
+		</div>
+	</div>
+
+
+	<script>
+		tabAction();
+	</script>
 </body>
 
 </html>

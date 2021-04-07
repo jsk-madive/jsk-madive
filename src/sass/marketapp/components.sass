@@ -47,9 +47,10 @@
 			height: inherit
 			font-size: $size-7
 			font-weight: 600
-			padding-top: 13px
-			padding-bottom: 20px
 			color: $color-gray05
+			padding: 10px 0 calc(constant(safe-area-inset-bottom) + 5px);
+			padding: 10px 0 calc(env(safe-area-inset-bottom) + 5px);
+
 
 			.ico
 				background: url(../img/btm_ico.png) center 0/auto 27px no-repeat
@@ -114,6 +115,7 @@
 .modal-card-body
 	padding: 15px 0
 
+
 .modal-del-btn
 	position: absolute
 	top: 0
@@ -177,7 +179,9 @@
 
 	&.ref-txt
 		margin-top: 20px
-		padding-top: 30px
+		padding: 
+			top: 20px
+			bottom: 5px
 		border-top: 1px solid $color-gray
 		color: $color-gray05
 
@@ -215,7 +219,21 @@
 			border-radius: 0
 
  
+/* 
+	Tabs 
+  */
+$tab-total: 12
+
+@for $i from 1 through $tab-total
+	.tabs
+		> ul.is-#{$i}
+			> li
+				width: calc(100% / #{$i})
+
+
+
 // tabs.sass
+
 .tabs
 	overflow: auto
 	background-color: $color-white
@@ -236,11 +254,10 @@
 			padding-top: 85px
 
 
-
 	> ul
 		min-width: 320px
 		width: 100%
-		padding: 15px 4px
+		padding: 15px 10px
 			
 		@media screen and (max-width: 320px)
 			overflow:
@@ -252,7 +269,7 @@
 
 			> li 
 				position: relative
-				padding: 0 4px
+				padding: 0 6px
 				font-size: 0
 		
 		&:after
@@ -289,10 +306,16 @@ a.tab-title
 		color: $color-white
 		border: 0
 
+	@each $size in $sizes
+		$i: index($sizes, $size)
+		&.is-#{$i}
+			font-size: $size
+
+
 .tab-cont
-		width: 100%
-		left: 0
-		display: none
+	width: 100%
+	left: 0
+	display: none
 
 
 /* 
@@ -307,15 +330,10 @@ a.tab-title
 		&:first-of-type
 			margin-top: 15px
 
-
-
-
-
 .level > *
 		font-size: 14px
 		line-height: 1.35
 		
-
 
 /* Media */
 

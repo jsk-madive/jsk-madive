@@ -91,7 +91,22 @@ $header-height: 50px
 	Section
  */
 
+// common 
+.section-grid
+	padding:
+		bottom: 30px
+
+
+.lnr-grid
+	padding: 
+		left: $gap
+		right: $gap
+	background-color: $color-white
+
+
 // section.sass
+
+
 .section
 	padding: 0 $gap 30px
 	background: $color-white
@@ -99,10 +114,7 @@ $header-height: 50px
 .non-hd
 	padding-top: 30px
 
-.lr-pd
-	padding:
-		left: $gap
-		right: $gap 
+
 /* 
 	Contents
  */
@@ -190,7 +202,7 @@ body
 		padding-bottom: 55px
 
 	&.has-navbar-btm-button02
-    padding-bottom: 100px
+    padding-bottom: 105px
 
 
 
@@ -207,5 +219,5 @@ body
 	.button
     height: auto
     border-radius: 0
-    padding: 10px 0 calc(constant(safe-area-inset-bottom) + 10px)
-    padding: 10px 0 calc(env(safe-area-inset-bottom) + 10px)
+    padding: 13px 0 calc(constant(safe-area-inset-bottom) + 13px)
+    padding: 13px 0 calc(env(safe-area-inset-bottom) + 13px)

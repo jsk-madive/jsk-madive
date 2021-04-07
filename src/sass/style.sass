@@ -2,13 +2,15 @@
 
 @import 'font/_all'
 @import 'marketapp/mixin'
+
 // ----------------------------------  변수선언 ---------------------------------- //
 
 // 
 //  [B - Utilities]   //
 // 
 
-// initial-variable.sass   //
+
+// initial-variable.sass   
 
  // Color
 $color-black: #000000
@@ -20,7 +22,6 @@ $color-black04 : #363636
 $color-blue : #1C67FF  // 기본 
 $color-blue02  : #3273DC
 $color-blue03 : #16295A
-
 
 $color-gray : #DBDBDB
 $color-gray02 : #D5D5D5
@@ -66,8 +67,13 @@ $border-color : $color-gray09
 
 $block-spacing: 15px
 
+
 // derived-variables.sass
 $family-primary: $family-sans-serif
+
+
+
+
 
 // 
 //  [B - Base]   //
@@ -77,7 +83,7 @@ $family-primary: $family-sans-serif
 $body-background-color: $color-white
 $body-min-width: 280px
 $body-font-size: 16px
-$body-line-height: 1.2
+$body-line-height: 1.3
 $body-color : $color-black
 
 
@@ -104,15 +110,14 @@ $column-gap: 6px
 //  [B - Utilities]  //
 //   
 
-$navbar-height: 5.437rem    // navbar / 16px
+$navbar-height: 4.75rem    // navbar / 16px
 
 // control.sass
 $input-focus-border-color: $color-gray
 $input-shadow: none
 
 
-
-
+ 
 
 
 // tools.sass
@@ -331,6 +336,14 @@ $tabs-link-active-color                  : $color-black
 /*************
     Common
  *************/
+
+// common class
+.bg-gray
+	background: $color-gray07 !important
+	
+.bg-white	
+	background: $color-white !important
+
 a.link-blue
 	color : $color-blue
 	&:active,
@@ -339,37 +352,42 @@ a.link-blue
 		color : $color-blue
 
 
+.infotxt-box
+	margin: 40px auto 
+	display: table
+	text-align: center
+	font-size: $size-5
+	
+	p
+		+ .button
+			margin-top: 20px
 
-.uolist-box
-    background-color: $color-gray07
-    padding: 15px
 
-    .title
-        font-size: $size-5
 
-    > ul
-        list-style: none
-        margin: 0
-        padding: 0
 
-        > li
-            position: relative
-            padding-left: 10px
-            line-height: 1.4
-            font-size: $size-7
+ul.unorder-list
+	list-style: none
+	margin: 0
+	padding: 0
 
-            + li
-                margin-top: 10px
+	> li
+		position: relative
+		padding-left: 10px
+		line-height: 1.4
+		font-size: $size-7
 
-            &::before
-                content: ''
-                width: 3px
-                height: 3px
-                border-radius: 50%
-                background-color: $color-black
-                position: absolute
-                top: 9px
-                left: 0
+		+ li
+			margin-top: 10px
+
+		&::before
+			content: ''
+			width: 3px
+			height: 3px
+			border-radius: 50%
+			background-color: $color-black
+			position: absolute
+			top: 9px
+			left: 0
 
         
 
@@ -380,9 +398,7 @@ a.link-blue
  *************/
 .container
     > .login
-        padding:
-            top: 100px
-            bottom: 30px
+        padding: 100px $gap 30px
 .login
     .field
         &:not(:last-child)
@@ -436,14 +452,10 @@ a.link-blue
  *************/
 .container
     > .join
-        padding:
-            top: 100px
-            bottom: 30px
+        padding: 100px $gap 30px
 
     > .join02
-        padding: 
-            top: 60px
-            bottom: 30px
+        padding: 60px $gap 30px
 
 
 /*************
@@ -464,16 +476,14 @@ a.link-blue
  *************/
 .container
     > .terms
-        padding:
-            top: 100px
-            bottom: 30px
+        padding: 100px $gap 30px
 
 .terms
+
     .cont
         font: 
             size: $size-4
             weight: $weight-medium
-        line-height: 1.3
         letter-spacing: 0.03em
 
     .field 
@@ -486,9 +496,6 @@ a.link-blue
                 font-size: $size-4
 
 
-    
-
-
 
 /********
     App Main     
@@ -498,6 +505,7 @@ a.link-blue
     top: 50%
     left: 0
     width: 100%
+	
     +prefix (transform, translateY(-50%))
 
     .title
@@ -525,87 +533,91 @@ a.link-blue
         +clearfix
 
 .foodctg-list
-    &.columns
-        margin: 0
+	padding-top: 5px
+	&.columns
+		margin: 0
 
-    > li
-        line-height: 1.5
-        padding: 10px 5px
-        text-align: center
+	> li
+		line-height: 1.5
+		padding: 5px
+		text-align: center
 
-    .img-box
-        display: block
-        margin-bottom: 5px
+	.img-box
+		display: block
+		margin-bottom: 5px
 
-        .img
-            display: table
-            table-layout: fixed
-            margin: 0 auto
-            padding: 10px
-            background-color: $color-gray07
-            border-radius: 10px
-            outline: 0
+		.img
+			display: table
+			table-layout: fixed
+			margin: 0 auto
+			padding: 10px
+			background-color: $color-gray07
+			border-radius: 10px
+			outline: 0
 
-        &:hover,
-        &:focus,
-        &:active
-            outline: 0
+		&:hover,
+		&:focus,
+		&:active
+			outline: 0
 
-    img
-        width: 50px
-        height: 40px
-        overflow: hidden
-        display: block
-        margin: 0 auto
-        outline: 0
-        background-color: transparent
-        -webkit-tap-highlight-color: transparent
-        
-        &:hover,
-        &:focus,
-        &:active
-            outline: 0
+	img
+		width: 50px
+		height: 40px
+		overflow: hidden
+		display: block
+		margin: 0 auto
+		outline: 0
+		background-color: transparent
+		-webkit-tap-highlight-color: transparent
+		
+		&:hover,
+		&:focus,
+		&:active
+			outline: 0
 
-    a
-        display: inline-block
-        margin: 0 auto
-        font-size: $size-7
+	a
+		display: inline-block
+		margin: 0 auto
+		font-size: $size-7
 
 
 // delivery-addr
 .delivery-addr
-    width: 100%
-    height: 45px
-    line-height: 45px
-    text-align: center
-    background-color: $color-white
-    border-bottom: 1px solid $color-gray
-    z-index: 10
+	width: 100%
+	height: 45px
+	line-height: 45px
+	text-align: center
+	background-color: $color-white
+	border-bottom: 1px solid $color-gray
+	z-index: 10
     
-    .location-txt
-        position: relative
-        display: inline-block
-        padding: 
-            left: 23px
-            right: 25px
+	> a
+		display: block
 
-        &::before,
-        &::after
-            content: ''
-            position: absolute
-            top: 50%
-            transform: translateY(-50%)
-            display: inline-block
+	.location-txt
+		position: relative
+		display: inline-block
+		padding: 
+			left: 23px
+			right: 25px
 
-        &:before
-            +location
-            left: 0
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			display: inline-block
 
-        &::after
-            +co-arrow(down)
-            margin:
-                top: -9px
-            right: 0
+		&:before
+			+location
+			left: 0
+
+		&::after
+			+co-arrow(down)
+			margin:
+				top: -9px
+			right: 0
 
 
 // subtab-box
@@ -673,81 +685,82 @@ a.link-blue
 
 
 .content
-    ul.list-non-type
-        list-style: none
-        margin: 0
+	ul.list-non-type
+		list-style: none
+		margin: 0
 
-        > li + li
-            margin-top: 5px
+		> li + li
+			margin-top: 5px
 
 .address-box
-    border: 
-        bottom: 1px solid $color-gray
+	border-bottom: 1px solid $color-gray
+	background-color: $color-white
 
-    &.type01
-        border: 
-            bottom: 0
+	&.type01
+		border: 
+			bottom: 0
 
-        > a
-            padding:
-                top: 10px
-                bottom: 13px
-        
-        .addr-stitle
-            font-size: 0
-        
+		> a
+			padding:
+				top: 10px
+				bottom: 13px
+		
+		.addr-stitle
+			font-size: 0
 
     
-    &.type02
-        position: relative
-        
-        > a
-            padding: 
-                top: 10px
-                bottom: 13px
-                right: 30px
+	&.type02
+		position: relative
+		
+		> a
+			padding: 
+				top: 10px
+				bottom: 13px
+				right: 30px
 
-        .btn-delete
-            position: absolute
-            top: 5px
-            right: 0
-            font-size: 0
-            z-index: 10
+		.btn-delete
+			position: absolute
+			top: 5px
+			right: 0
+			font-size: 0
+			z-index: 10
     
-    &.type03
-        > a
-            padding:
-                top: 10px
-                bottom: 13px
+	&.type03
+		> a
+			padding:
+				top: 10px
+				left: $gap
+				right: $gap
+				bottom: 13px
 
-        .addr01
-            color: $color-gray04
-        
-        .addr02
-            .dpt
-                color: $color-gray04
+		.addr01
+			color: $color-gray04
+		
+		.addr02
+			.dpt
+				color: $color-gray04
 
-    &.type04
-        position: relative
-        padding:
-            top: 10px
-            bottom: 13px
-            right: 45px
+	&.type04
+		position: relative
+		padding:
+			top: 10px
+			bottom: 13px
+			right: 45px
 
-        .btn-modify
-            display: inline-block
-            position: absolute
-            top: 50%
-            right: 0
-            +prefix(transform, translateY(-50%))
+		.btn-modify
+			display: inline-block
+			position: absolute
+			top: 50%
+			right: 0
+			+prefix(transform, translateY(-50%))
 
-    &.type05
-        border: 0
-        .addr01
-            font-size: 17px
-    
-    > a
-        display: block
+	&.type05
+		border: 0
+		.addr01
+			font-size: 17px
+
+	> a
+		display: block
 
 
             
@@ -813,24 +826,21 @@ a.link-blue
 
 // address-search
 .address-search
-    .is-search-box
-        background-color: $color-white
-        padding: $gap
-        position: fixed
-        top: $header-height
-        left: 0
-        right: 0
-        z-index: 10
+	.is-search-box
+		background-color: $color-white
+		border-bottom: 1px solid $color-gray07
+		padding: $gap
+		position: fixed
+		top: $header-height
+		left: 0
+		right: 0
+		z-index: 10
 
-        + .section
-            margin-top: 92px
-
-        
+		+ section
+			margin-top: 95px
 
 
-    .addrs-list
-        background-color: $color-white
-        
+	
 // map-box
 .map-wrap
     padding-bottom: 217px
@@ -882,20 +892,21 @@ a.link-blue
     padding: 10px
 
 .order-title
-    +clearfix
+	+clearfix
+
+	font:  
+		size: $size-7
+		weight: $weight-normal
     
-    font: 
-        size: $size-7
-        weight: $weight-medium
-    padding-bottom: 8px;
-    border-bottom: 2px solid $color-blue
+	padding-bottom: 8px;
+	border-bottom: 2px solid $color-blue
 
-    .left
-        float: left
-        color: $color-blue03
+	.left
+		float: left
+		color: $color-blue03
 
-    .right
-         float: right
+	.right
+		float: right
 
 .order-link
     color: $color-blue
@@ -1043,7 +1054,7 @@ a.link-blue
     background-color: $color-white
 
     > a
-        padding: 15px
+        padding: 15px 10px
         display: block
     
     + .coupon-box
@@ -1053,7 +1064,6 @@ a.link-blue
         font: 
             weight: $weight-bold
             size: 24px
-            family: 'Malgun Gothic', sans-serif
         color: #F75531
         letter-spacing: -0.03em
 
@@ -1063,7 +1073,7 @@ a.link-blue
         font-size: $size-7
 
         dt, dd
-            margin-top: 7px
+            margin-top: 5px
 
 
 
@@ -1084,26 +1094,31 @@ a.link-blue
 
 
 .inqlist-box
-    border-bottom: 1px solid $color-gray
-    padding-bottom: 10px
-    .inqlist-cont
-        padding-top: 15px
-        font-size: $size-6
-        line-height: 1.3
+	border-bottom: 1px solid $color-gray
 
-    .inqlist-info
-        padding-top: 10px
-        > span
-            display: inline-block
-            font-size: $size-7
+	> a
+		display: block
 
-            &.status
-                color: #F75531
-                margin-right: 5px
-            
-            &.date
-                color: $color-gray05
-                letter-spacing: 0.03em
+	.inqlist-cont
+		padding-top: 15px
+		font-size: $size-6
+
+	.inqlist-info
+		padding: 
+			top: 10px
+			bottom: 10px
+
+		> span
+			display: inline-block
+			font-size: $size-8
+
+			&.status
+				color: #F75531
+				margin-right: 5px
+
+			&.date
+				color: $color-gray05
+				letter-spacing: 0.03em
 
 
 /*************
@@ -1191,7 +1206,7 @@ a.link-blue
     border-top: 1px solid $color-gray
     display: flex
     flex: 1
-    padding-bottom: 50px
+    padding-bottom: 30px
 
     .textarea 
         border: 0
@@ -1208,7 +1223,7 @@ a.link-blue
 .productinfo-box
 	padding: 
 		top: 16px
-		bottom: 40px
+		bottom: 30px
 
 
 .paymethod-list
@@ -1279,6 +1294,11 @@ a.link-blue
 /*************
   mypage
  *************/
+
+.mypage
+	.version
+		padding: 0 10px
+
 .arrow-column
 	background-color: $color-white
 	> a
@@ -1296,20 +1316,20 @@ a.link-blue
 			&:after
 				+co-arrow(right)
 				border-color: $color-gray
+				border-width: 2px
 
 	.cont
 		display: flex
 		width: 100%
 		align-items: center
 		padding-right: 30px
+		padding-left: 10px
 	
 	.name
 		font: 
-			size: $size-4
+			size: $size-5
 			weight: $weight-normal
 		
-
-
 	&.user-info
 		margin-bottom: 10px
 		> a
@@ -1317,6 +1337,8 @@ a.link-blue
 
 		.name
 			font-size: $size-3
+
+	
 
 
 // user-grid
@@ -1350,7 +1372,8 @@ a.link-blue
 	.cnt
 		display: block
 		padding-bottom: 5px
-
+		font-size: $size-4
+		
 	.name
 		font: 
 			size: $size-6
@@ -1381,9 +1404,15 @@ a.link-blue
 			color: $color-black
 
 
+
 /*************
   frequentqna
  *************/
+.qna-question,
+.qna-answer
+	.cont
+		font-size: $size-6
+
 .qna-question
 	> a
 		padding: $gap
@@ -1398,7 +1427,6 @@ a.link-blue
 		width: 100%
 		align-items: center
 		padding-right: 30px
-		line-height: 1.3
 		
 	i
 		position: absolute
@@ -1416,8 +1444,9 @@ a.link-blue
 			border-width: 2px
 
 	&.active
-		.name
+		.cont
 			color: $color-blue
+
 
 		i::after
 			+co-arrow(up)
@@ -1432,7 +1461,7 @@ a.link-blue
 
 
 .qna-answer
-	padding: $gap
+	padding: 20px $gap
 	background-color: $color-white02
 	display: none
 
@@ -1442,16 +1471,4 @@ a.link-blue
 
 	.qna-close-btn
 		border-bottom: 1px solid $color-blue
-		font-size: $size-6
-		
-
-.co-infowithbox
-	margin: 40px auto 
-	display: table
-	text-align: center
-	line-height: 1.3
-	font-size: $size-5
-	
-	p
-		+ .button
-			margin-top: 20px
+		font-size: $size-7

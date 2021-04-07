@@ -46,7 +46,8 @@
 		<div class="guide_wrap">
 
 			<div class="tabs is-fullwidth">
-				<ul class="tab-list is-4">
+        <!-- 동일값 부여 -->
+				<ul class="tab-list is-4" id="tab-ex">
 					<li class="on">
 						<a href="javascript:;" class="tab-title">음식배달</a>
 					</li>
@@ -59,6 +60,10 @@
 				</ul>
 			</div>
 
+      <!-- 동일값 부여 -->
+      <div class="tab-contbox" data-tab="tab-ex">
+        <div class="tab-cont"></div>
+      </div>
 		</div>
 		<!-- // View -->
 
@@ -66,11 +71,14 @@
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
 <!--- 
-  - 탭 개수에 따른 클래스 부여 : is-n  (is-2, is-3, is-4 ...) 
-  - 상단 헤더 부분 없이 탭 상단 고정 시  [class=tabs] 클래스 부여 : is-fixed (container 태그 바로 이전 위치 지정)
+  * tabs id와 tab-contbox data-tab 값 동일값 부여 필요*
+  - [class=tabs] id 값 ==  [class=tab-contbox] data-tab 값
+  - tab 개수에 따른 [class=tab-list] 에 클래스 추가 : is-n  (is-2, is-3, is-4 ...) 
+  - tab title 사이즈 조정 가능 [class=tab-title]에 클래스 추가 : .is-1 ~ .is-6
 -->
-<div class="tabs is-fullwidth is-fixed">
-  <ul class="tab-list is-4">
+<div class="tabs is-fullwidth">
+  <!-- 동일값 부여 -->
+  <ul class="tab-list is-4" id="tab-ex">
     <li class="on">
       <a href="javascript:;" class="tab-title">음식배달</a>
     </li>
@@ -81,6 +89,14 @@
       <a href="javascript:;" class="tab-title">쇼핑몰</a>
     </li>
   </ul>
+</div>
+
+<div id="contents" class="container">
+  <!-- 동일값 부여 -->
+  <div class="tab-contbox" data-tab="tab-ex">
+    <div class="tab-cont"></div>
+    <div class="tab-cont"></div>
+  </div>
 </div>
 			</xmp>
 		</div>
@@ -115,8 +131,11 @@
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
 <!--- 
-  - 탭 개수에 따른 클래스 부여 : is-n  (is-2, is-3, is-4 ...) 
+  * tabs id와 tab-contbox data-tab 값 동일값 부여 필요*
+  - [class=tabs] id 값 ==  [class=tab-contbox] data-tab 값
   - 상단 헤더 부분 없이 탭 상단 고정 시  [class=tabs] 클래스 부여 : is-fixed (container 태그 바로 이전 위치 지정)
+  - tab 개수에 따른 [class=tab-list] 에 클래스 추가 : is-n  (is-2, is-3, is-4 ...) 
+  - tab title 사이즈 조정 가능 [class=tab-title]에 클래스 추가 : .is-1 ~ .is-6
 -->
 <div class="tabs is-fullwidth is-fixed">
   <ul class="tab-list is-4">

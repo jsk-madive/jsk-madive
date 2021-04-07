@@ -31,7 +31,7 @@
 			<section class="foodtab-section">
 				<div class="tabs is-fullwidth">
           <!-- tab-mainmenu -->
-					<ul class="tab-list is-4" id="tab-mainmenu">
+					<ul class="tab-list is-3" id="tab-mainmenu">
 						<li class="on">
 							<a href="javascript:;" class="tab-title">음식배달</a>
 						</li>
@@ -414,6 +414,7 @@
 	@@include('./include/btm_nav.html')
 	<script src="/lib/swiper/swiper-bundle.js"></script>
 	<script>
+
 		$(function () {
 			var swiper = new Swiper('.mainslide-box', {
 				loop: 1,
@@ -422,7 +423,10 @@
 					prevEl: '.swiper-button-prev',
 				},
 			});
-		})
+		});
+		
+		tabAction();
+		listTabScroll();
 
 	</script>
 </body>

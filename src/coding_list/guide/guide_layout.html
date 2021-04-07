@@ -33,10 +33,13 @@
 	<div id="wrap" class="coding_guide">
 		<h1 class="h1_guide">Layout</h1>
 
-<!-- 
-	-------- [Head] --------
- -->
-		<h2 class="h2_guide">Head</h2>
+<!-- ===================  [Head]  ======================= -->
+	<h2 class="h2_guide">[Head]</h2>
+
+
+  <!-- ---------------------
+  Head
+  --------------------------- -->
 		<div class="d_desc code">
 			<!-- code -->
 			<xmp class="prettyprint linenums javascript">
@@ -59,10 +62,14 @@
 		</div>
 
 
-<!-- 
-	-------- [Header] --------
- -->
-		<h2 class="h2_guide">Header</h2>
+<!-- ===================  [Header]  ======================= -->
+<h2 class="h2_guide">[Header]</h2>
+
+
+<!-- ---------------------
+  Header
+--------------------------- -->
+		<h3 class="h3_guide">Header</h3>
 		<div class="d_desc code">
 			<!-- code -->
 			<xmp class="prettyprint linenums javascript">
@@ -77,10 +84,10 @@
 		</div>
 
 
-<!-- 
-	-------- [Skip navi] --------
- -->
- <h2 class="h2_guide">skip navi</h2>
+<!-- ---------------------
+  Skip navi
+--------------------------- -->
+<h3 class="h3_guide">Skip navi</h3>
  <div class="d_desc code">
 	 <!-- code -->
 	 <xmp class="prettyprint linenums javascript">
@@ -94,13 +101,14 @@
 
 
 
- <!-- ===================  [Body]  ======================= -->
- <h2 class="h2_guide">Body</h2>
+<!-- ===================  [Body]  ======================= -->
+<h2 class="h2_guide">[Body]</h2>
 
 
- <!-- 
-	-------- [하단 네비게이션 메뉴 고정 시] --------
- -->
+
+ <!-- ---------------------
+  하단 네비게이션 메뉴 고정 시
+--------------------------- -->
 
  <h3 class="h3_guide">하단 네비게이션 메뉴 고정 시</h3>
  <div class="d_desc code">
@@ -154,9 +162,9 @@
  </div>
 
 
- <!-- 
-	-------- [하단 버튼 고정 시] --------
- -->
+<!-- ---------------------
+  하단 버튼 고정 시
+--------------------------- -->
 
  <h3 class="h3_guide">하단 버튼 고정 시</h3>
  <div class="d_desc code">
@@ -164,7 +172,6 @@
 	 <xmp class="prettyprint linenums javascript">
 <!-- 
 	- 하단 버튼 고정 시 body 클래스 추가 : has-navbar-btm-button 
-	- padding-bottom: 55px
 -->
 <body class="has-navbar-btm-button">
 	<div id="contents" class="container">
@@ -191,19 +198,55 @@
  </div>
 
 
+ <!-- ---------------------
+  결제 금액 + 하단 버튼 고정 시 
+--------------------------- -->
 
- <!-- 
-	-------- [ 배경 색상 회색 설정(gray)] --------
- -->
+<h3 class="h3_guide">하단 버튼 고정 시</h3>
+<div class="d_desc code">
+	<!-- code -->
+	<xmp class="prettyprint linenums javascript">
+<!-- 
+ - 하단 버튼 고정 시 body 클래스 추가 : has-navbar-btm-button02
+-->
+<body class="has-navbar-btm-button02">
+ <div id="contents" class="container">
+
+ </div>
+
+
+ <div class="button-btm-fixed">
+	<div class="totalprice-box">
+			<div class="level is-mobile">
+					<div class="level-left">
+							<p class="title has-text-weight-medium">최종결제금액</p>
+					</div>
+					<div class="level-right">
+							<p class="price"><span>10,000</span> 원</p>
+					</div>
+			</div>
+	</div>
+	<button type="button" class="button is-large is-blue is-fullwidth is-btm-fixed">다음</button>
+</div>
+
+</body>
+	</xmp>
+	<!-- // code -->
+</div>
+
+
+<!-- ---------------------
+  배경 색상 회색 설정(gray)
+--------------------------- -->
 
  <h3 class="h3_guide">전체 배경 색상 설정(gray)</h3>
  <div class="d_desc code">
 	 <!-- code -->
 	 <xmp class="prettyprint linenums javascript">
 <!-- 
-	- body 기본 배경 회색 색상 설정 시 클래스 추가 : is-gray
+	- body 기본 배경 회색 색상 설정 시 클래스 추가 : bg-gray
 -->
-<body class="is-gray">
+<body class="bg-gray">
 	<div id="contents" class="container">
 
 	</div>
@@ -216,24 +259,23 @@
 
 
 	
+<!-- ===================  [Layout]]  ======================= -->
+<h2 class="h2_guide">[Layout]</h2>
 
-<!-- 
-	-------- [Section] --------
- -->
- <h2 class="h2_guide">Section</h2>
+<!-- ---------------------
+  하단 여백
+--------------------------- -->
+ <h3 class="h3_guide">하단 여백</h3>
  <div class="d_desc code">
 	 <!-- code -->
 	 <xmp class="prettyprint linenums javascript">
 <!-- 
-	- 좌,우,하 여백 설정된 section 영역
-	- 고정 헤더 없을 경우 상단 여백 기본값 설정 클래스 추가 : non-hd
- -->
-<section class="section">
-
-</section>
-<!-- or -->
-<div class="section">
-
+  - 클래스 명 : section-grid
+  - <section> 또는 <div> 태그 내 적용
+  - 하단 여백 : 30px 
+  - 전체 레이아웃의 하단 여백 설정 시 사용
+-->
+<div class="section-grid">
 
 </div>
 
@@ -241,6 +283,45 @@
 	 <!-- // code -->
  </div>
 
+<!-- ---------------------
+  좌우 여백
+--------------------------- -->
+<h3 class="h3_guide">좌우 여백</h3>
+<div class="d_desc code">
+  <!-- code -->
+  <xmp class="prettyprint linenums javascript">
+<!-- 
+ - 클래스 명 : lnr-grid
+ - 태그 내 적용
+ - 좌우 여백 : 16px
+-->
+<div class="lnr-grid">
+
+</div>
+
+  </xmp>
+  <!-- // code -->
+</div>
+
+<!-- ---------------------
+  좌/우/하단 여백
+--------------------------- -->
+<h3 class="h3_guide">좌우 + 하단 여백</h3>
+<div class="d_desc code">
+  <!-- code -->
+  <xmp class="prettyprint linenums javascript">
+<!-- 
+ - 클래스 명 : section
+ - <section> 또는 <div> 태그 내 적용
+ - 좌우 여백 : 16px, 하단 여백 : 30px
+-->
+<div class="section">
+
+</div>
+
+  </xmp>
+  <!-- // code -->
+</div>
 
 
 	</div>
