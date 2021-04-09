@@ -1,6 +1,3 @@
-
-
-
 /* 
 	Button
  */
@@ -67,6 +64,7 @@ $button-cred-color            : $color-black
 		right: 30px
 	min:
 		width: 164px
+
 =button-medium
 	font: 
 		size: 16px
@@ -76,6 +74,7 @@ $button-cred-color            : $color-black
 		right: 20px
 	min:
 		width: 140px
+
 =button-small
 	&:not(.is-rounded)
     border-radius: 0
@@ -87,6 +86,7 @@ $button-cred-color            : $color-black
 		right: 10px
 	min:
 		width: 100px
+
 .button	
 	border:
 		radius: 6px	
@@ -98,142 +98,161 @@ $button-cred-color            : $color-black
 		+button-small
 
 	&.is-gray
-		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-gray-bg-color
+		&,
+		&:hover,
+		&.is-hovered,
+		&:focus,
+		&.is-focused,
+		&:active,
+		&.is-active
+			background-color: $button-gray-bg-color
 			color: $button-gray-color
-			border:
-				color: $button-gray-bg-color
+			border-color: $button-gray-bg-color
 		&.is-inverted
-			&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-gray-color
+			&,
+			&:hover,
+			&.is-hovered,
+			&:focus,
+			&.is-focused,
+			&:active,
+			&.is-active
+			background-color: $button-gray-color
 			color: $button-gray-bg-color
-			border:
-				color: $button-gray-bg-color
+			border-color: $button-gray-bg-color
 
 	&.is-blue
-		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-blue-bg-color
+		&,
+		&:hover,
+		&.is-hovered,
+		&:focus,
+		&.is-focused,
+		&:active,
+		&.is-active
+			background-color: $button-blue-bg-color
 			color: $button-blue-color
-			border:
-				color: $button-blue-bg-color
+			border-color: $button-blue-bg-color
 		&.is-inverted
-			&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-				background:
-					color: $button-blue-color
+			&,
+			&:hover,
+			&.is-hovered,
+			&:focus,
+			&.is-focused,
+			&:active,
+			&.is-active
+				background-color: $button-blue-color
 				color: $button-blue-bg-color
-				border:
-					color: $button-blue-bg-color
+				border-color: $button-blue-bg-color
 
 	&.is-black
-		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-black-bg-color
+		&,
+		&:hover,
+		&.is-hovered,
+		&:focus,
+		&.is-focused,
+		&:active,
+		&.is-active
+			background-color: $button-black-bg-color
 			color: $button-black-color
 			border: none
 	
 	&.is-yellow
-		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-yellow-bg-color
+		&,
+		&:hover,
+		&.is-hovered,
+		&:focus,
+		&.is-focused,
+		&:active,
+		&.is-active
+			background-color: $button-yellow-bg-color
 			color: $button-yellow-color
 			border: none
 			&:active
-				background: 
-					color: $button-yellow-active-bg-color
+				background-color: $button-yellow-active-bg-color
 
 	&.is-ygreen
-		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-ygreen-bg-color
+		&,
+		&:hover,
+		&.is-hovered,
+		&:focus,
+		&.is-focused,
+		&:active,
+		&.is-active
+			background-color: $button-ygreen-bg-color
 			color: $button-ygreen-color
 			border: none
 			&:active
-				background: 
-					color: $button-ygreen-active-bg-color
+				background-color: $button-ygreen-active-bg-color
 
 	&.is-cred
-		&, &:hover, &.is-hovered, &:focus, &.is-focused, &:active, &.is-actived
-			background:
-				color: $button-cred-bg-color
+		&,
+		&:hover,
+		&.is-hovered,
+		&:focus,
+		&.is-focused,
+		&:active,
+		&.is-active
+			background-color: $button-cred-bg-color
 			color: $button-cred-color
 			border: none
 	
-	//Status
+	// States
 	&:hover,
 	&.is-hovered
 		border-color: $border
-	&:focus,
-	&.is-focused
-		border-color: $border
-		&:not(:active)
-		box-shadow: none
+
 	&:active,
 	&.is-active
 		border-color: $border
 
-
-	&:focus:not(:active),
-	&.is-focused:not(:active)
-		box-shadow: none
-	&.is-text
-		padding: 0
-		min-width: auto
-		height: auto
-		border: none
-		+font-set(15px, -.28px, 23px)
-		color: $button-text-color
-		&:hover,
-		&:focus
-			background: none
-			color: $button-text-color
-
-// buttons
+	&:focus,
+	&.is-focused
+		&:not(:active)
+			box-shadow: none
+	
 .buttons
 	margin: 
 		bottom: 0
 		top: 40px
+
 	.button
-		margin: 
-			bottom: 0
+		margin-bottom: 0
+			
+			
+		&:focus,
+		&.is-focused
+			&:not(:active)
+				box-shadow: none
+
 	&:not(:last-child),
 	&:last-child
-		margin:
-			bottom: 0
+		margin-bottom: 0
+			
 		&:not(.has-addons)
 			.is-fullwidth
 				margin:
 					left: 0
 					right: 0
-				justify-content: center
+
 				+ .is-fullwidth
 					margin:
 						top: 10px
+						
 			.button:not(.is-fullwidth)
 				width: calc(50% - 6px)
 				min-width: auto
 				margin:
 					left: 6px
 					right: 6px
+
 				&:first-child
-					margin:
-						left: 0
+					margin-left: 0
+
 				&:last-child
-					margin:
-						right: 0
-				&.is-mobile-fullwidth
-					margin:
-						left: 0
-						right: 0
-					+ .is-mobile-fullwidth
-						margin:
-							top: 15px
+					margin-right: 0
 					
 	&.is-multirow
-		margin:
-			top: 40px
+		margin-top: 40px
+
 		.button
 			+ .button
 					margin-top: 6px
@@ -246,84 +265,20 @@ $button-cred-color            : $color-black
 	&.is-autowidth
 		min-width: auto
 
+
+button
+	&.button,
+	&.is-fullwidth,
+	&.button.is-fullwidth
+		display: inline-block
+		
+
 	
-// box.sass
-$box-gray-background-color : $color-white02
-$box-white-background-color: $color-white
-$box-agree-color           : $color-gray05
-$box-complete-color        : $color-black
-$box-complete-color2       : $color-gray05
 
-.box
-	&.is-gray
-		background:
-			color: $box-gray-background-color
-	&.is-white
-		background:
-			color: $box-white-background-color
-	&.agree
-		padding: 20px 30px
-		border:
-			radius: 0px
-		margin:
-			bottom: 0
-		+mobile
-			padding: 20px 20px
-		p
-			+font-set(13px, -.26px, 21px)
-			color: $box-agree-color
-	&.complete
-		padding: 30px
-		+mobile
-			padding: 30px 20px
-		margin:
-			bottom: 0
-		p
-			+font-set(20px, -.8px, 28px)
-			color: $box-complete-color
-			font:
-				weight: $weight-medium
-			+ p
-				margin:
-					top: 5px
-				+font-set(15px, -.3px, 23px)
-				font:
-					weight: $weight-normal
-				+ p
-					margin:
-						top: 15px
-					+font-set(13px, -.26px, 21px)
-					font:
-						weight: $weight-normal
-					color: $box-complete-color2
-			+ .box
-				width: 400px
-				+mobile
-					width: auto
-				margin: 30px auto 0
-				border:
-					radius: 4px
-				padding: 14px 0
-				p
-					+font-set(15px, -.3px, 23px)
-	&.form-list-box
-		padding: 30px
-		margin:
-			bottom: 0
-		+mobile
-			padding: 30px 20px
-		li
-			+ li
-				margin:
-					top: 20px
-	&.bullet-dotted-box
-		border:
-			radius: 0
-		+mobile
-			padding: 20px
+/* 
+	Container
+ */
 
-
-// container(container.sass)
 .container
     width: 100%
     height: 100%
@@ -331,14 +286,14 @@ $box-complete-color2       : $color-gray05
     overflow-y: auto
 
 
-/** 
+/*
 	Title
- **/
+ */
 
 // title
 .title-field
-	padding:
-		bottom: 30px
+	padding-bottom: 30px
+
 	.title
 		font-family: $body-family
 		letter-spacing: -0.23px
@@ -346,21 +301,11 @@ $box-complete-color2       : $color-gray05
 		&:not(:last-child)
 			margin: 
 				bottom: 15px
+
 	p:not(.subtitle)
 		+font-set(15px, -.3px, 23px)
 		+ p:not(.subtitle)
 			+font-set(13px, -.26px, 21px)
-	&.type-2
-		text-align: center
-	&.type-3
-		border:
-			bottom: none
-		margin:
-			top: 50px
-	&.is-centered
-		text-align: center
-	&.is-right
-		text-align: right
 
 	&.title-underline
 		padding: 
@@ -375,14 +320,14 @@ $box-complete-color2       : $color-gray05
 				margin: 
 					bottom: 5px
 
+	&.is-centered
+		text-align: center
 
 a.subtitle
 	&:hover,
 	&:focus,
 	&:active
 		color: $color-gray05
-
-
 
 
 
@@ -412,7 +357,6 @@ a.subtitle
 
 
 // search
-
 .btn-search
 	background:
 		color: $color-white
@@ -461,7 +405,6 @@ a.subtitle
 			height: 23px
 			display: inline-block
 			vertical-align: middle
-
 
 
 // modify
@@ -558,6 +501,7 @@ a.subtitle
 /** 
 	Notification
  **/
+ 
 .notification
   font:
     size: $size-7

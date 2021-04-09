@@ -48,6 +48,7 @@
 			font-size: $size-7
 			font-weight: 600
 			color: $color-gray05
+			padding-top: 10px
 			padding: 10px 0 calc(constant(safe-area-inset-bottom) + 5px);
 			padding: 10px 0 calc(env(safe-area-inset-bottom) + 5px);
 
@@ -85,8 +86,6 @@
 
 
 
-
-
 /*
 	Modal
  */
@@ -95,7 +94,17 @@
 .modal
 	&.is-active
 		.modal-card
-			animation : modal-animation .5s
+			animation: modal-animation .5s
+
+@keyframes modal-animation
+	0%
+		opacity : 0
+		transform : translateY(100px)
+
+	100%
+		opacity : 1
+		transform : translateY(0px)
+
 
 .modal-card
 	width: calc(100%  - 32px)
@@ -108,33 +117,6 @@
 		.modal-card-head,
 		.modal-card-foot
 			border-radius: 0
-
-.modal-card-head
-	display: block
-
-.modal-card-body
-	padding: 15px 0
-
-
-.modal-del-btn
-	position: absolute
-	top: 0
-	left: 0
-	padding-top: 3px
-
-
-.modal-card-title
-	display: block
-	font: 
-		size: $size-5
-		weight: $weight-medium
-	line-height: 1.4
-
-
-	.content
-		&:not(:first-child)
-			padding-top: 10px
-
 
 
 .modal-top-title
@@ -156,25 +138,41 @@
 			size: $size-4
 			weight: $weight-medium
 		
+.modal-card-head
+	display: block
 
-@keyframes modal-animation
-	0%
-		opacity : 0
-		transform : translateY(100px)
-	100%
-		opacity : 1
-		transform : translateY(0px)
+.modal-card-title
+	display: block
+	font: 
+		size: $size-5
+		weight: $weight-medium
+	line-height: 1.4
+
+.modal-del-btn
+	position: absolute
+	top: 0
+	left: 0
+	padding-top: 3px
+
+
+.modal-card-body
+	padding: 15px 0
+
+	.content
+		&:not(:first-child)
+			padding-top: 10px
+
 
 .modal-field
 	padding: 
 		left: 20px
 		right: 20px
+
 	&:not(:first-child)
-	padding-top: 15px
+		padding-top: 15px
 
 	*
-		font: 
-			size: $size-7
+		font-size: $size-7
 		line-height: 1.4
 
 	&.ref-txt
@@ -186,22 +184,17 @@
 		color: $color-gray05
 
 
-// modal-dl-list
 .modal-dl-list
 	dl 
 		+ dl
-			padding:
-				top: 15px
-				
+			padding-top: 15px
 	dt
 		font: 
 			size: $size-6
 			weight: $weight-medium
 	dd
-		padding:
-			top: 5px
-		font:
-			size: $size-7
+		padding-top: 5px
+		font-size: $size-7
 		color: $color-gray04 
 		line-height: 1.2
 
@@ -219,6 +212,7 @@
 			border-radius: 0
 
  
+
 /* 
 	Tabs 
   */
@@ -230,18 +224,12 @@ $tab-total: 12
 			> li
 				width: calc(100% / #{$i})
 
-
-
-// tabs.sass
-
 .tabs
 	overflow: auto
 	background-color: $color-white
 	
-
 	&:not(:last-child)
-		margin:
-			bottom: 0
+		margin-bottom: 0
 
 	&.is-fixed
 		position: fixed
@@ -253,51 +241,41 @@ $tab-total: 12
 		+ .container
 			padding-top: 85px
 
+.tab-list
+	min-width: 320px
+	width: 100%
+	padding: 15px 10px
+	position: relative
 
-	> ul
-		min-width: 320px
-		width: 100%
-		padding: 15px 10px
-			
-		@media screen and (max-width: 320px)
-			overflow:
-				x: scroll
-			width: auto
-
-		&.tab-list
-			position: relative
-
-			> li 
-				position: relative
-				padding: 0 6px
-				font-size: 0
+	+clearfix
 		
-		&:after
-					+clearfix
+	@media screen and (max-width: 320px)
+		overflow-x: scroll
+		width: auto
+	
+	> li 
+		position: relative
+		padding: 0 6px
+		font-size: 0
 
-		> li
-			text-align: center
-			font-size: $size-6
+		&:hover
+			border: none
 
-			a:hover
-				border: none
-
-			&.on
-				a
-					background-color: $color-blue !important
-					color: $color-white
+		&.on
+			a
+				background-color: $color-blue !important
+				color: $color-white
 
 a.tab-title
+	display: block
+	text-align: center
 	background-color: $color-gray
 	font-size: $size-6
-	height: 55px
-	line-height: 55px
+	padding: 18px 0
 	border-radius: 15px
 	border: 0
 	color: #fff
-	position: relative
 	overflow: hidden
-	z-index: 1
 	box-shadow: 0 1px 5px rgba(0, 0, 0, .1)
 
 	&:hover,

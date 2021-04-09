@@ -20,10 +20,10 @@ h2.c_left {padding:2px; line-height:normal}
 .t_confirm {color:#000}
 .t_modify {color:#ff0000}
 
-.coding_guide {position:static !important;}
+.coding_guide {position:static !important; padding-bottom: 50px}
 .coding_guide h1.h1_guide {margin-bottom:15px; padding:7px 0 12px 10px; background:#58626F; color:white; font-size:18px; line-height:normal;}
-.coding_guide h2.h2_guide {margin:20px 0 10px 10px; color:#000; font-size:17px; line-height:normal; background: #ddd; font-size: 18px; padding: 10px; font-weight: 700;}
-.coding_guide h3.h3_guide {margin:20px 0 10px 20px; color:#000; font-size:15px; line-height:normal;  background: #eee;padding: 10px; font-weight: 700;}
+.coding_guide h2.h2_guide {margin:20px 10px 10px 10px; color:#000; font-size:17px; line-height:normal; background: #ddd; font-size: 18px; padding: 10px; font-weight: 700;}
+.coding_guide h3.h3_guide {margin:20px 20px 10px 20px; color:#000; font-size:15px; line-height:normal;  background: #eee;padding: 10px; font-weight: 700;}
 .coding_guide dl.notice {padding-left:20px}
 .coding_guide dl.notice ol	{list-style-type:decimal; list-style-position:inside}
 .coding_guide dl.notice li {padding:2px;;list-style-type:decimal; list-style-position:inside}
@@ -45,10 +45,6 @@ h2.c_left {padding:2px; line-height:normal}
 
 .guideTitleSmall { font-size: 14px; margin: 30px 0 20px; }
 
-/* 
-    [210324 Add]
-*/
-/* Bulma */
 .ref_link {margin:10px 0 10px 20px}
 .ref_link a {color:#0042ff; }
 
@@ -58,3 +54,12 @@ h2.c_left {padding:2px; line-height:normal}
 
 .b_h3_guide {padding-left:30px;  font-weight: 700; margin-top:30px;}
 .b_dev_list > li {padding-top:10px; padding-left:40px}
+
+
+.guide_cont {padding:10px 15px; border:1px dotted #555; margin:20px;}
+.guide_cont , .guide_cont * {font-size: 14px; color:#000; line-height: 1.4;}
+.cont_title {font-size: 16px; font-weight: bold; padding-bottom:5px;}
+
+.guide_value {color:#006699}
+.cont-spacing {padding-top: 10px}
+.cont-spacing dd {padding-left:15px;}

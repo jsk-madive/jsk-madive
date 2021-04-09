@@ -2,16 +2,16 @@
 /*
 	Header
  */
-$header-height: 50px
 
+$header-height: 50px
 
 .header
 	height: $header-height
 	min-height: $header-height
 	line-height: $header-height
 	text-align: center
-	border: 
-		bottom: 1px solid $color-gray
+	border-bottom: 1px solid $color-gray
+	
 	> a
 		letter-spacing: -0.02em
 	.title
@@ -38,6 +38,7 @@ $header-height: 50px
 	display: inline-block
 	width: 50px
 	height: 50px
+
 	> div 
 		height: inherit
 		display: block
@@ -52,14 +53,11 @@ $header-height: 50px
 		&::after
 			content: ''
 			display: block
-			margin:
-				top: 30px
+			margin-top: 30px
 			width: 20px
 			height: 3px
-			background: 
-				color: $color-black
-			border: 
-				radius: 20px
+			background-color: $color-black
+			border-radius: 20px
 			+prefix02 (transform, rotate(-135deg), translate(22px, 15px))
 
 .bookmark
@@ -69,27 +67,31 @@ $header-height: 50px
 	height: inherit
 
 
+
 /* 
 	Skip navi
  */
+
 .skipnavi
 	positon: absolute
 	top: 0
 	left: 0
 	width: 100%
+
 	a
 		display: block
-		background: red
+		background-color: red
 		color: white
-		font: 
-			size: 0
+		font-size: 0
+
 		&:focus
-			font: 
-				size: 14px
+			font-size: 14px
+
 
 /*
 	Section
  */
+
 
 // common 
 .section-grid
@@ -123,9 +125,6 @@ $header-height: 50px
 		> .title-field
 			padding:
 				top: 30px
-		> .complete-grid
-			padding:
-				top: 60px
 
 			
 .contents-grid

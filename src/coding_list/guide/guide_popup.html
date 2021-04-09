@@ -33,9 +33,29 @@
 
 	<div id="wrap" class="coding_guide">
 		<h1 class="h1_guide">Popup Guide</h1>
-		<!-- 
-	-------- [Auto height Popup] --------
--->
+
+<!-- guide_cont  -->
+<div class="guide_cont">
+	<p class="cont_title">[공통]</p>
+	* [class=modal-open] id와 [class=modal] data-modal 동일값 선언하여 사용 가능 * <br>
+	 - <b>[class=modal-open] id </b>값 == <b>[class=modal] data-modal </b> 값<br>
+	<dl class="cont-spacing">
+		<dt>- 팝업 닫기 클래스</dt>
+		<dd>- 확인 : <b>modal-confirm-btn</b></dd>
+		<dd>- 취소 : <b>modal-del-btn</b></dd>
+	</dl>
+	<dl class="cont-spacing">
+		<dt>- 함수선언</dt>
+		<dd>- Open + Close : <b>modalEvent();</b></dd>
+		<dd>- Open : <b>openModal();</b></dd>
+		<dd>- Close : <b>closeModal();</b></dd>
+	</dl>
+	<br>
+</div>
+		
+<!-- ---------------------
+  Auto height Popup
+  --------------------------- -->
 		<h2 class="h2_guide">Auto height Popup</h2>
 
 		<!-- View -->
@@ -81,14 +101,7 @@
 			<!-- code -->
 			<xmp class="prettyprint linenums javascript">
 <!-- 
-	
-	- 자동 height 팝업
-	* 동일 ID, data값을 구분하여 해당 팝업 열림 *
-	- 팝업 활성화 버튼 - 공통 클래스 부여 : modal-open
-	- 동일값 부여 : [class=modal-open] 의  [ID]값  ==  [class=modal] 의 [data-modal]
-	- 팝업 닫기 클래스 
-		- 확인 : modal-confirm-btn
-		- 취소 : modal-del-btn
+- 자동 height 팝업
 -->
 <button class="button is-blue modal-open" id="동일 값">open popup</button>
 <aside class="modal" data-modal="동일 값">
@@ -123,6 +136,12 @@
 	</div>
   </div>
 </aside>
+
+
+<!--  script  -->
+<script>
+	modalEvent();
+</script>
 			</xmp>
 			<!-- // code -->
 		</div>
@@ -151,7 +170,7 @@
 					<div class="modal-card-body">
 						<div class="modal-field">
 							<p>
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repellat, similique aliquid ipsa suscipit voluptatum unde tempore beatae quam debitis corporis nobis, obcaecati dolor praesentium ullam, explicabo assumenda porro? Unde veritatis nemo voluptatibus laboriosam tempora iure aspernatur quod quaerat. Rerum dolore molestiae veritatis nulla soluta animi velit atque quas hic numquam ea quae quidem fuga repellat incidunt qui omnis, commodi deleniti culpa harum expedita eum facilis modi. Dignissimos consectetur quos, maxime sed corporis magni incidunt neque minima fuga ab quidem quas praesentium id magnam ipsum dicta eum pariatur rem omnis assumenda. Asperiores perspiciatis, cumque debitis voluptates praesentium aspernatur provident saepe accusantium, omnis optio a reiciendis illum porro, voluptatibus ipsam odit placeat esse consequatur ea ut! Minima ullam omnis maxime hic error asperiores, similique pariatur aut dicta ipsa. Rem nisi totam inventore necessitatibus doloremque hic laboriosam ab autem, nam molestias optio at debitis. Quisquam quis odio alias perspiciatis! Eveniet, voluptatibus impedit soluta ipsam incidunt dolores consequuntur! Non, est consequatur sit dolor aut vitae excepturi incidunt, ab quas mollitia fugit alias nisi ratione iusto doloremque maxime? Minima maiores perferendis corporis, doloremque recusandae iure ullam reprehenderit maxime dolore aperiam possimus ducimus quisquam, corrupti praesentium magni mollitia rerum inventore, eveniet veniam magnam in impedit!
+								팝업 내용
 							</p>
 						</div>
 					</div>
@@ -165,19 +184,14 @@
 			<!-- code -->
 			<xmp class="prettyprint linenums javascript">
 <!-- 
-	
 	- Full layer 팝업
-	* 동일 ID, data값을 구분하여 해당 팝업 열림 *
-	- 팝업 활성화 버튼 - 공통 클래스 부여 : modal-open
-	- [class=modal-card] 에 클래스 부여 :  full-modal
-	- 동일값 부여 : [class=modal-open] 의  [ID]값  ==  [class=modal] 의 [data-modal]
-	- 팝업 닫기 클래스 
-		- 확인 : modal-confirm-btn
-		- 취소 : modal-del-btn
+	- [class=modal-card] 클래스 추가 : full-moda
+
 -->
 <button class="button is-blue modal-open" id="동일 값">팝업창 열기</button>
 <aside class="modal" data-modal="동일 값">
 	<div class="modal-background" aria-label="background"></div>
+	<!-- full-modal -->
 	<div class="modal-card full-modal">
 		<div class="modal-card-head modal-top-title">
 			<div class="modal-del-btn">
@@ -188,18 +202,25 @@
 		<div class="modal-card-body">
 			<div class="modal-field">
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo repellat, similique aliquid ipsa suscipit voluptatum unde tempore beatae quam debitis corporis nobis, obcaecati dolor praesentium ullam, explicabo assumenda porro? Unde veritatis nemo voluptatibus laboriosam tempora iure aspernatur quod quaerat. Rerum dolore molestiae veritatis nulla soluta animi velit atque quas hic numquam ea quae quidem fuga repellat incidunt qui omnis, commodi deleniti culpa harum expedita eum facilis modi. Dignissimos consectetur quos, maxime sed corporis magni incidunt neque minima fuga ab quidem quas praesentium id magnam ipsum dicta eum pariatur rem omnis assumenda. Asperiores perspiciatis, cumque debitis voluptates praesentium aspernatur provident saepe accusantium, omnis optio a reiciendis illum porro, voluptatibus ipsam odit placeat esse consequatur ea ut! Minima ullam omnis maxime hic error asperiores, similique pariatur aut dicta ipsa. Rem nisi totam inventore necessitatibus doloremque hic laboriosam ab autem, nam molestias optio at debitis. Quisquam quis odio alias perspiciatis! Eveniet, voluptatibus impedit soluta ipsam incidunt dolores consequuntur! Non, est consequatur sit dolor aut vitae excepturi incidunt, ab quas mollitia fugit alias nisi ratione iusto doloremque maxime? Minima maiores perferendis corporis, doloremque recusandae iure ullam reprehenderit maxime dolore aperiam possimus ducimus quisquam, corrupti praesentium magni mollitia rerum inventore, eveniet veniam magnam in impedit!
+					팝업 내용
 				</p>
 			</div>
 		</div>
 	</div>
 </aside>
+
+<!--  script  -->
+<script>
+	modalEvent();
+</script>
+
 			</xmp>
 			<!-- // code -->
 		</div>
 
 	</div>
 	<script type="text/javascript" src="/coding_list/js/pretty.js"></script>
+	<!--  script  -->
 	<script>
 		modalEvent();
 	</script>

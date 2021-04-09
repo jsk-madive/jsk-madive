@@ -3,7 +3,7 @@
 /* Tab Event */
 
 // tabAction
-function tabAction() {
+function tabAction(){
 	// tabInit
 	$('.tab-list').each(function () {
 		var onIdx = $(this).children('.on').index(),
@@ -31,7 +31,7 @@ function tabAction() {
 
 
 // listTabScroll
-function listTabScroll() {
+function listTabScroll(){
 	$('.subtab').each(function () {
 		$(this).children('li').on({
 			'click': function click() {
@@ -48,7 +48,7 @@ function listTabScroll() {
 
 
 // inputChkAll
-function inputChkAll() {
+function inputChkAll(){
 	// 전체 선택
 	$(document).on('click', '.inputchk-all', function () {
 		var allChkId = $(this).attr('id'),
@@ -79,7 +79,7 @@ function inputChkAll() {
 /* Modal */
 
 // openModal
-function openModal() {
+function openModal(){
 	$(document).on('click', '.modal-open', function () {
 		var selectBtn = $(this).attr('id');
 
@@ -88,7 +88,7 @@ function openModal() {
 }
 
 // closeModal
-function closeModal() {
+function closeModal(){
 	$(document).on('click', '.modal-del-btn, .modal-confirm-btn', function () {
 		$(this).closest('.modal').removeClass('is-active');
 	});
@@ -98,18 +98,16 @@ function closeModal() {
 function modalEvent(){
 	openModal();
 	closeModal();
-
 }
 
 
 /* qna */
-function qnaAction() {
+function qnaAction(){
 	// qnaToggle
 	$(document).on('click', '.qna-question', function () {
 		if ($(this).hasClass('active')) {
 			$(this).removeClass('active')
 		} else {
-
 			$('.qna-question').removeClass('active');
 			$(this).addClass('active');
 		}

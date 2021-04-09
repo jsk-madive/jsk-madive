@@ -18,35 +18,36 @@
 
     <script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
     <style>
-        .tag:not(body) {
-            align-items: baseline;
-            background: none;
-            display: inline;
-            padding: 0;
-            height: auto;
-        }
-
+    .tag:not(body) {
+        align-items: baseline;
+        background: none;
+        display: inline;
+        padding: 0;
+        height: auto;
+    }
     </style>
 </head>
 
 <body>
 
     <div id="wrap" class="coding_guide">
-        <h1 class="h1_guide">Font</h1>
+        <h1 class="h1_guide">Basic</h1>
 
+<!-- ===================  [Basic]  ======================= -->
+<h2 class="h2_guide">[Bulma 기본 클래스]</h2>
+
+<!-- ---------------------
+  	font-weight 관련 기본 클래스
+  --------------------------- -->
         <!-- tag -->
-        <h2 class="h2_guide">font-weight 관련 기본 클래스</h2>
-        <div class="ref_link">
-            <a href="https://bulma.io/documentation/helpers/typography-helpers/#text-weight" target="_blank">Bulma
-                Hompage</a>
-        </div>
+        <h3 class="h3_guide">font-weight 관련 기본 클래스</h3>
         <!-- View -->
         <div class="guide_wrap">
-            <p class="has-text-weight-light">.has-text-weight-light</p>
-            <div class="has-text-weight-normal">.has-text-weight-normal</div>
-            <p class="has-text-weight-medium">.has-text-weight-medium</p>
-            <p class="has-text-weight-semibold">.has-text-weight-semibold</p>
-            <p class="has-text-weight-bold">.has-text-weight-bold</p>
+            <p class="has-text-weight-light">has-text-weight-light</p>
+            <div class="has-text-weight-normal">has-text-weight-normal</div>
+            <p class="has-text-weight-medium">has-text-weight-medium</p>
+            <p class="has-text-weight-semibold">has-text-weight-semibold</p>
+            <p class="has-text-weight-bold">has-text-weight-bold</p>
             
         </div>
         <!-- // View -->
@@ -54,10 +55,10 @@
             <!-- code -->
             <xmp class="prettyprint linenums javascript">
 <!--
-    태그 종류와 상관없이 클래스 적용 가능
+    클래스 추가 스타일 적용
 -->
 <p class="has-text-weight-light">has-text-weight-light</p>
-<div class="has-text-weight-normal">.has-text-weight-normal</div>
+<div class="has-text-weight-normal">has-text-weight-normal</div>
 <p class="has-text-weight-medium">has-text-weight-medium</p>
 <p class="has-text-weight-semibold">has-text-weight-semibold</p>
 <p class="has-text-weight-bold">has-text-weight-bold</p>
@@ -66,18 +67,18 @@
             <!-- // code -->
         </div>
 
+
+	<!-- ---------------------
+  Text Align
+  --------------------------- -->
+
         <!-- tag -->
-        <h2 class="h2_guide">align</h2>
-        <div class="ref_link">
-            <a href="https://bulma.io/documentation/helpers/typography-helpers/#alignment" target="_blank">Bulma
-                Hompage</a>
-        </div>
+        <h2 class="h2_guide">Text Align</h2>
         <!-- View -->
         <div class="guide_wrap">
-            <p class="has-text-centered">.has-text-centered</p>
-            <p class="has-text-justified">.has-text-justified	</p>
-            <p class="has-text-left">.has-text-left</p>
-            <p class="has-text-right">.has-text-right</p>
+            <p class="has-text-centered">has-text-centered</p>
+            <p class="has-text-left">has-text-left</p>
+            <p class="has-text-right">has-text-right</p>
             
         </div>
         <!-- // View -->
@@ -85,87 +86,74 @@
             <!-- code -->
             <xmp class="prettyprint linenums javascript">
 <!--
-    태그 종류와 상관없이 클래스 적용 가능
+    클래스 추가 스타일 적용
 -->
 <p class="has-text-centered">.has-text-centered</p>
-<p class="has-text-justified">.has-text-justified	</p>
 <p class="has-text-left">.has-text-left</p>
 <p class="has-text-right">.has-text-right</p>
         
                     </xmp>
                     <!-- // code -->
                 </div>
-
         <!-- // tag -->
 
 
-        <h1 class="h1_guide">Title</h1>
+<!-- ===================  [Basic]  ======================= -->
+<h2 class="h2_guide">[Custom 공통 클래스]</h2>
 
-        <h2 class="h2_guide">Title Align</h2>
-		<!-- View -->
-		<div class="guide_wrap">
-			<div class="title-field">
-                <h2 class="title is-4">로그인을 해주세요</h2>
-                <h2 class="subtitle">로그인을 해주세요</h2>
-            </div>
-
-			<div class="title-field is-centered">
-                <h2 class="title is-3">로그인을 해주세요</h2>
-            </div>
-
-			<div class="title-field is-right">
-                <h2 class="title is-4">로그인을 해주세요</h2>
-            </div>
-		</div>
-		<!-- // View -->
-
-		<!-- code -->
-		<div class="d_desc code">
-			<xmp class="prettyprint linenums javascript">
+<!-- ---------------------
+  	background-color
+  --------------------------- -->
+        <!-- tag -->
+        <h3 class="h3_guide">background-color</h3>
+        <!-- View -->
+        <div class="guide_wrap">
+            <div class="bg-gray">background-color : #EEE </div>
+						<br>
+						<br>
+            <div class="bg-white">background-color : #FFF</div>
+            
+        </div>
+        <!-- // View -->
+        <div class="d_desc code">
+            <!-- code -->
+            <xmp class="prettyprint linenums javascript">
 <!--
-	- 기본 정렬 : [title-field] 클래스 추가 (is-centered, is-right)
-	- 폰트 크기 : [title] 클래스 추가 (is-1 ~ 6)
+    전체 배경 색상 적용 시 클래스 추가
 -->
+<div class="bg-gray">background-color : #EEEEEE </div>
+<div class="bg-white">background-color : #fff</div>
 
-<div class="title-field">
-	<h2 class="title">로그인을 해주세요</h2>
-</div>
+            </xmp>
+            <!-- // code -->
+        </div>
 
-<div class="title-field is-centered">
-	<h2 class="title is-2">로그인을 해주세요</h2>
-</div>
 
-<div class="title-field is-right">
-	<h2 class="title is-4">로그인을 해주세요</h2>
-</div>
-			</xmp>
-		</div>
-		<!-- // code -->
+<!-- ---------------------
+  Link blue
+  --------------------------- -->
 
-        <h2 class="h2_guide">Title Underline</h2>
-		<!-- View -->
-		<div class="guide_wrap">
-            <div class="title-field title-underline">
-                <h3 class="title is-4">최근주소</h3>
-              </div>
-		</div>
-		<!-- // View -->
-
-		<!-- code -->
-		<div class="d_desc code">
-			<xmp class="prettyprint linenums javascript">
-<div class="title-field title-underline">
-    <h3 class="title is-4">최근주소</h3>
-</div>
-			</xmp>
-		</div>
-		<!-- // code -->
+        <!-- tag -->
+        <h2 class="h2_guide">A Link Blue</h2>
+        <!-- View -->
+        <div class="guide_wrap">
+            <a href="javascript:;" class="link-blue">link color</a>
+        </div>
+        <!-- // View -->
+        <div class="d_desc code">
+            <!-- code -->
+            <xmp class="prettyprint linenums javascript">
+<!--
+    a 링크 색상 적용
+-->
+<a href="javascript:;" class="link-blue">link color</a>
+                    </xmp>
+                    <!-- // code -->
+                </div>
+        <!-- // tag -->
 
 
 
-
-
-       
     </div>
 
     <script type="text/javascript" src="/coding_list/js/pretty.js"></script>

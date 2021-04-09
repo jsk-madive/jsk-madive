@@ -9,7 +9,6 @@
 //  [B - Utilities]   //
 // 
 
-
 // initial-variable.sass   
 
  // Color
@@ -17,7 +16,6 @@ $color-black: #000000
 $color-black02 : #333333
 $color-black03 : #151515
 $color-black04 : #363636
-
 
 $color-blue : #1C67FF  // 기본 
 $color-blue02  : #3273DC
@@ -73,8 +71,6 @@ $family-primary: $family-sans-serif
 
 
 
-
-
 // 
 //  [B - Base]   //
 //    
@@ -97,14 +93,14 @@ $link: $color-black
 $body-color: $color-black
 
 
-
 // 
 //  [B - Grid]   //
 // 
 
 // grid.sass
 $column-gap: 6px
-//   
+
+
 
 // 
 //  [B - Utilities]  //
@@ -117,9 +113,6 @@ $input-focus-border-color: $color-gray
 $input-shadow: none
 
 
- 
-
-
 // tools.sass
 $label-weight: 400
 $size-normal: $size-6
@@ -130,11 +123,14 @@ $box-padding: 20px 30px
 // Image Path
 $image-path: '/img/'
 
-// -------------
-//  [B] Form
-// -------------    
 
-// shared.sass //
+
+// 
+//  [B - Form]  //
+//   
+
+
+// shared.sass 
 $input-color: $color-black  // text
 
 $input-border-color: $color-gray02
@@ -159,17 +155,11 @@ $input-disabled-color-2 : $color-black03
 
 
 
-
-
-// tools.sass
-
-// -------------
-//  [B] Elements
-// -------------
-
+// 
+//  [B - Elements]  //
+//   
 
 // title.sass
-
 $title-family : 'NotoSansKR', sans-serif
 $title-size: $size-4
 $title-weight: 700
@@ -182,23 +172,26 @@ $subtitle-strong-color: $color-gray05
 
 
 // notification.sass
+
 $notification-radius: 0
 $notification-padding: $gap
 $notification-padding-ltr: $gap
 $notification-padding-rtl: $gap
 
-// -------------
-//  [B] Layout  
-// -------------
 
+
+// 
+//  [B - Layout]  //
+//   
 
 // section
 $section-padding : 0 $gap $gap $gap
 
-// -------------
-// [B]  Components  
-// -------------
 
+
+// 
+//  [B - Components]  //
+// 
 
 // modal.sass
 $modal-background-background-color: rgba(0, 0, 0, .3)
@@ -211,10 +204,9 @@ $modal-content-width: 550px
 
 
 
-
-// -------------
-// [B]  Utilities  
-// -------------
+// 
+//  [B - Utilities]  //
+// 
 
 // initial-variables.css
 $radius-small: 4px
@@ -223,30 +215,23 @@ $radius: 5px
 $sizes: $size-1 $size-2 $size-3 $size-4 $size-5 $size-6 $size-7 $size-8 $size-9
 
 
-
-
-// derived-variables.sass
-
-
-
-
 // controls.sass
 $control-radius: 6px // 버튼
 $control-height : 50px
 $control-radius: 0px
 
-
 =control-small
-    $control-height : 40px
+	$control-height : 40px
 
 =control-medium
-    $control-height : 50px
+	$control-height : 50px
 
 =control-large
-    $control-height : 55px
+	$control-height : 55px
 
 
-// 기존 bulma css 
+
+// 기존 Bulma css 
 @import 'utilities/_all'
 @import 'base/_all'
 @import 'components/_all'
@@ -260,14 +245,6 @@ $control-radius: 0px
 
 // custom css
 @import 'marketapp/_all'
-
-
-
-
-
-
-// shared.sass
-
 
 
 // modal.sass
@@ -304,54 +281,32 @@ $tabs-link-active-color                  : $color-black
 
 
 
-// swiper
-\:root
-    --swiper-theme-color: #fff
-    --swiper-navigation-size: 20px
 
-.mainslide-box
-    img
-        width: 100%
+	  
+/**********
+	Common
+ ***********/
 
-.swiper-container
-    font-size: 0
-
-
-.swiper-button-next,
-.swiper-button-prev
-    outline: 0
-
-    span
-        overflow: hidden
-        text-indent: 100%
-        white-space: nowrap
-        z-index: 100
-    
-    &::after
-        padding: 10px
-        outline: 0
-
-      
-
-/*************
-    Common
- *************/
-
-// common class
+// background color
 .bg-gray
 	background: $color-gray07 !important
 	
 .bg-white	
 	background: $color-white !important
 
+
+// link color
+.link-blue,
 a.link-blue
 	color : $color-blue
+	
 	&:active,
 	&:focus,
 	&:active
 		color : $color-blue
 
 
+// info txt
 .infotxt-box
 	margin: 40px auto 
 	display: table
@@ -363,8 +318,7 @@ a.link-blue
 			margin-top: 20px
 
 
-
-
+// order-list
 ul.unorder-list
 	list-style: none
 	margin: 0
@@ -389,157 +343,218 @@ ul.unorder-list
 			top: 9px
 			left: 0
 
-        
 
+
+
+
+/**********
+	App Main
+ ***********/
+.appmain
+	position: absolute
+	top: 50%
+	left: 0
+	width: 100%
+	
+	+prefix (transform, translateY(-50%))
+
+	.title
+		text-align: center
+		padding-bottom: 10px
+
+	.logo-img
+		display: table
+		margin: 0 auto
+			
+		img
+			margin: 0 auto
 
 
 /*************
-    Login
+	Terms
  *************/
 .container
-    > .login
-        padding: 100px $gap 30px
-.login
-    .field
-        &:not(:last-child)
-            margin-bottom: calc(10px - #{$column-gap})
-    .field-grid
-        + .buttons
-                margin:
-                    top: 20px
-
-.sns-login
-    .button
-        position: relative
-    
-        &::before
-            position: absolute
-            content: ''
-            left: 0
-            width: 50px
-            height: 50px
-            line-height: 50px
-            background: 
-                position: center
-                repeat: no-repeat
-
-        &.kakao
-            color: rgba(0, 0, 0, .85)
-            &:before
-                background: 
-                    image: url(/img/logo_kakao.png)
-                    size: 22px auto
-
-        &.naver 
-             &:before
-                background: 
-                    image: url(/img/logo_naver.png)
-                    size: 34px auto 
-
-        &.google 
-            border-color: #E5E5E5
-            &:before
-                background: 
-                    image: url(/img/logo_google.png)
-                    size: 24px auto
-
-
-
-
-
-/*************
-    Join
- *************/
-.container
-    > .join
-        padding: 100px $gap 30px
-
-    > .join02
-        padding: 60px $gap 30px
-
-
-/*************
-    Find id/pw
- *************/
-.findidpw-box
-    .tab-cont 
-        padding-top: 30px
-    
-
-
-
-
-
-    
-/*************
-    Terms
- *************/
-.container
-    > .terms
-        padding: 100px $gap 30px
+	> .terms
+		padding: 100px $gap 30px
 
 .terms
+	.cont
+		font: 
+			size: $size-4
+			weight: $weight-medium
+		letter-spacing: 0.03em
 
-    .cont
-        font: 
-            size: $size-4
-            weight: $weight-medium
-        letter-spacing: 0.03em
-
-    .field 
-        &:first-child
-            border-bottom: 1px solid $color-gray
-            padding:
-                top: 20px
-                bottom: 20px
-            strong
-                font-size: $size-4
-
+	.field 
+		&:first-child
+			border-bottom: 1px solid $color-gray
+			padding:
+				top: 20px
+				bottom: 20px
+			strong
+				font-size: $size-4
 
 
-/********
-    App Main     
- ********/
-.appmain
-    position: absolute
-    top: 50%
-    left: 0
-    width: 100%
+
+
+/*************
+	Login
+ *************/
+.container
+	> .login
+		padding: 100px $gap 30px
+
+.login
+	.field
+		&:not(:last-child)
+			margin-bottom: calc(10px - #{$column-gap})
+	.field-grid
+		+ .buttons
+				margin:
+					top: 20px
+
+.sns-login
+	.button
+		position: relative
 	
-    +prefix (transform, translateY(-50%))
+		&:before
+			position: absolute
+			content: ''
+			left: 0
+			top: 0
+			width: 50px
+			height: 50px
+			background: 
+				position: center
+				repeat: no-repeat
 
-    .title
-        text-align: center
-        padding-bottom: 10px
+		&.kakao
+			color: rgba(0, 0, 0, .85)
+			&:before
+				background: 
+					image: url(/img/logo_kakao.png)
+					size: 22px auto
 
-    .logo-img
-        display: table
-        margin: 0 auto
+		&.naver 
+			&:before
+				background: 
+					image: url(/img/logo_naver.png)
+					size: 34px auto
 
-        img
-            margin: 0 auto
+		&.google 
+			border-color: #E5E5E5
+			&:before
+				background: 
+					image: url(/img/logo_google.png)
+					size: 24px auto
 
+
+
+
+
+/*************
+	Join
+ *************/
+.container
+	> .join
+		padding: 100px $gap 30px
+
+	> .join02
+		padding: 60px $gap 30px
+
+
+
+/*************
+	Find id/pw
+ *************/
+.findidpw-box
+	.tab-cont 
+		padding-top: 30px
+	
 
 /********
-    Main     
+	Main     
  ********/
+// swiper
+\:root
+	--swiper-theme-color: #fff
+	--swiper-navigation-size: 20px
+
+.mainslide-box
+	img
+		width: 100%
+
+.swiper-container
+	font-size: 0
+
+.swiper-button-next,
+.swiper-button-prev
+	outline: 0
+
+	span
+		overflow: hidden
+		text-indent: 100%
+		white-space: nowrap
+		z-index: 100
+	
+	&::after
+		padding: 10px
+		outline: 0
+
+
+// delivery-addr
+.delivery-addr
+	width: 100%
+	height: 45px
+	line-height: 45px
+	text-align: center
+	background-color: $color-white
+	border-bottom: 1px solid $color-gray
+	z-index: 10
+	
+	> a
+		display: block
+
+	.location-txt
+		position: relative
+		display: inline-block
+		padding: 
+			left: 23px
+			right: 25px
+
+		&::before,
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			display: inline-block
+
+			+prefix(transform, translateY(-50%))
+
+		&:before
+			+location
+			left: 0
+
+		&::after
+			+co-arrow(down)
+			margin-top: -9px
+			right: 0
+
 
 // foodtab-section
 .foodtab-section
-    position: relative
-    padding-bottom: 20px
+	position: relative
+	padding-bottom: 20px
 
-    &:after
-        +clearfix
+	+clearfix
 
 .foodctg-list
 	padding-top: 5px
+	
 	&.columns
 		margin: 0
 
 	> li
-		line-height: 1.5
-		padding: 5px
+		padding: 8px 5px
 		text-align: center
 
 	.img-box
@@ -567,7 +582,6 @@ ul.unorder-list
 		display: block
 		margin: 0 auto
 		outline: 0
-		background-color: transparent
 		-webkit-tap-highlight-color: transparent
 		
 		&:hover,
@@ -581,107 +595,66 @@ ul.unorder-list
 		font-size: $size-7
 
 
-// delivery-addr
-.delivery-addr
-	width: 100%
-	height: 45px
-	line-height: 45px
-	text-align: center
-	background-color: $color-white
-	border-bottom: 1px solid $color-gray
-	z-index: 10
-    
-	> a
-		display: block
-
-	.location-txt
-		position: relative
-		display: inline-block
-		padding: 
-			left: 23px
-			right: 25px
-
-		&::before,
-		&::after
-			content: ''
-			position: absolute
-			top: 50%
-			transform: translateY(-50%)
-			display: inline-block
-
-		&:before
-			+location
-			left: 0
-
-		&::after
-			+co-arrow(down)
-			margin:
-				top: -9px
-			right: 0
-
-
 // subtab-box
 .subtab-box
-    width: 100%
-    overflow: hidden
-    z-index: 10
-    border-bottom: 1px solid $color-gray
+	width: 100%
+	overflow: hidden
+	z-index: 10
+	border-bottom: 1px solid $color-gray
 
-    .subtab
-        display: block
-        margin: 0 auto
-        padding: 10px 6px
-        width: auto
-        font-size: 0
-        text-align: left
-        overflow-x: scroll
-        white-space: nowrap
-        -webkit-overflow-scrolling: touch
+	.subtab
+		display: block
+		margin: 0 auto
+		padding: 10px
+		width: auto
+		font-size: 0
+		text-align: left
+		overflow-x: scroll
+		white-space: nowrap
+		-webkit-overflow-scrolling: touch
 
-        &::-webkit-scrollbar
-            width: 0
-            height: 0
-            background-color: red
+		&::-webkit-scrollbar
+			width: 0
+			height: 0
 
-        > li
-            display: inline-block
-            padding: 0 6px
+		> li
+			display: inline-block
+			padding: 0 6px
 
-            &.active
+			> a
+				font-size: $size-7
+				padding: 5px 8px
+				border: 1px solid $color-gray02
+				background-color: $color-white
+				line-height: 32px
+				border-radius: 32px
 
-                > a
-                    color: $color-white
-                    background-color: $color-blue02
-                    border-color: $color-blue02
-            > a
-                    font-size: $size-7
-                    padding: 5px 8px
-                    border: 1px solid $color-gray02
-                    background-color: $color-white
-                    line-height: 32px
-                    border-radius: 32px
-
+			&.active
+				> a
+					color: $color-white
+					background-color: $color-blue02
+					border-color: $color-blue02
+			
 
 /********
  Address
  ********/
 .now-location
-    &:hover,
-    &.is-hovered,
-    &:focus,
-    &.is-focused,
-    &:active,
-    &.is-active
-        color: $color-black
-        
-    > span
-        position: relative
-    
-        &::before
-            +location
-            content: ''
-            margin:
-                right: 5px
+	&:hover,
+	&.is-hovered,
+	&:focus,
+	&.is-focused,
+	&:active,
+	&.is-active
+		color: $color-black
+		
+	> span
+		position: relative
+	
+		&::before
+			+location
+			content: ''
+			margin-right: 5px
 
 
 .content
@@ -708,7 +681,7 @@ ul.unorder-list
 		.addr-stitle
 			font-size: 0
 
-    
+	
 	&.type02
 		position: relative
 		
@@ -724,7 +697,7 @@ ul.unorder-list
 			right: 0
 			font-size: 0
 			z-index: 10
-    
+	
 	&.type03
 		> a
 			padding:
@@ -763,66 +736,66 @@ ul.unorder-list
 		display: block
 
 
-            
+			
 
-                
+				
 .addr-stitle
-    margin: 
-        bottom: 10px
-    > span
-        font: 
-            size: 17px
-            weight : 700
-        position: relative
+	margin: 
+		bottom: 10px
+	> span
+		font: 
+			size: 17px
+			weight : 700
+		position: relative
 
-        &[class^='addr-dpt'] 
-            &::before
-                background:
-                    size: 100% auto
-                    position: center
-                    repeat: no-repeat
-                content: ''
-                width: 20px
-                height: 20px
-                display: inline-block
-                vertical-align: middle
-                margin: 
-                    right: 5px
-                    top: -2px
+		&[class^='addr-dpt'] 
+			&::before
+				background:
+					size: 100% auto
+					position: center
+					repeat: no-repeat
+				content: ''
+				width: 20px
+				height: 20px
+				display: inline-block
+				vertical-align: middle
+				margin: 
+					right: 5px
+					top: -2px
 
-        &.addr-dpt01::before
-            background-image: url(/img/ico_addr01.png)
-        &.addr-dpt02::before
-            background-image: url(/img/ico_addr02.png)
-        &.addr-dpt03::before
-            background-image: url(/img/ico_addr03.png)
+		&.addr-dpt01::before
+			background-image: url(/img/ico_addr01.png)
+		&.addr-dpt02::before
+			background-image: url(/img/ico_addr02.png)
+		&.addr-dpt03::before
+			background-image: url(/img/ico_addr03.png)
 
 
 .addr01,
 .addr02
-    font-size: $size-7
+	font-size: $size-7
 
 .addr02
-    display: table
-    margin-top: 10px
-    table-layout: fixed
-    width: 100%
-    font-size: $size-7
+	display: table
+	margin-top: 10px
+	table-layout: fixed
+	width: 100%
+	font-size: $size-7
 
-    > div
-        display: table-cell
+	> div
+		display: table-cell
 
-        &.left
-            width: 60px
-        &.right
-            color: $color-gray04
-    .dpt
-        padding: 0 5px
-        border: 1px solid $color-gray
-        color: $color-black
+		&.left
+			width: 60px
+		&.right
+			color: $color-gray04
+	.dpt
+		padding: 0 5px
+		border: 1px solid $color-gray
+		color: $color-black
 
 .button
-    align-items:  center
+	align-items:  center
 
 // address-search
 .address-search
@@ -843,53 +816,53 @@ ul.unorder-list
 	
 // map-box
 .map-wrap
-    padding-bottom: 217px
+	padding-bottom: 217px
 
 .map-area
-    position: relative
-    height: inherit
-    
-    .btn-map
-        position: fixed
-        bottom: 225px
-        right: 10px
-        z-index: 10
+	position: relative
+	height: inherit
+	
+	.btn-map
+		position: fixed
+		bottom: 225px
+		right: 10px
+		z-index: 10
 
 
 
 // address-fixed-bottom
 .address-fixed-bottom
-    padding: $gap
-    background-color: $color-white
-    border-top: 1px solid $color-gray
+	padding: $gap
+	background-color: $color-white
+	border-top: 1px solid $color-gray
 
-    position: fixed
-    bottom: 0
-    left: 0
-    right: 0
-    z-index: 30
-    
-    .field
-        margin-bottom: 0
-    input
-        margin: 15px 0
+	position: fixed
+	bottom: 0
+	left: 0
+	right: 0
+	z-index: 30
+	
+	.field
+		margin-bottom: 0
+	input
+		margin: 15px 0
 
 
 /********
  Order List
  ********/
 .ordertab
-    padding-bottom: 10px
+	padding-bottom: 10px
 
 .order-list
-    width: 100%
-    margin: 0
-    font-size: $size-4
+	width: 100%
+	margin: 0
+	font-size: $size-4
 
 .order-box 
-    border: 1px solid $color-gray
-    margin: 6px
-    padding: 10px
+	border: 1px solid $color-gray
+	margin: 6px
+	padding: 10px
 
 .order-title
 	+clearfix
@@ -897,7 +870,7 @@ ul.unorder-list
 	font:  
 		size: $size-7
 		weight: $weight-normal
-    
+	
 	padding-bottom: 8px;
 	border-bottom: 2px solid $color-blue
 
@@ -909,188 +882,188 @@ ul.unorder-list
 		float: right
 
 .order-link
-    color: $color-blue
-    font-size: $size-8
-    padding-top: 2px
+	color: $color-blue
+	font-size: $size-8
+	padding-top: 2px
 
-    &:hover,
-    &:focus,
-    &:active
-        color: $color-blue
-    
+	&:hover,
+	&:focus,
+	&:active
+		color: $color-blue
+	
 .order-info
-    padding-top: 10px
+	padding-top: 10px
 
-    .media-left
-        margin-right: 10px
+	.media-left
+		margin-right: 10px
 
-        .img-box
-            width: 100px
+		.img-box
+			width: 100px
 
 .order-cont
-    dt
-        font: 
-            size: $size-6
-            weight: $weight-medium
-        color: $color-blue03
+	dt
+		font: 
+			size: $size-6
+			weight: $weight-medium
+		color: $color-blue03
 
-    dd
-        font: 
-            size: $size-7
-            weight: $weight-normal
-        color: $color-blue03
-        margin-top: 6px
+	dd
+		font: 
+			size: $size-7
+			weight: $weight-normal
+		color: $color-blue03
+		margin-top: 6px
 
-    .odr-menu-opt
-        font:
-            size: $size-8
-        color: $color-gray05
+	.odr-menu-opt
+		font:
+			size: $size-8
+		color: $color-gray05
 
 
-    .odr-price
-        span
-            color : $color-gray05
-            &:first-child
-                font: 
-                    size: $size-5
-                    weight: $weight-medium
-                color: $color-blue03
+	.odr-price
+		span
+			color : $color-gray05
+			&:first-child
+				font: 
+					size: $size-5
+					weight: $weight-medium
+				color: $color-blue03
 
-            &:last-child
-                position: relative
-                padding-left: 10px 
-                font:
-                    size: $size-6
+			&:last-child
+				position: relative
+				padding-left: 10px 
+				font:
+					size: $size-6
 
-                &::before
-                    position: absolute
-                    top: 5px
-                    left: 0
-                    content: ''
-                    width: 1px
-                    height: 15px
-                    background-color: $color-gray08
-                    display: inline-block
-                    margin-left: 1px
+				&::before
+					position: absolute
+					top: 5px
+					left: 0
+					content: ''
+					width: 1px
+					height: 15px
+					background-color: $color-gray08
+					display: inline-block
+					margin-left: 1px
 
 .order-btnbox
-    margin-top: 10px
+	margin-top: 10px
 
-    .odr-btn
-        display: inline-block
-        text-align: center
-        min-width: 80px
-        height: 30px
-        line-height: 30px
-        color: $color-gray06
-        border: 1px solid $color-gray06
-        background-color: $color-white
-        font-size: $size-7
+	.odr-btn
+		display: inline-block
+		text-align: center
+		min-width: 80px
+		height: 30px
+		line-height: 30px
+		color: $color-gray06
+		border: 1px solid $color-gray06
+		background-color: $color-white
+		font-size: $size-7
 
-        &:hover,
-        &:focus,
-        &:active
-            color : $color-gray06
+		&:hover,
+		&:focus,
+		&:active
+			color : $color-gray06
 
-        + .odr-btn
-            margin-left: 10px
+		+ .odr-btn
+			margin-left: 10px
 
 /*************
-    Profile modify
+	Profile modify
  *************/
 
 .prfmod-email
-    font-size: 15px
-    color: $color-gray03
+	font-size: 15px
+	color: $color-gray03
 
-    .mark
-        color: $color-blue
+	.mark
+		color: $color-blue
 
 .label-withsub
-    display: table
-    margin-bottom: 5px
-    .label,
-    span
-        display: table-cell
-        vertical-align: middle
+	display: table
+	margin-bottom: 5px
+	.label,
+	span
+		display: table-cell
+		vertical-align: middle
 
-    span
-        padding-left: 5px
+	span
+		padding-left: 5px
 
 
 .agreechk-box
-    margin-top: 35px
-    padding-top: 15px
-    border-top: 1px solid $color-gray06
+	margin-top: 35px
+	padding-top: 15px
+	border-top: 1px solid $color-gray06
 
-    .title-field
-        padding-bottom: 0
+	.title-field
+		padding-bottom: 0
 
-        p.subtitle
-            color: $color-gray05
+		p.subtitle
+			color: $color-gray05
 
 
-    .toggle-cont
-    
-        
+	.toggle-cont
+	
+		
 
 
 /*************
-    withdrawal
+	withdrawal
  *************/
 .withdrawal
-    padding-top: 30px
+	padding-top: 30px
 
-    .form-grid
-        padding-top: 60px
+	.form-grid
+		padding-top: 60px
 
 
 /* ************
-    available-coupon
+	available-coupon
   *************/
 
 .coupon-box
-    border: 1px solid $color-gray
-    background-color: $color-white
+	border: 1px solid $color-gray
+	background-color: $color-white
 
-    > a
-        padding: 15px 10px
-        display: block
-    
-    + .coupon-box
-        margin-top: 15px
+	> a
+		padding: 15px 10px
+		display: block
+	
+	+ .coupon-box
+		margin-top: 15px
 
-    .coupon-price
-        font: 
-            weight: $weight-bold
-            size: 24px
-        color: #F75531
-        letter-spacing: -0.03em
+	.coupon-price
+		font: 
+			weight: $weight-bold
+			size: 24px
+		color: #F75531
+		letter-spacing: -0.03em
 
-    .coupon-cont
-        margin-top: 15px
-        color: $color-gray05
-        font-size: $size-7
+	.coupon-cont
+		margin-top: 15px
+		color: $color-gray05
+		font-size: $size-7
 
-        dt, dd
-            margin-top: 5px
+		dt, dd
+			margin-top: 5px
 
 
 
 /*************
-    mtminq-list
+	mtminq-list
   *************/
 .mtminq-list
-    // select 고정 시
-    .select-field
-        &.fixed
-            position: fixed
-            left: 0
-            right: 0
-            background-color: #fff
+	// select 고정 시
+	.select-field
+		&.fixed
+			position: fixed
+			left: 0
+			right: 0
+			background-color: #fff
 
-            .section
-                padding-top: 52px
+			.section
+				padding-top: 52px
 
 
 .inqlist-box
@@ -1122,96 +1095,96 @@ ul.unorder-list
 
 
 /*************
-    mtminq-write
+	mtminq-write
   *************/
 .mtminq-write
-    display: flex
-    flex-direction: column
+	display: flex
+	flex-direction: column
 
 
 // inq-photo-box
 .inq-photo-box
 
-    width: 100%
-    padding-top: 16px
-    overflow: hidden
+	width: 100%
+	padding-top: 16px
+	overflow: hidden
 
 .inq-photo-list
-    display: block
-    margin: 0 auto
-    padding: 
-        left: 11px
-        right: 11px
-        bottom: 25px
-    width: auto
-    font-size: 0
-    text-align: left
-    overflow-x: scroll
-    white-space: nowrap
-    -webkit-overflow-scrolling: touch
+	display: block
+	margin: 0 auto
+	padding: 
+		left: 11px
+		right: 11px
+		bottom: 25px
+	width: auto
+	font-size: 0
+	text-align: left
+	overflow-x: scroll
+	white-space: nowrap
+	-webkit-overflow-scrolling: touch
 
 
-    > li
-        margin: 0 5px
-        display: inline-block
-        
-        > a
-            display: block
+	> li
+		margin: 0 5px
+		display: inline-block
+		
+		> a
+			display: block
 
 
 .inq-photo
-    border-radius: 6px
-    width: 96px
-    height: 96px
-    overflow: hidden
+	border-radius: 6px
+	width: 96px
+	height: 96px
+	overflow: hidden
 
-    &.mark
-        display: table
-        table-layout:  fixed
-        background-color: $color-gray09
-        
-        > div
-            display: table-cell
-        
-        i
-            display: block
-            width: 24px
-            height: 24px
-            margin: 0 auto
-            background: url(/img/ico_camera.png) center 0/24px auto no-repeat;
+	&.mark
+		display: table
+		table-layout:  fixed
+		background-color: $color-gray09
+		
+		> div
+			display: table-cell
+		
+		i
+			display: block
+			width: 24px
+			height: 24px
+			margin: 0 auto
+			background: url(/img/ico_camera.png) center 0/24px auto no-repeat;
 
-        .cnt
-            display: block
-            margin-top: 5px
-            font-size: $size-8
-            color: $color-gray05
-
-
-    &.image
-        img
-            min-width: 100%
-            min-height: 100%
-            max-width: 100%
-            max-height: 100%
+		.cnt
+			display: block
+			margin-top: 5px
+			font-size: $size-8
+			color: $color-gray05
 
 
-    > div
-        height: 100%
-        text-align: center
-        vertical-align: middle
-        overflow: hidden
+	&.image
+		img
+			min-width: 100%
+			min-height: 100%
+			max-width: 100%
+			max-height: 100%
+
+
+	> div
+		height: 100%
+		text-align: center
+		vertical-align: middle
+		overflow: hidden
 
 
 .inq-textarea-box
-    border-top: 1px solid $color-gray
-    display: flex
-    flex: 1
-    padding-bottom: 30px
+	border-top: 1px solid $color-gray
+	display: flex
+	flex: 1
+	padding-bottom: 30px
 
-    .textarea 
-        border: 0
-        resize: none
-        height: 100%
+	.textarea 
+		border: 0
+		resize: none
+		height: 100%
 
 
 /*************
