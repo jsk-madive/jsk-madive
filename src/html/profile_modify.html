@@ -1,124 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
-
 <body>
-  <!-- container -->
-  <div id="contents" class="container">
-    <!--  profilemodify -->
-    <div class="profilemodify non-hd section-grid">
-      <h2 class="skip">프로필 수정</h2>
-      <div class="form-grid">
-        <div class="field-grid lnr-grid">
-          <div class="field">
-            <div class="columns has-label-btn is-mobile">
-              <div class="column is-3">
-                <label class="label" for="prfmod-nickname">닉네임</label>
-              </div>
-              <div class="column is-6">
-                <input class="input is-small" id="prfmod-nickname" type="text" placeholder="10-20자 이내">
-              </div>
-              <div class="column is-3">
-                <button type="button" class="button is-small is-gray is-fullwidth">변경</button>
-              </div>
-            </div>
-          </div>
+	<!-- container -->
+	<div id="contents" class="container">
+		<!--  profilemodify -->
+		<div class="profilemodify non-hd section-grid">
+			<h2 class="skip">프로필 수정</h2>
+			<div class="form-grid">
+				<div class="field-grid lnr-grid">
+					<div class="field">
+						<div class="columns has-label-btn is-mobile">
+							<div class="column is-3">
+								<label class="label" for="prfmod-nickname">닉네임</label>
+							</div>
+							<div class="column is-6">
+								<!--  [210415 - Modify] -->
+								<input class="input is-small input-mod-status" id="prfmod-nickname" type="text" placeholder="10-20자 이내">
+							</div>
+							<div class="column is-3">
+								<button type="button" class="button is-small is-gray is-fullwidth" disabled>변경</button>
+							</div>
+						</div>
+					</div>
 
-          <div class="field">
-            <div class="columns has-label-btn is-mobile is-label">
-              <div class="column is-3">
-                <label class="label">이메일</label>
-              </div>
-              <div class="column is-9">
-                <div class="prfmod-email"><span class="mark">@</span> market@naver.com</div>
-              </div>
-            </div>
-          </div>
+					<div class="field">
+						<!--  [210415 - Modify] -->
+						<div class="columns has-label-btn is-mobile is-label">
+							<div class="column is-3">
+								<label class="label">이메일</label>
+							</div>
+							<div class="column is-9">
+								<div class="prfmod-email"><span class="mark">@</span> market@naver.com</div>
+							</div>
+						</div>
+					</div>
 
-          <div class="field">
-            <div class="columns has-label-btn is-mobile">
-              <div class="column is-3">
-                <label class="label" for="prfmod-pw">비밀번호</label>
-              </div>
-              <div class="column is-6">
-                <input class="input is-small" id="prfmod-pw" type="password" placeholder="10-20자 이내">
-              </div>
-              <div class="column is-3">
-                <button type="button" class="button is-small is-gray is-fullwidth">변경</button>
-              </div>
-            </div>
-          </div>
+					<div class="field">
+						<div class="columns has-label-btn is-mobile">
+							<div class="column is-3">
+								<label class="label" for="prfmod-pw">비밀번호</label>
+							</div>
+							<div class="column is-6">
+								<input class="input is-small input-mod-status" id="prfmod-pw" type="password" placeholder="10-20자 이내">
+							</div>
+							<div class="column is-3">
+								<button type="button" class="button is-small is-gray is-fullwidth" disabled>변경</button>
+							</div>
+						</div>
+					</div>
 
-          <div class="field">
-            <div class="columns">
-              <div class="column">
-                <div class="label-withsub">
-                  <label class="label">휴대폰 인증</label>
-                  <span class="subtitle is-9">주문정보의 연락처로 사용됩니다.</span>
-                </div>
-              </div>
-            </div>
-            <div class="columns has-label-btn is-mobile">
-              <div class="column is-3">
-                <input type="tel" class="input is-small" placeholder="010">
-              </div>
-              <div class="column is-3">
-                <input type="tel" class="input is-small" placeholder="0000">
-              </div>
-              <div class="column is-3">
-                <input type="tel" class="input is-small" placeholder="0000">
-              </div>
-              <div class="column is-3">
-                <button type="button" class="button is-small is-gray is-fullwidth is-autowidth">재인증</button>
-              </div>
-            </div>
-          </div>
+					<div class="field">
+						<div class="columns">
+							<div class="column">
+								<div class="label-withsub">
+									<label class="label">휴대폰 인증</label>
+									<span class="subtitle is-9">주문정보의 연락처로 사용됩니다.</span>
+								</div>
+							</div>
+						</div>
+						<div class="columns has-label-btn is-mobile">
+							<div class="column is-3">
+								<input type="tel" class="input is-small" placeholder="010">
+							</div>
+							<div class="column is-3">
+								<input type="tel" class="input is-small" placeholder="0000">
+							</div>
+							<div class="column is-3">
+								<input type="tel" class="input is-small" placeholder="0000">
+							</div>
+							<div class="column is-3">
+								<button type="button" class="button is-small is-gray is-fullwidth is-autowidth">재인증</button>
+							</div>
+						</div>
+					</div>
 
-          <div class="field">
-            <div class="agreechk-box">
-              <div class="title-field with-subtitle">
-                <h3 class="title is-5 is-spaced">마케팅 정보 수신동의</h3>
-                <p class="subtitle is-9">이벤트 및 혜택에 대한 정보를 받으실 수 있어요.</p>
-              </div>
-            </div>
+					<div class="field">
+						<div class="agreechk-box">
+							<div class="title-field with-subtitle">
+								<h3 class="title is-5 is-spaced">마케팅 정보 수신동의</h3>
+								<p class="subtitle is-9">이벤트 및 혜택에 대한 정보를 받으실 수 있어요.</p>
+							</div>
+						</div>
 
-            <div class="columns">
-              <div class="column">
-                <div class="level is-mobile toggle-cont">
-                  <div class="level-left">
-                    <p>메일 수신동의</p>
-                  </div>
-                  <div class="level-right">
-                    <label class="toggle-btn">
-                      <input type="checkbox">
-                      <span class="switch"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
+						<div class="columns">
+							<div class="column">
+								<div class="level is-mobile toggle-cont">
+									<div class="level-left">
+										<p>메일 수신동의</p>
+									</div>
+									<div class="level-right">
+										<label class="toggle-btn">
+											<input type="checkbox">
+											<span class="switch"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
 
-            <div class="columns">
-              <div class="column">
-                <div class="level is-mobile toggle-cont">
-                  <div class="level-left">
-                    <p>SMS 수신동의</p>
-                  </div>
-                  <div class="level-right">
-                    <label class="toggle-btn">
-                      <input type="checkbox">
-                      <span class="switch"></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- // container -->
+						<div class="columns">
+							<div class="column">
+								<div class="level is-mobile toggle-cont">
+									<div class="level-left">
+										<p>SMS 수신동의</p>
+									</div>
+									<div class="level-right">
+										<label class="toggle-btn">
+											<input type="checkbox">
+											<span class="switch"></span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
+
+	<script>
+		// [210415 - Modify]
+		$(function () {
+			$(document).on('input', '.input-mod-status', function() {
+				if ($(this).val() == '') {
+					$(this).parent().next().children('.button').attr('disabled', true)
+				} else {
+					$(this).parent().next().children('.button').attr('disabled', false)
+				}
+			})
+		});
+
+	</script>
+
 </body>
 
 </html>

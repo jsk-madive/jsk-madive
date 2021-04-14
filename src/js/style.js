@@ -1,7 +1,6 @@
 'use strict';
 
 /* Tab Event */
-
 // tabAction
 function tabAction(){
 	// tabInit
@@ -125,5 +124,5 @@ function qnaAction(){
 	$(document).on('click', '.qna-close-btn', function () {
 		$(this).closest('.qna-answer').slideUp(300).siblings('.qna-question').removeClass('active');
 	});
-
+ 
 }

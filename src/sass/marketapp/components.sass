@@ -2,10 +2,6 @@
 	Navbar 
  */
 
-// navbar.sass
-.navbar.is-fixed-bottom
-	> ul
-		+clearfix
 
 // btm-fix-nav
 .btm-fix-nav
@@ -14,8 +10,7 @@
 	> ul
 		width: 100%
 
-		&::after
-			+clearfix
+		+clearfix
 
 		> li
 			float: left
@@ -48,10 +43,12 @@
 			font-size: $size-7
 			font-weight: 600
 			color: $color-gray05
-			padding-top: 10px
-			padding: 10px 0 calc(constant(safe-area-inset-bottom) + 5px);
-			padding: 10px 0 calc(env(safe-area-inset-bottom) + 5px);
-
+			max-height: 90px
+			padding: 
+				top: 10px
+				bottom: 10px
+				bottom: calc(constant(safe-area-inset-bottom) + 10px)
+				bottom: calc(env(safe-area-inset-bottom) + 10px)
 
 			.ico
 				background: url(../img/btm_ico.png) center 0/auto 27px no-repeat

@@ -67,7 +67,6 @@
 		<!-- // code -->
 
 		<br>
-		<br>
 		<!-- ===================  [Input + Button ]  ======================= -->
 		<h2 class="h2_guide">Input + Button</h2>
 
@@ -83,7 +82,7 @@
 					<input type="text" class="input">
 				</div>
 				<div class="column is-one-quarter">
-					<button type="button" class="button is-medium is-blue">중복확인</button>
+					<button type="button" class="button is-medium is-blue is-fullwidth">중복확인</button>
 				</div>
 			</div>
 		</div>
@@ -97,7 +96,7 @@
 		<input type="text" class="input">
 	</div>
 	<div class="column is-one-quarter">
-		<button type="button" class="button is-medium is-blue">중복확인</button>
+		<button type="button" class="button is-medium is-blue is-fullwidth">중복확인</button>
 	</div>
 </div>
 			</xmp>
@@ -150,11 +149,11 @@
 				<div class="column is-2">
 					<div class="time-limt is-medium is-fullwidth">03:00</div>
 				</div>
-				<div class="column is-8">
+				<div class="column is-8 certify-num">
 					<input class="input is-medium" type="text" placeholder="인증번호 입력">
 				</div>
 				<div class="column is-2">
-					<button class="button is-medium is-blue is-fullwidth">확인</button>
+					<button type="button" class="button is-medium is-blue is-fullwidth">확인</button>
 				</div>
 			</div>
 		</div>
@@ -167,18 +166,57 @@
 	<div class="column is-2">
 		<div class="time-limt is-medium is-fullwidth">03:00</div>
 	</div>
-	<div class="column is-8">
+	<div class="column is-8 certify-num">
 		<input class="input is-medium" type="text" placeholder="인증번호 입력">
 	</div>
 	<div class="column is-2">
-		<button class="button is-medium is-blue is-fullwidth">확인</button>
+		<button type="button" class="button is-medium is-blue is-fullwidth">확인</button>
 	</div>
 </div>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<br>
+		<!-- ---------------------
+			Label + Input + Button
+		--------------------------- -->
+
+		<h3 class="h3_guide">Label + Input + Button</h3>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="columns has-label-btn is-mobile">
+				<div class="column is-3">
+					<label class="label">닉네임</label>
+				</div>
+				<div class="column is-6">
+					<input class="input is-small" type="text" placeholder="10-20자 이내">
+				</div>
+				<div class="column is-3">
+					<button type="button" class="button is-small is-gray is-fullwidth">변경</button>
+				</div>
+			</div>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<div class="columns has-label-btn is-mobile">
+	<div class="column is-3">
+		<label class="label">닉네임</label>
+	</div>
+	<div class="column is-6">
+		<input class="input is-small" type="text" placeholder="10-20자 이내">
+	</div>
+	<div class="column is-3">
+		<button type="button" class="button is-small is-gray is-fullwidth">변경</button>
+	</div>
+</div>
+			</xmp>
+		</div>
+		<!-- // code -->
+
+
 		<br>
 
 		<!-- ===================  [Input + Search]  ======================= -->
@@ -261,88 +299,126 @@
 		<h3 class="h3_guide">Select</h3>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="select is-subselect is-no-outline">
+			<div class="select is-subselect">
 				<select>
-					<option>Select dropdown</option>
+					<option>옵션 선택</option>
 					<option>With options</option>
 				</select>
 			</div>
 
+			<br><br>
 
-			<div class="select is-small ">
+			<div class="select is-small">
 				<select>
-					<option>Select dropdown</option>
+					<option>옵션 선택</option>
 					<option>With options</option>
 				</select>
 			</div>
+
+			<div class="select is-small is-no-outline">
+				<select>
+					<option>옵션 선택</option>
+					<option>With options</option>
+				</select>
+			</div>
+
+			<br><br>
 
 			<div class="select is-medium">
 				<select>
-					<option>Select dropdown</option>
+					<option>옵션 선택</option>
 					<option>With options</option>
 				</select>
 			</div>
+
+			<div class="select is-medium is-no-outline">
+				<select>
+					<option>옵션 선택</option>
+					<option>With options</option>
+				</select>
+			</div>
+
+			<br><br>
 
 			<div class="select is-large">
 				<select>
-					<option>Select dropdown</option>
+					<option>옵션 선택</option>
 					<option>With options</option>
 				</select>
 			</div>
 
-			<div class="select is-large is-fullwidth">
+			<div class="select is-large is-no-outline">
 				<select>
-					<option>Select dropdown</option>
+					<option>옵션 선택</option>
 					<option>With options</option>
 				</select>
 			</div>
+
+			<br><br>
+
+			<div class="select is-large is-fullwidth">
+				<select>
+					<option>옵션 선택</option>
+					<option>With options</option>
+				</select>
+			</div>
+
 		</div>
 		<!-- // View -->
 
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<!-- 
-		- 버튼 type :is-subselect, is-small, is-medium, is-large
-		- select border 제거 클래스 추가 : is-no-outline
-          - 너비 100% select 클래스 추가 : is-fullwidth
+<!-- 
+	- 버튼 type : is-subselect, is-small, is-medium, is-large
+	- select border 제거 클래스 추가 : is-no-outline
+	- 너비 100% select 클래스 추가 : is-fullwidth
+-->
+<div class="select is-subselect">
+	<select>
+		<option>옵션 선택</option>
+		<option>With options</option>
+	</select>
+</div>
 
-				 -->
-				<div class="select is-subselect">
-					<select>
-						<option>Select dropdown</option>
-						<option>With options</option>
-					</select>
-				</div>
+
+<div class="select is-small">
+	<select>
+		<option>옵션 선택</option>
+		<option>With options</option>
+	</select>
+</div>
+
+<div class="select is-small is-no-outline">
+	<select>
+		<option>옵션 선택</option>
+		<option>With options</option>
+	</select>
+</div>
 
 
-				<div class="select is-small ">
-					<select>
-						<option>Select dropdown</option>
-						<option>With options</option>
-					</select>
-				</div>
+<div class="select is-medium">
+	<select>
+		<option>옵션 선택</option>
+		<option>With options</option>
+	</select>
+</div>
 
-				<div class="select is-medium">
-					<select>
-						<option>Select dropdown</option>
-						<option>With options</option>
-					</select>
-				</div>
 
-				<div class="select is-large">
-					<select>
-						<option>Select dropdown</option>
-						<option>With options</option>
-					</select>
-				</div>
+<div class="select is-large">
+	<select>
+		<option>옵션 선택</option>
+		<option>With options</option>
+	</select>
+</div>
 
-				<div class="select is-large is-fullwidth">
-					<select>
-						<option>Select dropdown</option>
-						<option>With options</option>
-					</select>
-				</div>
+
+<div class="select is-large is-fullwidth">
+	<select>
+		<option>옵션 선택</option>
+		<option>With options</option>
+	</select>
+</div>
 
 			</xmp>
 		</div>
@@ -357,22 +433,22 @@
 		<div class="guide_wrap">
 			<div class="select-field">
 				<div class="level is-mobile ">
-					<div class="level-left">
-						<div class="select is-subselect">
-							<select>
-								<option>전체 카테고리</option>
-								<option>option</option>
-							</select>
+						<div class="level-left">
+								<div class="select is-subselect">
+										<select>
+												<option>전체 카테고리</option>
+												<option>option</option>
+										</select>
+								</div>
 						</div>
-					</div>
-					<div class="level-right">
-						<div class="select is-subselect no-pdr">
-							<select>
-								<option>최신순</option>
-								<option>option</option>
-							</select>
+						<div class="level-right">
+								<div class="select is-subselect no-pdr">
+										<select>
+												<option>최신순</option>
+												<option>option</option>
+										</select>
+								</div>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -381,37 +457,35 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<div class="select-field">
-					<div class="level is-mobile ">
-						<div class="level-left">
-							<div class="select is-subselect">
-								<select>
+<div class="select-field">
+	<div class="level is-mobile ">
+			<div class="level-left">
+					<div class="select is-subselect">
+							<select>
 									<option>전체 카테고리</option>
 									<option>option</option>
-								</select>
-							</div>
-						</div>
-						<div class="level-right">
-							<div class="select is-subselect no-pdr">
-								<select>
+							</select>
+					</div>
+			</div>
+			<div class="level-right">
+					<div class="select is-subselect no-pdr">
+							<select>
 									<option>최신순</option>
 									<option>option</option>
-								</select>
-							</div>
-						</div>
+							</select>
 					</div>
-				</div>
-
+			</div>
+	</div>
+</div>
 			</xmp>
 		</div>
 		<!-- // code -->
 
 
 		<br>
-		<br>
 
 		<!-- ===================  [Checkbox]  ======================= -->
-		<h2 class="h2_guide">[Checkbox]</h2>
+		<h2 class="h2_guide">Checkbox</h2>
 
 		<!-- ---------------------
 			Checkbox
@@ -446,9 +520,7 @@
 	<strong>Checkbox</strong>
 </label>
 
-<!--  
-- [class=checkbox] 클래스 추가 : is-rounded
--->
+<!--  - [class=checkbox] 클래스 추가 : is-rounded -->
 <label class="checkbox is-rounded">
 	<input type="checkbox">
 	<i></i>
@@ -457,8 +529,6 @@
 			</xmp>
 		</div>
 		<!-- // code -->
-
-
 
 		<!-- ---------------------
 			Checkbox / Right text
@@ -469,16 +539,16 @@
 		<div class="guide_wrap">
 			<div class="field">
 				<div class="level is-mobile">
-					<div class="level-left">
-						<label class="checkbox">
-							<input type="checkbox">
-							<i></i>
-							<strong>로그인 유지하기</strong>
-						</label>
-					</div>
-					<div class="level-right">
-						<a href="javascript:;" class="link-blue">비밀번호를 잊으셨나요?</a>
-					</div>
+						<div class="level-left">
+								<label class="checkbox">
+										<input type="checkbox">
+										<i></i>
+										<strong>로그인 유지하기</strong>
+								</label>
+						</div>
+						<div class="level-right">
+								<a href="javascript:;" class="link-blue">비밀번호를 잊으셨나요?</a>
+						</div>
 				</div>
 			</div>
 		</div>
@@ -495,16 +565,16 @@
 -->
 <div class="field">
 	<div class="level is-mobile">
-		<div class="level-left">
-			<label class="checkbox">
-				<input type="checkbox">
-				<i></i>
-				<strong>로그인 유지하기</strong>
-			</label>
-		</div>
-		<div class="level-right">
-			<a href="javascript:;" class="link-blue">비밀번호를 잊으셨나요?</a>
-		</div>
+			<div class="level-left">
+					<label class="checkbox">
+							<input type="checkbox">
+							<i></i>
+							<strong>로그인 유지하기</strong>
+					</label>
+			</div>
+			<div class="level-right">
+					<a href="javascript:;" class="link-blue">비밀번호를 잊으셨나요?</a>
+			</div>
 	</div>
 </div>
 			</xmp>
@@ -513,27 +583,25 @@
 
 		<br>
 		<br>
-		<br>
 
-		<!-- 
-			-------- Checkbox + Textarea --------
-		-->
-
+		<!-- ---------------------
+			Checkbox + Textarea
+		--------------------------- -->
 		<h2 class="h2_guide">Checkbox + Textarea</h2>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="field chktxtarea">
-				<div class="level util">
-					<p class="level-left">
-						<label class="checkbox">
-							<input type="checkbox">
-							<i></i>
-							<strong>개인정보 처리방침(필수)</strong>
-						</label>
-					</p>
+				<div class="level">
+						<p class="level-left">
+								<label class="checkbox">
+										<input type="checkbox" name="joinchk">
+										<i></i>
+										<strong>개인정보 처리방침(필수)</strong>
+								</label>
+						</p>
 				</div>
 				<div class="control">
-					<textarea class="textarea is-medium">개인정보 처리방침</textarea>
+						<textarea class="textarea is-medium">개인정보 처리방침</textarea>
 				</div>
 			</div>
 		</div>
@@ -542,84 +610,44 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<div class="field chktxtarea">
-					<div class="level util">
-						<p class="level-left">
-							<label class="checkbox">
-								<input type="checkbox">
-								<i></i>
-								<strong>개인정보 처리방침(필수)</strong>
-							</label>
-						</p>
-					</div>
-					<div class="control">
-						<textarea class="textarea is-medium">개인정보 처리방침</textarea>
-					</div>
-				</div>
+<div class="field chktxtarea">
+	<div class="level">
+			<p class="level-left">
+					<label class="checkbox">
+							<input type="checkbox" name="joinchk">
+							<i></i>
+							<strong>개인정보 처리방침(필수)</strong>
+					</label>
+			</p>
+	</div>
+	<div class="control">
+			<textarea class="textarea is-medium">개인정보 처리방침</textarea>
+	</div>
+</div>
 			</xmp>
 		</div>
 		<!-- // code -->
 
 		<br>
 		<br>
-		<br>
-		<h2 class="h2_guide">Title + 입력폼 / 기본</h2>
+		
+		<!-- ===================  [Label +  Input]  ======================= -->
+		<h2 class="h2_guide">Label +  Input</h2>
+
+		<!-- ---------------------
+			Label +  Input / Basic
+		--------------------------- -->
+
+
+		<h3 class="h3_guide">Label +  Input / Basic</h3>
 		<!-- View -->
 		<div class="guide_wrap">
-			<div class="columns is-mobile">
+			<div class="columns">
 				<div class="column">
-					<label class="label">이름</label>
-					<div class="control">
-						<input type="text" class="input is-medium">
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- // View -->
-
-		<!-- code -->
-		<div class="d_desc code">
-			<xmp class="prettyprint linenums javascript">
-				<div class="columns is-mobile">
-					<div class="column">
 						<label class="label">이름</label>
 						<div class="control">
-							<input type="text" class="input is-medium">
+								<input type="text" class="input is-medium">
 						</div>
-					</div>
-				</div>
-			</xmp>
-		</div>
-		<!-- // code -->
-
-		<h2 class="h2_guide">Title + 입력폼 / 3Column</h2>
-		<!-- View -->
-		<div class="guide_wrap">
-			<div class="columns is-mobile">
-				<div class="column">
-					<label class="label">생년월일</label>
-					<div class="columns">
-						<div class="column">
-							<div class="control">
-								<input type="text" class="input is-medium" placeholder="년">
-							</div>
-						</div>
-						<div class="column">
-							<div class="control">
-								<div class="select is-medium is-fullwidth">
-									<select>
-										<option value="self" selected="selected">월</option>
-										<option>1월</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="column">
-							<div class="control">
-								<input type="text" class="input is-medium" placeholder="일">
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -628,43 +656,40 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<div class="columns is-mobile">
-					<div class="column">
-						<label class="label">생년월일</label>
-						<div class="columns">
-							<div class="column">
-								<div class="control">
-									<input type="text" class="input is-medium" placeholder="년">
-								</div>
-							</div>
-							<div class="column">
-								<div class="control">
-									<div class="select is-medium is-fullwidth">
-										<select>
-											<option value="self" selected="selected">월</option>
-											<option>1월</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="column">
-								<div class="control">
-									<input type="text" class="input is-medium" placeholder="일">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+<div class="columns">
+	<div class="column">
+			<label class="label">이름</label>
+			<div class="control">
+					<input type="text" class="input is-medium">
+			</div>
+	</div>
+</div>
 			</xmp>
 		</div>
 		<!-- // code -->
 
+	<br>
+	<br>
+	<!-- ===================  [Label +  Input + Message]  ======================= -->
+	<h2 class="h2_guide">Label +  Input + Message</h2>
 
-		<br>
-		<br>
-		<br>
+		<div class="guide_cont">
+			<p class="cont_title">[Common]</p>
+			- 메세지가 표시될 <b>[class=columns]</b> 다음 형제 요소로  <b>[p class=msg]</b> 요소 추가하여 메세지 삽입 <br>
+			
+			<dl class="cont-spacing">
+				<dt>- 상태별 색상 부여 <b>[class=columns]</b> 요소 클래스 추가</dt>
+				<dd>- is-error</dd>
+				<dd>- is-success</dd>
+			</dl>
+			<br>
+		</div>
 
-		<h2 class="h2_guide">input validation 하단 문구표시 / 기본</h2>
+		<!-- ---------------------
+			Label +  Input + Meaaage(basic)
+		--------------------------- -->
+
+		<h3 class="h3_guide">Label +  Input + Message(basic)</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="columns is-mobile">
@@ -682,23 +707,24 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<!--
-	- 메세지가 표시될 class="columns" 형재 요소로 <p class="msg">메세지</p> 추가
--->
-				<div class="columns is-mobile">
-					<div class="column">
-						<label class="label">이름</label>
-						<div class="control">
-							<input type="text" class="input is-medium">
-						</div>
-					</div>
-				</div>
-				<p class="msg">메세지</p>
+<div class="columns is-mobile">
+	<div class="column">
+		<label class="label">이름</label>
+		<div class="control">
+			<input type="text" class="input is-medium">
+		</div>
+	</div>
+</div>
+<p class="msg">메세지</p>
 			</xmp>
 		</div>
 		<!-- // code -->
 
-		<h2 class="h2_guide">input validation 하단 문구 표시 / error</h2>
+
+		<!-- ---------------------
+			Label +  Input + Meaaage(error)
+		--------------------------- -->
+		<h3 class="h3_guide">Label +  Input + Message(error)</h3>
 		<!-- View -->
 		<div class="guide_wrap">
 			<div class="columns is-error is-mobile">
@@ -716,24 +742,127 @@
 		<!-- code -->
 		<div class="d_desc code">
 			<xmp class="prettyprint linenums javascript">
-				<!--
-  메세지가 표시될 class="columns" class="is-error" 추가
--->
-				<div class="guide_wrap">
-					<div class="columns is-error is-mobile">
-						<div class="column">
-							<label class="label">이름</label>
-							<div class="control">
-								<input type="text" class="input is-medium">
-							</div>
-						</div>
-					</div>
-					<p class="msg">메세지</p>
-				</div>
+<!-- is-error -->
+<div class="columns is-error is-mobile">
+	<div class="column">
+		<label class="label">이름</label>
+		<div class="control">
+			<input type="text" class="input is-medium">
+		</div>
+	</div>
+</div>
+<p class="msg">메세지</p>
 			</xmp>
 		</div>
 		<!-- // code -->
+
+		<!-- ---------------------
+			Label +  Input + Meaaage(success)
+		--------------------------- -->
+		<h3 class="h3_guide">Label +  Input + Message(success)</h3>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="columns is-success is-mobile">
+				<div class="column">
+					<label class="label">이름</label>
+					<div class="control">
+						<input type="text" class="input is-medium">
+					</div>
+				</div>
+			</div>
+			<p class="msg">메세지</p>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<!-- is-success -->
+<div class="columns is-success is-mobile">
+	<div class="column">
+		<label class="label">이름</label>
+		<div class="control">
+			<input type="text" class="input is-medium">
+		</div>
 	</div>
+</div>
+<p class="msg">메세지</p>
+			</xmp>
+		</div>
+		<!-- // code -->
+
+		<br><br>
+		<h2 class="h2_guide">Label + Input + Select / 3Column</h2>
+		<!-- View -->
+		<div class="guide_wrap">
+			<div class="columns">
+				<div class="column">
+						<label class="label">생년월일</label>
+						<div class="columns">
+								<div class="column">
+										<div class="control">
+												<input type="text" class="input is-medium" placeholder="년">
+										</div>
+								</div>
+								<div class="column">
+										<div class="control">
+												<div class="select is-medium is-fullwidth">
+														<select>
+																<option value="self" selected="selected">월</option>
+																<option>1월</option>
+														</select>
+												</div>
+										</div>
+								</div>
+								<div class="column">
+										<div class="control">
+												<input type="text" class="input is-medium" placeholder="일">
+										</div>
+								</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<!-- // View -->
+
+		<!-- code -->
+		<div class="d_desc code">
+			<xmp class="prettyprint linenums javascript">
+<div class="columns">
+	<div class="column">
+			<label class="label">생년월일</label>
+			<div class="columns">
+					<div class="column">
+							<div class="control">
+									<input type="text" class="input is-medium" placeholder="년">
+							</div>
+					</div>
+					<div class="column">
+							<div class="control">
+									<div class="select is-medium is-fullwidth">
+											<select>
+													<option value="self" selected="selected">월</option>
+													<option>1월</option>
+											</select>
+									</div>
+							</div>
+					</div>
+					<div class="column">
+							<div class="control">
+									<input type="text" class="input is-medium" placeholder="일">
+							</div>
+					</div>
+			</div>
+	</div>
+</div>
+			</xmp>
+		</div>
+		<!-- // code -->
+
+
+		<br>
+		<br>
+		<br>
 	</div>
 	<script type="text/javascript" src="/coding_list/js/pretty.js"></script>
 

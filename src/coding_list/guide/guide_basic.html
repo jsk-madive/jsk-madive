@@ -32,15 +32,23 @@
 
     <div id="wrap" class="coding_guide">
         <h1 class="h1_guide">Basic</h1>
+		<!-- guide_cont  -->
+<div class="guide_cont">
+	<p class="cont_title">[Common]</p>
+	 - Bulma 프레임 워크 기본 제공 클래스 <br>
+	 - 태그 상관없이 필요한 부분에 클래스 추가
+	<br>
+</div>
 
 <!-- ===================  [Basic]  ======================= -->
-<h2 class="h2_guide">[Bulma 기본 클래스]</h2>
+<h2 class="h2_guide">Bulma 기본 클래스</h2>
 
-<!-- ---------------------
-  	font-weight 관련 기본 클래스
-  --------------------------- -->
+		<!-- ---------------------
+			font-weight 관련 기본 클래스
+		--------------------------- -->
+
         <!-- tag -->
-        <h3 class="h3_guide">font-weight 관련 기본 클래스</h3>
+        <h3 class="h3_guide">font-weight</h3>
         <!-- View -->
         <div class="guide_wrap">
             <p class="has-text-weight-light">has-text-weight-light</p>
@@ -54,26 +62,22 @@
         <div class="d_desc code">
             <!-- code -->
             <xmp class="prettyprint linenums javascript">
-<!--
-    클래스 추가 스타일 적용
--->
 <p class="has-text-weight-light">has-text-weight-light</p>
 <div class="has-text-weight-normal">has-text-weight-normal</div>
 <p class="has-text-weight-medium">has-text-weight-medium</p>
 <p class="has-text-weight-semibold">has-text-weight-semibold</p>
 <p class="has-text-weight-bold">has-text-weight-bold</p>
-
             </xmp>
             <!-- // code -->
         </div>
 
 
-	<!-- ---------------------
-  Text Align
-  --------------------------- -->
+		<!-- ---------------------
+			Text Align
+		--------------------------- -->
 
         <!-- tag -->
-        <h2 class="h2_guide">Text Align</h2>
+        <h3 class="h3_guide">text-align</h3>
         <!-- View -->
         <div class="guide_wrap">
             <p class="has-text-centered">has-text-centered</p>
@@ -85,21 +89,68 @@
         <div class="d_desc code">
             <!-- code -->
             <xmp class="prettyprint linenums javascript">
-<!--
-    클래스 추가 스타일 적용
--->
 <p class="has-text-centered">.has-text-centered</p>
 <p class="has-text-left">.has-text-left</p>
 <p class="has-text-right">.has-text-right</p>
-        
                     </xmp>
                     <!-- // code -->
                 </div>
         <!-- // tag -->
 
 
-<!-- ===================  [Basic]  ======================= -->
-<h2 class="h2_guide">[Custom 공통 클래스]</h2>
+		<!-- ---------------------
+			Spacing
+		--------------------------- -->
+
+        <!-- tag -->
+        <h3 class="h3_guide">spacing</h3>
+		
+		<!-- guide_cont  -->
+		<div class="guide_cont">
+			<p class="cont_title">[Common]</p>
+			- margin, padding 여백 필요할 경우 클래스 선언하여 사용 가능 <br>
+			<dl class="cont-spacing">
+				<dt>- 전체 여백(top, right, bottom, left) 조정</dt>
+				<dd>- margin 클래스 : <b>m-0, m-1, m-2, m-3, m-4, m-5, m-6</b></dd>
+				<dd>- padding 클래스 : <b>p-0, p-1, p-2, p-3, p-4, p-5, p-6</b></dd>
+			</dl>
+
+			<dl class="cont-spacing">
+				<dt>- 방향에 따른 여백 클래스 조정 가능</dt>
+				<dd>클래스 부여 숫자에 따른 여백 크기 설정 가능: <b>*(0~6)</b></dd>
+				<dd>- <b>[margin-top / padding-top]</b>  클래스 : <b>mt-* / pt-*</b></dd>
+				<dd>- <b>[margin-right / padding-right]</b>  클래스 : <b>mr-* / pr-*</b></dd>
+				<dd>- <b>[margin-bottom / padding-bottom]</b>  클래스 : <b>mb-* / pb-*</b></dd>
+				<dd>- <b>[margin-left / padding-left]</b>  클래스 : <b>ml-* / pl-*</b></dd>
+				<dd>- <b>[margin-left&right / padding-left&right]</b>  클래스 : <b>mx-* / px-*</b></dd>
+				<dd>- <b>[margin-top&bottom / padding-top&bottom]</b>  클래스 : <b>my-* / py-*</b></dd>
+			</dl>
+
+
+		</div>
+
+        <!-- View -->
+        <div class="guide_wrap">
+            <div class="mt-6">상단 margin 설정</div>
+            <div class="p-6">전체 padding 설정</div>
+            <div class="mx-4">좌우 margin 설정</div>
+            
+        </div>
+        <!-- // View -->
+        <div class="d_desc code">
+            <!-- code -->
+            <xmp class="prettyprint linenums javascript">
+<div class="mt-6">상단 margin 설정</div>
+<div class="p-6">전체 padding 설정</div>
+<div class="mx-4">좌우 margin 설정</div>
+            </xmp>
+                    <!-- // code -->
+                </div>
+        <!-- // tag -->
+
+
+<!-- ===================  [Custom 공통 클래스]  ======================= -->
+<h2 class="h2_guide">Custom 공통 클래스</h2>
 
 <!-- ---------------------
   	background-color
@@ -108,33 +159,30 @@
         <h3 class="h3_guide">background-color</h3>
         <!-- View -->
         <div class="guide_wrap">
-            <div class="bg-gray">background-color : #EEE </div>
-						<br>
-						<br>
-            <div class="bg-white">background-color : #FFF</div>
+					<div class="bg-white">background-color : #FFF</div>
+					<br>
+					<br>
+					<div class="bg-gray">background-color : #EEE </div>
             
         </div>
         <!-- // View -->
         <div class="d_desc code">
             <!-- code -->
             <xmp class="prettyprint linenums javascript">
-<!--
-    전체 배경 색상 적용 시 클래스 추가
--->
-<div class="bg-gray">background-color : #EEEEEE </div>
-<div class="bg-white">background-color : #fff</div>
-
+<!-- 전체 배경 색상 적용 시 클래스 추가 -->
+<div class="bg-white">background-color : #FFF</div>
+<div class="bg-gray">background-color : #EEE </div>
             </xmp>
             <!-- // code -->
         </div>
 
 
 <!-- ---------------------
-  Link blue
+  Link Color
   --------------------------- -->
 
         <!-- tag -->
-        <h2 class="h2_guide">A Link Blue</h2>
+        <h3 class="h3_guide">A Link Color</h3>
         <!-- View -->
         <div class="guide_wrap">
             <a href="javascript:;" class="link-blue">link color</a>
@@ -143,9 +191,7 @@
         <div class="d_desc code">
             <!-- code -->
             <xmp class="prettyprint linenums javascript">
-<!--
-    a 링크 색상 적용
--->
+<!-- a 링크 색상 적용 -->
 <a href="javascript:;" class="link-blue">link color</a>
                     </xmp>
                     <!-- // code -->
@@ -158,5 +204,4 @@
 
     <script type="text/javascript" src="/coding_list/js/pretty.js"></script>
 </body>
-
 </html>

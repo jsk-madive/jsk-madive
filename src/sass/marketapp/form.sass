@@ -57,6 +57,8 @@
 				radius: 0
 			width: 12px
 			height: 12px
+			margin-top: -0.5em
+			right: 1em
 	select
 		+font-set(16px, 0, 24px)
 		padding:
@@ -242,8 +244,15 @@ $input-readonly-color-2           : $color-black03
 	&.is-large
 		height: 55px
 		line-height: 55px
+		
 
-
+.add-util-btn 
+	> .column.is-one-quarter 
+			min-width: calc(140px - #{$column-gap})
+			
+			.button
+				min-width: auto;
+				width: 100%
 /*
 	Select
  */
@@ -286,29 +295,29 @@ $input-readonly-color-2           : $color-black03
 
 	&.is-subselect
 		height: 35px
+		font-size: 14px
 		
+
 		select
 			height: 35px
 			font-size:  $size-6
 			color: $color-gray04
-			border: 0
+			border: none
 			border-radius: 0
+			padding-right: 35px
 
 		&:not(.is-multiple):not(.is-loading)
 			&::after
 				width: 10px
 				height: 10px
 				border-color: $color-gray04
+				margin-top: -0.5em
 				
 	&.is-no-outline
 		select
 			border: 0
 			border-radius: 0
-
-
-
-
-
+		
 
 
 

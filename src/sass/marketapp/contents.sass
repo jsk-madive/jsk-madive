@@ -36,18 +36,23 @@ $success-color      : $color-blue
 		+ .msg
 				color: $error-color
 	&.is-success
+		.input,
+		.select select,
+			border:
+				color: $success-color
 		+ .msg
 				color: $success-color
 
 .msg
-	margin:
-		top: calc(10px - #{$column-gap})
-	font: 
-		size: 13px
+	margin-top: calc(10px - #{$column-gap})
+	font-size: 13px
 	letter-spacing: -.26px
 	line-height: 21px
 	color: $field-message-color
 		
+	+ .columns,
+	+	.field
+			margin-top: 10px
 
 
 /* 사이 간격 */
@@ -79,9 +84,10 @@ $success-color      : $color-blue
 .buttons + .box
 	margin:
 		top: 40px
-.msg
-	margin: 
-		top: 5px
+
+.columns 
+	+ .msg
+		margin-top: -10px
 
 .chktxtarea
 	.level
@@ -89,12 +95,16 @@ $success-color      : $color-blue
 			bottom: 8px
 				
 
+
 // column.has-addons
 .columns
 	&.has-addons
 		display: flex
 		justify-content: flex-start
-		margin: 0 
+		margin:
+			left: 0
+			right: 0 
+
 		.column
 			padding: 6px 0
 			&:not(:last-child)
@@ -150,15 +160,20 @@ $success-color      : $color-blue
 .columns
 	&.has-addons
 		&.certify-box
-				.button
-					min-width: auto
-					padding: 0
-				.is-fullwidth
-					width: 100%
-				
-				.time-limt
-					@include input
-					justify-content: center
-
-				.certify-num
+			.column
+				&:not(:last-child)
 					margin-right: 0
+				
+			.button
+				min-width: auto
+				padding: 0
+			.is-fullwidth
+				width: 100%
+			
+			.time-limt
+				@include input
+				justify-content: center
+				border-right: 0
+
+			.certify-num
+				margin-right: 0

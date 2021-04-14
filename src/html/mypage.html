@@ -1,166 +1,168 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
+
 <body>
-  <!-- container -->
-  <div id="contents" class="container">
-    <!-- mapage -->
-    <section class="mypage section non-hd">
-      <h2 class="skip">마이페이지</h2>
-      <div class="arrow-column user-info">
-        <a href="javascript:;">
-          <div class="cont">
-            <span class="name">홍길동 (hong7363)</span>
-          </div>
-          <i></i>
-        </a>
-      </div>
+	<!-- container -->
+	<div id="contents" class="container">
+		<!-- mypage -->
+		<section class="mypage section non-hd">
+			<h2 class="skip">마이페이지</h2>
+			<div class="arrow-column user-info">
+				<a href="javascript:;">
+					<div class="cont">
+						<span class="name">홍길동 (hong7363)</span>
+					</div>
+					<i></i>
+				</a>
+			</div>
 
-      <div class="user-grid">
-        <div class="user-column">
-          <a href="javascript:;">
-            <strong class="cnt">0</strong>
-            <p class="name">보유쿠폰</p>
-          </a>
-        </div>
-        <div class="user-column">
-          <a href="javascript:;">
-            <strong class="cnt">10</strong>
-            <p class="name">보유쿠폰</p>
-          </a>
-        </div>
-        <div class="user-column">
-          <a href="javascript:;">
-            <strong class="cnt">0</strong>
-            <p class="name">보유쿠폰</p>
-          </a>
-        </div>
-      </div>
+			<div class="user-grid">
+				<div class="user-column">
+					<a href="javascript:;">
+						<strong class="cnt">0</strong>
+						<p class="name">보유쿠폰</p>
+					</a>
+				</div>
+				<div class="user-column">
+					<a href="javascript:;">
+						<strong class="cnt">10</strong>
+						<p class="name">보유쿠폰</p>
+					</a>
+				</div>
+				<div class="user-column">
+					<a href="javascript:;">
+						<strong class="cnt">0</strong>
+						<p class="name">보유쿠폰</p>
+					</a>
+				</div>
+			</div>
 
-      <div class="user-grid02">
-        <div class="user-column">
-          <a href="javascript:;">
-            <p class="name">동백전</p>
-          </a>
-        </div>
-        <div class="user-column">
-          <a href="javascript:;">
-            <p class="name">찜한상품</p>
-          </a>
-        </div>
-        <div class="user-column">
-          <a href="javascript:;">
-            <p class="name">최근 본 상품</p>
-          </a>
-        </div>
-      </div>
+			<div class="user-grid02">
+				<div class="user-column">
+					<a href="javascript:;">
+						<p class="name">동백전</p>
+					</a>
+				</div>
+				<div class="user-column">
+					<a href="javascript:;">
+						<p class="name">찜한상품</p>
+					</a>
+				</div>
+				<div class="user-column">
+					<a href="javascript:;">
+						<p class="name">최근 본 상품</p>
+					</a>
+				</div>
+			</div>
 
-      <ul class="myctg-list">
-        <li>
-          <div class="arrow-column">
-            <a href="javascript:;">
-              <div class="cont">
-                <span class="name">배달주소관리</span>
-              </div>
-              <i></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="arrow-column">
-            <a href="javascript:;">
-              <div class="cont">
-                <span class="name">이벤트 및 공지사항</span>
-              </div>
-              <i></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="arrow-column">
-            <a href="javascript:;">
-              <div class="cont">
-                <span class="name">자주묻는 질문</span>
-              </div>
-              <i></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="arrow-column">
-            <a href="javascript:;">
-              <div class="cont">
-                <span class="name">1:1 문의내역</span>
-              </div>
-              <i></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="arrow-column">
-            <a href="javascript:;" class="modal-open" id="modal-withdrawal">
-              <div class="cont">
-                <span class="name">회원탈퇴</span>
-              </div>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="arrow-column">
-            <a href="javascript:;">
-              <div class="cont">
-                <span class="name">로그아웃</span>
-              </div>
-            </a>
-          </div>
-        </li>
-      </ul>
-      
-      <div class="field version">
-        <div class="level is-mobile">
-          <div class="level-left">
-            <a href="javascript:;" class="subtitle is-7">캐시 지우기</a>
-          </div>
-          <div class="level-right">
-            <p class="subtitle is-7">현재 버전 : V 1.0</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-  <!-- modal-withdrawal -->
-  <aside class="modal" data-modal="modal-withdrawal">
-    <div class="modal-background" aria-label="background"></div>
-    <div class="modal-card">
-      <div class="modal-card-head has-text-centered">
-        <p class="modal-card-title">회원탈퇴</p>
-      </div>
-      <div class="modal-card-body">
-        <div class="modal-field">
-          <p>
-            보유쿠폰, 주문내역이 모두 삭제됩니다.</p>
-        </div>
-        <div class="modal-field">
-          <p>
-            현재 진행중인 주문(음식점/전통시장/쇼핑몰) 주문/배송 진행중인 있는 경우 해당 상품 주문이 모두 완료 된 후 회원탈퇴가 가능합니다.
-          </p>
-        </div>
-        <div class="modal-field">
-          <p>
-            회원탈퇴시 진행중인 상품이 있는지 체크함
-          </p>
-        </div>
-      </div>
-      <div class="modal-card-foot modal-btm-btn">
-        <button type="button" class="button is-fullwidth modal-confirm-btn">탈퇴</button>
-      </div>
-    </div>
-  </aside>
-  <!-- // modal-withdrawal -->
+			<ul class="myctg-list">
+				<li>
+					<div class="arrow-column">
+						<a href="javascript:;">
+							<div class="cont">
+								<span class="name">배달주소관리</span>
+							</div>
+							<i></i>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="arrow-column">
+						<a href="javascript:;">
+							<div class="cont">
+								<span class="name">이벤트 및 공지사항</span>
+							</div>
+							<i></i>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="arrow-column">
+						<a href="javascript:;">
+							<div class="cont">
+								<span class="name">자주묻는 질문</span>
+							</div>
+							<i></i>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="arrow-column">
+						<a href="javascript:;">
+							<div class="cont">
+								<span class="name">1:1 문의내역</span>
+							</div>
+							<i></i>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="arrow-column">
+						<a href="javascript:;" class="modal-open" id="modal-withdrawal">
+							<div class="cont">
+								<span class="name">회원탈퇴</span>
+							</div>
+						</a>
+					</div>
+				</li>
+				<li>
+					<div class="arrow-column">
+						<a href="javascript:;">
+							<div class="cont">
+								<span class="name">로그아웃</span>
+							</div>
+						</a>
+					</div>
+				</li>
+			</ul>
+
+			<div class="field version">
+				<div class="level is-mobile">
+					<div class="level-left">
+						<a href="javascript:;" class="subtitle is-7">캐시 지우기</a>
+					</div>
+					<div class="level-right">
+						<p class="subtitle is-7">현재 버전 : V 1.0</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<!-- modal-withdrawal -->
+	<aside class="modal" data-modal="modal-withdrawal">
+		<div class="modal-background" aria-label="background"></div>
+		<div class="modal-card">
+			<div class="modal-card-head has-text-centered">
+				<p class="modal-card-title">회원탈퇴</p>
+			</div>
+			<div class="modal-card-body">
+				<div class="modal-field">
+					<p>
+						보유쿠폰, 주문내역이 모두 삭제됩니다.</p>
+				</div>
+				<div class="modal-field">
+					<p>
+						현재 진행중인 주문(음식점/전통시장/쇼핑몰) 주문/배송 진행중인 있는 경우 해당 상품 주문이 모두 완료 된 후 회원탈퇴가 가능합니다.
+					</p>
+				</div>
+				<div class="modal-field">
+					<p>
+						회원탈퇴시 진행중인 상품이 있는지 체크함
+					</p>
+				</div>
+			</div>
+			<div class="modal-card-foot modal-btm-btn">
+				<button type="button" class="button is-fullwidth modal-confirm-btn">탈퇴</button>
+			</div>
+		</div>
+	</aside>
+	<!-- // modal-withdrawal -->
 
 	<script>
 		modalEvent();
 	</script>
+
 </body>
 
 </html>

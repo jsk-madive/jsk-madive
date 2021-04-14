@@ -117,7 +117,7 @@ $button-cred-color            : $color-black
 			&:active,
 			&.is-active
 			background-color: $button-gray-color
-			color: $button-gray-bg-color
+			color: $color-gray05
 			border-color: $button-gray-bg-color
 
 	&.is-blue
@@ -154,6 +154,18 @@ $button-cred-color            : $color-black
 			background-color: $button-black-bg-color
 			color: $button-black-color
 			border: none
+
+		&.is-inverted
+			&,
+			&:hover,
+			&.is-hovered,
+			&:focus,
+			&.is-focused,
+			&:active,
+			&.is-active
+				background-color: $button-black-color
+				color: $button-black-bg-color
+				border: 1px solid $button-black-bg-color
 	
 	&.is-yellow
 		&,
@@ -207,7 +219,7 @@ $button-cred-color            : $color-black
 	&:focus,
 	&.is-focused
 		&:not(:active)
-			box-shadow: none
+			box-shadow: none !important
 	
 .buttons
 	margin: 
@@ -216,7 +228,6 @@ $button-cred-color            : $color-black
 
 	.button
 		margin-bottom: 0
-			
 			
 		&:focus,
 		&.is-focused
@@ -358,10 +369,18 @@ a.subtitle
 
 // search
 .btn-search
-	background:
-		color: $color-white
-	border: 1px solid $color-gray02
-	color: $color-gray02
+	&,
+	&:hover,
+	&.is-hovered,
+	&:focus,
+	&.is-focused,
+	&:active,
+	&.is-active
+		background:
+			color: $color-white
+		border: 1px solid $color-gray02
+		color: $color-gray02
+
 	
 	> span
         background: url(/img/ico_search.png) center/100% auto no-repeat
@@ -384,7 +403,10 @@ a.subtitle
 		right: 0
 		border:
 			left: 0
-			radius: $input-radius
+			top-left-radius: 0
+			top-right-radius: $input-radius
+			bottom-left-radius: 0
+			bottom-right-radius: $input-radius
 		font: 
 			size: 0
 		cursor: pointer
@@ -411,7 +433,7 @@ a.subtitle
 .btn-modify
 	height: 40px
 	width: 40px
-	display: flex
+	display: inline-block
 	background-color: $input-background-color
 	border: 1px solid $input-border-color
 	border-radius: $input-radius
@@ -498,6 +520,7 @@ a.subtitle
 			-webkit-transition: .2s
 			transition: .2s
 
+
 /** 
 	Notification
  **/
@@ -506,9 +529,3 @@ a.subtitle
   font:
     size: $size-7
   line-height: 1.3
-
-
-.is-btm-fixed
-	height: auto
-	padding: 15px 0 calc(constant(safe-area-inset-bottom) + 10px)
-	padding: 15px 0 calc(env(safe-area-inset-bottom) + 10px)

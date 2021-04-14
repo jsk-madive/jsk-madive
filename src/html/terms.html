@@ -1,98 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
 @@include('./include/head.html')
+
 <body>
-  <!-- container -->
-  <div id="contents" class="container">
-    <h2 class="skip">회원가입 약관동의</h2>
-    <div class="terms">
-      <p class="cont">
-        반갑습니다! <br>
-        앱을 사용하기 위해서는 <br>
-        아래 약관에 동의가 필요합니다.
-      </p>
-      <div class="form-gird">
-        <div class="field-grid">
-          <div class="field">
-            <div class="level">
-              <p class="level-left">
-                <label class="checkbox is-rounded">
-                  <input type="checkbox" id="termschk" class="inputchk-all">
-                  <i></i>
-                  <strong>전체 동의</strong>
-                </label>
-              </p>
-            </div>
-          </div>
-          <div class="field chktxtarea">
-            <div class="level is-mobile">
-              <p class="level-left">
-                <label class="checkbox is-rounded">
-                  <input type="checkbox" name="termschk">
-                  <i class="is-rounded"></i>
-                  <strong>위치기반 서비스 이용 동의(필수)</strong>
-                </label>
-              </p>
-              <p class="level-right">
-                <!--  modalbtn-terms  -->
-                <a href="javascript:;" class="link-blue modal-open" id="modalbtn-terms">내용보기</a>
-              </p>
-            </div>
-          </div>
-          <div class="field chktxtarea">
-            <div class="level">
-              <p class="level-left">
-                <label class="checkbox is-rounded">
-                  <input type="checkbox" name="termschk">
-                  <i class="is-rounded"></i>
-                  <strong>마케팅 정보 앱 푸시 알림수신 동의 (선택)</strong>
-                </label>
-              </p>
-            </div>
-          </div>
-          <div class="buttons is-centered">
-            <button type="button" class="button is-large is-blue is-fullwidth">시작하기
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 내용 보기 팝업  -->
+	<!-- container -->
+	<div id="contents" class="container">
+		<h2 class="skip">회원가입 약관동의</h2>
+		<div class="terms">
+			<p class="cont">
+				반갑습니다! <br>
+				앱을 사용하기 위해서는 <br>
+				아래 약관에 동의가 필요합니다.
+			</p>
+			<div class="form-gird">
+				<div class="field-grid">
+					<div class="field">
+						<div class="level">
+							<p class="level-left">
+								<label class="checkbox is-rounded">
+									<input type="checkbox" id="termschk" class="inputchk-all">
+									<i></i>
+									<strong>전체 동의</strong>
+								</label>
+							</p>
+						</div>
+					</div>
+					<div class="field chktxtarea">
+						<div class="level is-mobile">
+							<p class="level-left">
+								<label class="checkbox is-rounded">
+									<input type="checkbox" name="termschk">
+									<i class="is-rounded"></i>
+									<strong>위치기반 서비스 이용 동의(필수)</strong>
+								</label>
+							</p>
+							<p class="level-right">
+								<!--  modalbtn-terms  -->
+								<a href="javascript:;" class="link-blue modal-open" id="modalbtn-terms">내용보기</a>
+							</p>
+						</div>
+					</div>
+					<div class="field chktxtarea">
+						<div class="level">
+							<p class="level-left">
+								<label class="checkbox is-rounded">
+									<input type="checkbox" name="termschk">
+									<i class="is-rounded"></i>
+									<strong>마케팅 정보 앱 푸시 알림수신 동의 (선택)</strong>
+								</label>
+							</p>
+						</div>
+					</div>
+					<div class="buttons is-centered">
+						<button type="button" class="button is-large is-blue is-fullwidth">시작하기
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 내용 보기 팝업  -->
 
-    <!-- 
-					- 모달 활성화 버튼 ID 지정 : modalbtn-*
-						.modal 클래스 부분 data-modal 에 동일한 값 부여 :  modalbtn-*
-			-->
-    <!--  modalbtn-terms -->
-    <aside class="modal" data-modal="modalbtn-terms">
-      <div class="modal-background" aria-label="background"></div>
-      <div class="modal-card full-modal">
-        <div class="modal-card-head modal-top-title">
-          <div class="modal-del-btn">
-            <button type="button" class="btn-delete is-large"><span class="skip">닫기</span></button>
-          </div>
-          <h3 class="title">약관동의</h3>
-        </div>
-        <div class="modal-card-body">
-          <div class="modal-field">
-            <p>
-              약관동의 내용 삽입
-            </p>
-          </div>
-        </div>
-      </div>
-    </aside>
+		<!--  modalbtn-terms -->
+		<aside class="modal" data-modal="modalbtn-terms">
+			<div class="modal-background" aria-label="background"></div>
+			<div class="modal-card full-modal">
+				<div class="modal-card-head modal-top-title">
+					<div class="modal-del-btn">
+						<button type="button" class="btn-delete is-large"><span class="skip">닫기</span></button>
+					</div>
+					<h3 class="title">약관동의</h3>
+				</div>
+				<div class="modal-card-body">
+					<div class="modal-field">
+						<p>
+							약관동의 내용 삽입
+						</p>
+					</div>
+				</div>
+			</div>
+		</aside>
 
-    <!-- // 내용 보기 팝업  -->
-  </div>
-  <!-- // container -->
+		<!-- // 내용 보기 팝업  -->
+	</div>
+	<!-- // container -->
 
 	<script>
 		openModal();
 		closeModal();
 
 		inputChkAll();
+
 	</script>
+
 </body>
 
 </html>

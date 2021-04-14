@@ -2,136 +2,138 @@
 <html lang="ko">
 @@include('./include/head.html')
 <body>
-  <!-- container -->
-  <div id="contents" class="container">
-    <!--  join02 -->
-    <div class="join02 section non-hd">
-      <div class="title-field is-centered">
-        <h2 class="title is-4">회원가입</h2>
-      </div>
-      <div class="form-grid">
-        <div class="field-grid">
-          <div class="field">
-            <label class="label" for="join-id">아이디</label>
-            <div class="columns add-util-btn is-mobile">
-              <div class="control column">
-                <input type="text" class="input" id="join-id">
-              </div>
-              <div class="column is-one-quarter">
-                <button type="button" class="button is-medium is-blue">중복확인</button>
-              </div>
-            </div>
-          </div>
-          <div class="columns">
-            <div class="column">
-              <label class="label" for="join-pw">비밀번호</label>
-              <div class="control">
-                <input type="password" class="input is-medium" id="join-pw">
-              </div>
-            </div>
-          </div>
+	<!-- container -->
+	<div id="contents" class="container">
+		<!--  join02 -->
+		<div class="join02 section non-hd">
+			<div class="title-field is-centered">
+				<h2 class="title is-4">회원가입</h2>
+			</div>
+			<div class="form-grid">
+				<div class="field-grid">
+					<div class="field">
+						<label class="label" for="join-id">아이디</label>
+						<div class="columns add-util-btn is-mobile">
+							<div class="control column">
+								<input type="text" class="input" id="join-id">
+							</div>
+							<div class="column is-one-quarter">
+								<button type="button" class="button is-medium is-blue is-fullwidth">중복확인</button>
+							</div>
+						</div>
+					</div>
+					<div class="columns">
+						<div class="column">
+							<label class="label" for="join-pw">비밀번호</label>
+							<div class="control">
+								<input type="password" class="input is-medium" id="join-pw">
+							</div>
+						</div>
+					</div>
 
-          <div class="columns">
-            <div class="column">
-              <label class="label" for="join-pw02">비밀번호 확인</label>
-              <div class="control">
-                <input type="password" class="input is-medium" id="join-pw02">
-              </div>
-            </div>
-          </div>
+					<div class="columns">
+						<div class="column">
+							<label class="label" for="join-pw02">비밀번호 확인</label>
+							<div class="control">
+								<input type="password" class="input is-medium" id="join-pw02">
+							</div>
+						</div>
+					</div>
 
-          <div class="columns">
-            <div class="column">
-              <label class="label" for="join-email">이메일</label>
-              <div class="control">
-                <input type="text" class="input is-medium" id="join-email">
-              </div>
-            </div>
-          </div>
+					<div class="columns">
+						<div class="column">
+							<label class="label" for="join-email">이메일</label>
+							<div class="control">
+								<input type="text" class="input is-medium" id="join-email">
+							</div>
+						</div>
+					</div>
 
 
-          <div class="columns">
-            <div class="column">
-              <label class="label" for="join-name">이름</label>
-              <div class="control">
-                <input type="text" class="input is-medium" id="join-name">
-              </div>
-            </div>
-          </div>
+					<div class="columns">
+						<div class="column">
+							<label class="label" for="join-name">이름</label>
+							<div class="control">
+								<input type="text" class="input is-medium" id="join-name">
+							</div>
+						</div>
+					</div>
 
-          <div class="columns">
-            <div class="column">
-              <label class="label">생년월일</label>
-              <div class="columns">
-                <div class="column">
-                  <div class="control">
-                    <input type="text" class="input is-medium" placeholder="년">
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="control">
-                    <div class="select is-medium is-fullwidth">
-                      <select>
-                        <option value="self" selected="selected">월</option>
-                        <option>1월</option>
-                        <option>2월</option>
-                        <option>3월</option>
-                        <option>4월</option>
-                        <option>5월</option>
-                        <option>6월</option>
-                        <option>7월</option>
-                        <option>8월</option>
-                        <option>9월</option>
-                        <option>10월</option>
-                        <option>11월</option>
-                        <option>12월</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="column">
-                  <div class="control">
-                    <input type="text" class="input is-medium" placeholder="일">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="field">
-            <div class="columns">
-              <div class="column">
-                <label class="label">휴대전화</label>
-                <div class="control">
-                  <input type="tel" class="input is-medium" placeholder="010-0000-0000">
-                </div>
-              </div>
-            </div>
-            <div class="columns">
-              <div class="column">
-                <button type="button" class="button is-medium is-gray is-fullwidth">인증번호받기</button>
-              </div>
-            </div>
-            <div class="columns has-addons certify-box is-mobile is-error">
-              <div class="column is-2">
-                <div class="time-limt is-medium is-fullwidth">03:00</div>
-              </div>
-              <div class="column is-8 certify-num">
-                <input class="input is-medium" type="text" placeholder="인증번호 입력">
-              </div>
-              <div class="column is-2">
-                <button type="button" class="button is-medium is-blue is-fullwidth">확인</button>
-              </div>
-            </div>
-            <p class="msg">인증번호 안내 문구 표시 태그</p>
-          </div>
-          <div class="buttons is-centered">
-            <button type="button" class="button is-large is-blue is-fullwidth">가입</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- // container -->
+					<div class="columns">
+						<div class="column">
+							<label class="label">생년월일</label>
+							<div class="columns">
+								<div class="column">
+									<div class="control">
+										<input type="text" class="input is-medium" placeholder="년">
+									</div>
+								</div>
+								<div class="column">
+									<div class="control">
+										<div class="select is-medium is-fullwidth">
+											<select>
+												<option value="self" selected="selected">월</option>
+												<option>1월</option>
+												<option>2월</option>
+												<option>3월</option>
+												<option>4월</option>
+												<option>5월</option>
+												<option>6월</option>
+												<option>7월</option>
+												<option>8월</option>
+												<option>9월</option>
+												<option>10월</option>
+												<option>11월</option>
+												<option>12월</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="column">
+									<div class="control">
+										<input type="text" class="input is-medium" placeholder="일">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="field">
+						<div class="columns">
+							<div class="column">
+								<label class="label">휴대전화</label>
+								<div class="control">
+									<input type="tel" class="input is-medium" placeholder="010-0000-0000">
+								</div>
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column">
+								<button type="button" class="button is-medium is-gray is-fullwidth">인증번호받기</button>
+							</div>
+						</div>
+						<div class="columns has-addons certify-box is-mobile is-error">
+							<div class="column is-2">
+								<div class="time-limt is-medium is-fullwidth">03:00</div>
+							</div>
+							<div class="column is-8 certify-num">
+								<input class="input is-medium" type="text" placeholder="인증번호 입력">
+							</div>
+							<div class="column is-2">
+								<button type="button" class="button is-medium is-blue is-fullwidth">확인</button>
+							</div>
+						</div>
+						<p class="msg">인증번호 안내 문구 표시 태그</p>
+					</div>
+
+					<div class="buttons is-centered">
+						<button type="button" class="button is-large is-blue is-fullwidth">가입</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- // container -->
 </body>
 
 </html>

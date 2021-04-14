@@ -3,16 +3,15 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Popup Guide</title>
 	<meta name="viewport"
-		content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
+	content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, viewport-fit=cover">
+	<title>Popup Guide</title>
 	<link rel="stylesheet" href="/lib/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="/css/style.css">
 
 	<!-- 가이드용 -->
 	<link rel="stylesheet" type="text/css" href="/coding_list/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/coding_list/css/pretty.css">
-	<!--//  가이드용 -->
 	<!--//  가이드용 -->
 
 	<script type="text/javascript" src="/lib/jquery/jquery.min.js"></script>
@@ -36,8 +35,8 @@
 
 <!-- guide_cont  -->
 <div class="guide_cont">
-	<p class="cont_title">[공통]</p>
-	* [class=modal-open] id와 [class=modal] data-modal 동일값 선언하여 사용 가능 * <br>
+	<p class="cont_title">[Common]</p>
+	* [class=modal-open] id와 [class=modal] data-modal 동일값 선언하여 사용 * <br>
 	 - <b>[class=modal-open] id </b>값 == <b>[class=modal] data-modal </b> 값<br>
 	<dl class="cont-spacing">
 		<dt>- 팝업 닫기 클래스</dt>
@@ -45,7 +44,7 @@
 		<dd>- 취소 : <b>modal-del-btn</b></dd>
 	</dl>
 	<dl class="cont-spacing">
-		<dt>- 함수선언</dt>
+		<dt>- 함수 호출</dt>
 		<dd>- Open + Close : <b>modalEvent();</b></dd>
 		<dd>- Open : <b>openModal();</b></dd>
 		<dd>- Close : <b>closeModal();</b></dd>
@@ -148,11 +147,9 @@
 
 
 
-
-
-<!-- 
-	-------- [Full layer Popup] --------
--->
+		<!-- ---------------------
+			Full layer Popup
+		--------------------------- -->
 		<h2 class="h2_guide">Full layer Popup</h2>
 
 		<!-- View -->
@@ -185,7 +182,7 @@
 			<xmp class="prettyprint linenums javascript">
 <!-- 
 	- Full layer 팝업
-	- [class=modal-card] 클래스 추가 : full-moda
+	- [class=modal-card] 클래스 추가 : full-modal
 
 -->
 <button class="button is-blue modal-open" id="동일 값">팝업창 열기</button>
