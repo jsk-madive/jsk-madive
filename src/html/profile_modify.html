@@ -123,18 +123,14 @@
 
 	<script>
 		// [210415 - Modify]
-		$(function () {
-			$(document).on('input', '.input-mod-status', function() {
-				if ($(this).val() == '') {
-					$(this).parent().next().children('.button').attr('disabled', true)
-				} else {
-					$(this).parent().next().children('.button').attr('disabled', false)
-				}
-			})
-		});
-
+		$(document).on('input', '.input-mod-status', function() {
+			if ($(this).val() == '') {
+				$(this).parent().next().children('.button').attr('disabled', true)
+			} else {
+				$(this).parent().next().children('.button').attr('disabled', false)
+			}
+		})
 	</script>
-
-</body>
+</body> 
 
 </html>
