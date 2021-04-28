@@ -206,6 +206,9 @@ gulp.task('sassMove', () => {
 		], {allowEmpty: true})
 		.pipe(gulp.dest(dist + '/assets/sass'))
 		resolve();
+
+		console.log('sassMove');
+		console.log('sassMove-----------');
 	});
 });
 
@@ -255,11 +258,14 @@ gulp.task('watch', () => {
 		gulp.watch(dir.src_images, gulp.series(['imagemin']));
 		gulp.watch(dir.src_js + '/**/*.js', gulp.series(['babel']));
 		gulp.watch(dir.src_scss + '/**/*.sass', gulp.series(['sass']));
+		gulp.watch(dir.src_scss + '/**/*.sass', gulp.series(['sassMove']));
+		
 
 		// File Move
 		gulp.watch(dir.src_images, gulp.series(['media']));
 		gulp.watch(dir.src_js, gulp.series(['json']));
 		gulp.watch(dir.src_coding_list, gulp.series(['codingList']));
+		
 		
 		resolve();
 	});
@@ -297,8 +303,6 @@ var allSeries = gulp.series([
 	'sass',
 	'babel',
 
-	
-	
 	'watch',
 	'browserSync'
 ]);

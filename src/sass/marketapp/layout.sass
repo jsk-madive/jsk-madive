@@ -175,3 +175,19 @@ body
 			bottom: 13px
 			bottom: calc(constant(safe-area-inset-bottom) + 13px)
 			bottom: calc(env(safe-area-inset-bottom) + 13px)
+
+
+/* [210428 - Add] */
+.vh-center-grid
+	height: 100%
+	position: relative
+
+	.vh-center-box
+		position: absolute
+		top: 50%
+		left: 0
+		width: 100%
+		transform: translateY(-50%)
+
+	.infotxt-box
+		margin: 0 auto;

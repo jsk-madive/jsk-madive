@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="ko">
-    @@include('./include/head.html')
+@@include('./include/head.html')
+
 <body>
-        <!-- 
+    <!-- 
         - 요청에 따른 스타일 인라인 요소로 삽입
         - 공통 탭 요소로 클릭 시 스크립트 적용 되어 있는 상태로 클래스명 유지해주세요. 
             (클릭 시 색상 부여, 해당 탭 콘텐츠 표시 기능)
         -->
-        <div class="tabs is-fullwidth is-fixed">
-          <ul class="tab-list is-3" id="tab-cart">
-              <li class="on">
-                  <a href="javascript:;" class="tab-title" style="display: block;text-align: center; background-color: #DBDBDB; font-size: 15px; padding: 18px 0; border-radius: 15px; border: 0; color: #fff; overflow: hidden; box-shadow: 0 1px 5px rgba(0, 0, 0, .1);"
-                  >음식배달</a>
-              </li>
-			  <li>
-                  <a href="javascript:;" class="tab-title" style="display: block;text-align: center; background-color: #DBDBDB; font-size: 15px; padding: 18px 0; border-radius: 15px; border: 0; color: #fff; overflow: hidden; box-shadow: 0 1px 5px rgba(0, 0, 0, .1);">전통시장</a>  
-              </li>
-              <li>
-                  <a href="javascript:;" class="tab-title" style="display: block;text-align: center; background-color: #DBDBDB; font-size: 15px; padding: 18px 0; border-radius: 15px; border: 0; color: #fff; overflow: hidden; box-shadow: 0 1px 5px rgba(0, 0, 0, .1);">쇼핑몰</a>
-              </li>
-          </ul>
-      </div> 
-        <!-- container -->
-        <div id="contents" class="container">
-            <div class="tab-contbox" data-tab="tab-cart">
-                <div class="tab-cont">음식배달 탭</div>
-                <div class="tab-cont">전통시장 탭</div>
-                <div class="tab-cont">쇼핑몰 탭</div>
-            </div>
-      </div>
 
-	<script>
-		tabAction(); 
-	</script>
-</body>
+    <div class="tabs is-fullwidth is-fixed">
+        <ul class="tab-list is-3" id="tab-cart">
+            <li class="on">
+                <a href="javascript:;" class="tab-title" style="display: block;text-align: center; background-color: #DBDBDB; font-size: 15px; padding: 18px 0; border-radius: 15px; border: 0; color: #fff; overflow: hidden; box-shadow: 0 1px 5px rgba(0, 0, 0, .1);">음식배달</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="tab-title" style="display: block;text-align: center; background-color: #DBDBDB; font-size: 15px; padding: 18px 0; border-radius: 15px; border: 0; color: #fff; overflow: hidden; box-shadow: 0 1px 5px rgba(0, 0, 0, .1);">전통시장</a>
+            </li>
+            <li>
+                <a href="javascript:;" class="tab-title" style="display: block;text-align: center; background-color: #DBDBDB; font-size: 15px; padding: 18px 0; border-radius: 15px; border: 0; color: #fff; overflow: hidden; box-shadow: 0 1px 5px rgba(0, 0, 0, .1);">쇼핑몰</a>
+            </li>
+        </ul>
+    </div>
+    <!-- container -->
+    <div id="contents" class="container">
+        <div class="tab-contbox" data-tab="tab-cart">
+            <div class="tab-cont">음식배달 탭</div>
+            <div class="tab-cont">전통시장 탭</div>
+            <div class="tab-cont">쇼핑몰 탭</div>
+        </div>
+    </div>
+
+    <script>
+        tabAction();
+    </script>
+
 </html>
